@@ -1,5 +1,5 @@
-# tutorials
-Tutorial dump / Depósito de tutoriais
+# Tutorial dump / Depósito de tutoriais
+
 
 Arquivos:
 # - classe_javascript (PT)
