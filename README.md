@@ -3,7 +3,7 @@ Tutorial dump / Depósito de tutoriais
 
 Arquivos:
 # - classe_javascript (PT)
-    Explica como funciona o processamento de classes em javascript. É majoritariamente em português.
+    Explica como funciona o processamento de classes em javascript. Está majoritariamente em português.
     Explains the processing of classes in javascript. It's mainly in Portuguese.
 
 # - pandas_tutorial.py (EN)
