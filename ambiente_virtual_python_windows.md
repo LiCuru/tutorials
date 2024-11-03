@@ -91,6 +91,20 @@ para rodar o Jupyter Lab é só digitar:
 
 `jupyter lab`
 
+Isso vai fazer o prompt de comando apresentar vários dados e ficar indisponível para novos comandos. Isso quer dizer que está funcionando. Repare no que ele diz:
+
+![Screenshot 2024-11-03 165520](https://github.com/user-attachments/assets/928251cb-4977-4873-b504-a958ca521122)
+
+"*Para acessar o servidor, abra esse arquivo em um navegador*"
+
+"*Ou copie e cole um desses URLs*"
+
+Eu prefiro copiar e colar um desses links no navegador do que procurar pelo arquivo. Mas isso é totalmente opcional.
+
+O que acontece é que o Jupyter cria um servidor local, e bota pra funcionar quando ele executa. É um servidor dentro do seu próprio computador. Esse servidor é acessível através desses links que ele apresenta no prompt de comando quando você executa o Jupyter. Acessando o link no seu navegador, você acessa o servidor local com o Jupyter Lab rodando. Ou seja, copiando e colando o link apresentado no seu prompt de comando no seu navegador, você acessa o Jupyter Lab.
+
+### as pastas para trabalhar estão esquisitas =(
+
 só que se você rodar esse comando direto no prompt de comando assim que ele executa, você vai abrir o jupyter lab no endereço das pastas do sistema do windows:
 
 ![Screenshot (2)](https://github.com/user-attachments/assets/fdd072d5-7d50-4bc8-a41c-48b7d39113e4)
@@ -132,23 +146,15 @@ e para acessar um diretório use o comando:
 
 Veja como funciona no exemplo abaixo:
 
-![Screenshot 2024-11-03 183257](https://github.com/user-attachments/assets/9ab1c0c9-c93a-45c2-b4e8-bb121e575cf4)
+![Screenshot 2024-11-03 183414](https://github.com/user-attachments/assets/3a7485eb-a1c1-4338-91d0-af8c639e380f)
 
+Então é isso. Se você quiser fechar o Jupyter porque ele está acessando uma pasta que não te interessa, digite `Ctrl + C` no prompt de comando onde ele está rodando e apresentando os links para acesso. Vai levar uns segundos, mas ele vai terminar o processo.
 
+### depois de acessar a pasta que você quer trabalhar:
 
+use o comando:
 
-
-Isso vai fazer o prompt de comando apresentar vários dados e ficar indisponível para novos comandos. Isso quer dizer que está funcionando. Repare no que ele diz:
-
-![Screenshot 2024-11-03 165520](https://github.com/user-attachments/assets/928251cb-4977-4873-b504-a958ca521122)
-
-"*Para acessar o servidor, abra esse arquivo em um navegador*"
-
-"*Ou copie e cole um desses URLs*"
-
-Eu prefiro copiar e colar um desses links no navegador do que procurar pelo arquivo. Mas isso é totalmente opcional.
-
-O que acontece é que o Jupyter cria um servidor local, e bota pra funcionar quando ele executa. É um servidor dentro do seu próprio computador. Esse servidor é acessível através desses links que ele apresenta no prompt de comando quando você executa o Jupyter. Acessando o link no seu navegador, você acessa o servidor local com o Jupyter Lab rodando. Ou seja, copiando e colando o link apresentado no seu prompt de comando no seu navegador, você acessa o Jupyter Lab. =D
+`jupyter lab`
 
 ## 3 - instalar o pyenv-win
 
