@@ -177,7 +177,8 @@ Uma vez instalado, ainda não tem como acessar o pyenv-win através do prompt de
 
 Ele vai informar que o pyenv-win já está instalado e onde está instalado. Vá até esse diretório, encontre o diretório do pyenv-win, entre no diretório, e depois vá no bin. A figura abaixo explica melhor:
 
-![Captura de tela 2024-11-03 195413](https://github.com/user-attachments/assets/cff8f471-1d9f-4e59-93f3-1558d25aa3c2)
+![Captura de tela 2024-11-03 195413](https://github.com/user-attachments/assets/e01dbf19-27a5-42ee-aa70-ccffa2c9aa35)
+
 
 Depois vá nas variáveis do ambiente do windows, e adicione o endereço copiado à variável PATH conforme as figuras abaixo. O seu computador pode estar um pouco diferente. Se estiver um pouco diferente, não vai estar tão diferente. O importante é adicionar ao PATH:
 
@@ -185,7 +186,11 @@ Depois vá nas variáveis do ambiente do windows, e adicione o endereço copiado
 
 ![Captura de tela 2024-11-03 195942](https://github.com/user-attachments/assets/d744a4be-48c0-4890-87a8-fd81d408a9b9)
 
+![Captura de tela 2024-11-03 200044](https://github.com/user-attachments/assets/4a80e44d-2644-4ee4-82dd-92360c523665)
 
+![Captura de tela 2024-11-03 200158](https://github.com/user-attachments/assets/6a3e19c9-12d7-4c0f-9d8f-0dbd9a0ecc4f)
+
+![Captura de tela 2024-11-03 200224](https://github.com/user-attachments/assets/133d375c-c802-4006-afdc-f3f778e741bf)
 
 
 ## 4 - alterar a versão do python para versões mais antigas com o pyenv-win
