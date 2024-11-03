@@ -1,4 +1,4 @@
-Como instalar o Jupyter Lab e configurar um ambiente virtual do python no Windows 11
+#Como instalar o Jupyter Lab e configurar um ambiente virtual do python no Windows 11
 
 As vezes é necessário configurar um ambiente virtual onde as bibliotecas estejam em versões específicas. E se você conduz mais de um projeto em sua máquina, pode ser necessário configurar um ambiente para cada projeto.
 
@@ -15,7 +15,7 @@ Esse tutorial explica como que:
 8 - adiciona esse kernel no leque de opções de kernel do jupyter lab
 
 
-1 - instalando a versão mais recente do python no Windows
+#1 - instalando a versão mais recente do python no Windows
 
 Primeiro vá no site oficial do python, na parte de downloads, e selecione a versão:
  - para windows
