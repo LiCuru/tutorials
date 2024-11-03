@@ -22,7 +22,7 @@ Primeiro vá no site oficial do python, na parte de downloads, e selecione a ver
  - para windows
  - correta para a arquitetura da sua máquina
 
-Para saber a arquitetura da sua máquina, vá no cmd (prompt de comando) e digite "wmic os get osarchitecture". Ele vai devolver qual é a arquitetura da sua máquina como na figura abaixo:
+Para saber a arquitetura da sua máquina, vá no cmd (prompt de comando) e digite `wmic os get osarchitecture`. Ele vai devolver qual é a arquitetura da sua máquina como na figura abaixo:
 
 ![Screenshot 2024-11-03 164558](https://github.com/user-attachments/assets/0a2ed3e4-34d2-4748-8382-c491dd634266)
 
