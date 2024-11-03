@@ -13,3 +13,5 @@ Esse tutorial explica como que:
 6 - instala as bibliotecas requeridas no ambiente virtual criado
 7 - cria um kernel do ipython dentro do ambiente virtual criado para ser usado no jupyter lab
 8 - adiciona esse kernel no leque de opções de kernel do jupyter lab
+
+
