@@ -180,7 +180,7 @@ Ele vai informar que o pyenv-win já está instalado e onde está instalado. Vá
 ![Captura de tela 2024-11-03 195413](https://github.com/user-attachments/assets/e01dbf19-27a5-42ee-aa70-ccffa2c9aa35)
 
 
-Copie o endereço da instalação do `C:\Caminho\Para\O\pyenv-win\bin`. Depois vá nas variáveis do ambiente do windows, e adicione o endereço copiado à variável PATH conforme as figuras abaixo. O seu computador pode estar um pouco diferente. Se estiver um pouco diferente, não vai estar tão diferente. O importante é adicionar ao PATH:
+Copie o endereço da instalação do `C:\Caminho\Para\O\pyenv-win\bin` e do `C:\Caminho\Para\O\pyenv-win\shims`. Depois vá nas variáveis do ambiente do windows, e adicione ambos os endereços à variável PATH conforme as figuras abaixo. O seu computador pode estar um pouco diferente. Se estiver um pouco diferente, não vai estar tão diferente. O importante é adicionar ao PATH:
 
 ![Captura de tela 2024-11-03 195927](https://github.com/user-attachments/assets/040727d7-55eb-487c-9809-c3a85a9d7813)
 
@@ -188,12 +188,18 @@ Copie o endereço da instalação do `C:\Caminho\Para\O\pyenv-win\bin`. Depois v
 
 ![Captura de tela 2024-11-03 200044](https://github.com/user-attachments/assets/4a80e44d-2644-4ee4-82dd-92360c523665)
 
-![Captura de tela 2024-11-03 200158](https://github.com/user-attachments/assets/6a3e19c9-12d7-4c0f-9d8f-0dbd9a0ecc4f)
+![Captura de tela 2024-11-03 202634](https://github.com/user-attachments/assets/27836d9b-ef8d-4f77-9ea0-142559560ff3)
+
 
 ![Captura de tela 2024-11-03 200224](https://github.com/user-attachments/assets/133d375c-c802-4006-afdc-f3f778e741bf)
 
 
 ## 4 - alterar a versão do python para versões mais antigas com o pyenv-win
+
+Para instalar uma versão anterior do python, no caso, vou instalar a versão 3.10.5, utilize o comando:
+
+`pyenv install 3.10.5`
+
 
 
 
