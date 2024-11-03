@@ -30,7 +30,12 @@ Para saber a arquitetura da sua máquina, vá no cmd (*prompt de comando*). Se v
 
 ![Screenshot 2024-11-03 164910](https://github.com/user-attachments/assets/f3549ee6-d73c-4a1e-850e-c3eb991ea150)
 
-Ele vai aparecer. Não se esqueça de executar como administrador:
+Ele vai aparecer:
+
+![Screenshot 2024-11-03 164509](https://github.com/user-attachments/assets/043723bc-6038-4bf0-9f18-fb801d4f368c)
+
+
+Não se esqueça de executar como administrador:
 
 ![Screenshot 2024-11-03 175243](https://github.com/user-attachments/assets/66e1b913-7779-4c3b-a092-fcaa8f5e04f6)
 
