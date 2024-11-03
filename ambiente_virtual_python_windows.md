@@ -87,7 +87,6 @@ Agora sim, com o gerenciador de pacotes pip atualizado, podemos seguir conforme 
 
 `pip install jupyterlab`
 
-
 Uma vez instalado, para rodar o Jupyter Lab é só digitar:
 
 `jupyter lab`
@@ -103,3 +102,11 @@ Isso vai fazer o prompt de comando apresentar vários dados e ficar indisponíve
 Eu prefiro copiar e colar um desses links no navegador do que procurar pelo arquivo. Mas isso é totalmente opcional.
 
 O que acontece é que o Jupyter cria um servidor local, e bota pra funcionar quando ele executa. É um servidor dentro do seu próprio computador. Esse servidor é acessível através desses links que ele apresenta no prompt de comando quando você executa o Jupyter. Acessando o link no seu navegador, você acessa o servidor local com o Jupyter Lab rodando. Ou seja, copiando e colando o link apresentado no seu prompt de comando no seu navegador, você acessa o Jupyter Lab. =D
+
+## 3 - instalar o pyenv-win
+
+Rodando o prompt de comando como administrador, execute?
+
+`pip install pyenv-win`
+
+
