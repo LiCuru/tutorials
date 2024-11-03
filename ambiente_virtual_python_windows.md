@@ -148,7 +148,8 @@ Veja como funciona no exemplo abaixo:
 
 ![Screenshot 2024-11-03 183414](https://github.com/user-attachments/assets/3a7485eb-a1c1-4338-91d0-af8c639e380f)
 
-Então é isso. Se você quiser fechar o Jupyter porque ele está acessando uma pasta que não te interessa, digite `Ctrl + C` no prompt de comando onde ele está rodando e apresentando os links para acesso. Vai levar uns segundos, mas ele vai terminar o processo.
+
+Então é isso. Se você quiser fechar o Jupyter porque ele está acessando uma pasta que não te interessa, digite `Ctrl + C` no prompt de comando onde ele está rodando e apresentando os links para acesso. Vai levar uns segundos, mas ele vai terminar o processo. Em seguida navegue até a pasta que é do seu interesse, e só então execute o `jupyter lab`.
 
 ### depois de acessar a pasta que você quer trabalhar:
 
@@ -157,6 +158,8 @@ use o comando:
 `jupyter lab`
 
 ## 3 - instalar o pyenv-win
+
+Agora que instalamos o jupyter, é necessário configurar um ambiente.
 
 Rodando o prompt de comando como administrador, execute
 
