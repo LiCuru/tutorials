@@ -122,6 +122,8 @@ Então é necessário ir no endereço da pasta que você quer disponível nos ar
 
 ![Screenshot 2024-11-03 181816](https://github.com/user-attachments/assets/1896996a-5799-4cce-a234-3dbbbaba6b85)
 
+### diretório de dados do usuário
+
 Nesse exemplo eu decidi ir para o diretório onde fica os dados de usuário (Downloads, Desktop, Documentos, etc...). Se a gente não souber onde fica esse diretório, a gente fica meio perdido. O endereço desse diretório fica disponível para consulta quando você acessa o prompt de comando executando direto, sem executar como administrador:
 
 ![Screenshot 2024-11-03 180647](https://github.com/user-attachments/assets/95b1a2c9-3334-4a89-988a-545cf0a47d72)
@@ -159,11 +161,18 @@ use o comando:
 
 ## 3 - instalar o pyenv-win
 
-Agora que instalamos o jupyter, é necessário configurar um ambiente.
+Agora que instalamos o jupyter, é necessário configurar um ambiente virtual.
 
-Rodando o prompt de comando como administrador, execute
+O ambiente é criado pelo python, o que significa que a versão do python utilizada vai ser a versão do python do ambiente virtual. Trocar de versão do python no Windows, e em qualquer sistema operacional, pode ser muito desafiador e desnecessariamente difícil. Para que seja possível poder trocar de versão com facilidade e organização, foi criado o pyenv. Depois de um tempo o pyenv teve sua versão adaptada para o Windows, chamado de pyenv-win.
+
+Esse site (https://realpython.com/intro-to-pyenv/) explica como que faz o manejo das diferentes versões do python com o pyenv. Vale a pena ler.
+
+Para instalar o pyenv-win, acesse prompt de comando como administrador, e execute:
 
 `pip install pyenv-win`
+
+## 4 - alterar a versão do python para versões mais antigas com o pyenv-win
+
 
 
 
