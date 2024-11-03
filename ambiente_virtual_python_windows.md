@@ -97,6 +97,17 @@ só que se você rodar esse comando direto no prompt de comando assim que ele ex
 
 E, no fim, os arquivos que vão aparecer no Jupyter pra você "trabalhar" vão simplesmete ser arquivos do sistema do windows:
 
+![Screenshot 2024-11-03 181618](https://github.com/user-attachments/assets/fcf14211-79a8-4ee1-9389-580c8c80f06b)
+
+
+Então é necessário ir no endereço da pasta que você quer disponível nos arquivos do jupyter e só então rodar o jupyter lab:
+
+![Screenshot 2024-11-03 181805](https://github.com/user-attachments/assets/1167039e-aeaa-4cb6-9895-7e8e598e6859)
+
+
+![Screenshot 2024-11-03 181816](https://github.com/user-attachments/assets/1896996a-5799-4cce-a234-3dbbbaba6b85)
+
+
 
 
 Uma vez instalado, vá para o diretório onde fica os seus dados de usuário (Downloads, Desktop, Documentos, etc...). O endereço desse diretório fica disponível para consulta quando você acessa o prompt de comando executando direto, sem executar como administrador:
