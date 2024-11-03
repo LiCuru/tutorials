@@ -57,6 +57,15 @@ Sabendo a arquitetura da sua máquina, vá em downloads para Windows no site ofi
 
 
 
-Agora que fez o download, simplesmente prossiga com a instalação clicando em "Install Now" (O meu diz "64-bit" mas o seu pode diferente, dependendo da arquitetura):
+Agora que fez o download, execute o instalador do python para windows como administrador:
+
+![Screenshot (18)](https://github.com/user-attachments/assets/ec85e178-69a6-42fd-bf4f-512f33c2d959)
+
+Antes de prosseguir com a instalação, autorize os privilégios de administrador e autorize que o python.exe seja adicionado ao PATH:
+
+![Screenshot (19)](https://github.com/user-attachments/assets/8f34d149-612b-4198-881c-8fc7fd59240d)
+
+clicando em "Install Now" (O meu diz "64-bit" mas o seu pode diferente, dependendo da arquitetura).:
  
-![Screenshot 2024-11-03 172148](https://github.com/user-attachments/assets/1a5361d0-aa21-407c-8ad7-37dd8201eda1)
+
+
