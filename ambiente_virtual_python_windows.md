@@ -26,7 +26,7 @@ Primeiro vá no site oficial do python, na parte de downloads, e selecione a ver
  - para windows
  - correta para a **arquitetura da sua máquina**
 
-Para saber a arquitetura da sua máquina, vá no cmd (* *prompt de comando* *). Se você não sabe como encontrar o prompt de comando, procure por "cmd" no menu do windows:
+Para saber a arquitetura da sua máquina, vá no cmd (*prompt de comando*). Se você não sabe como encontrar o prompt de comando, procure por "cmd" no menu do windows:
 
 ![Screenshot 2024-11-03 164910](https://github.com/user-attachments/assets/f3549ee6-d73c-4a1e-850e-c3eb991ea150)
 
