@@ -88,7 +88,7 @@ Agora sim, com o gerenciador de pacotes pip atualizado, podemos seguir conforme 
 `pip install jupyterlab`
 
 
-para rodar o Jupyter Lab e ver a mágica acontecer, é só digitar:
+Uma vez instalado, para rodar o Jupyter Lab e ver a mágica acontecer, é só digitar:
 
 `jupyter lab`
 
