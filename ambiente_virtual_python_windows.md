@@ -34,6 +34,11 @@ Vai aparecer:
 
 ![Screenshot 2024-11-03 164509](https://github.com/user-attachments/assets/56a81792-124c-46c2-96a6-86fed4f808a2)
 
+Não se esqueça de executar como administrador:
+![Screenshot 2024-11-03 175243](https://github.com/user-attachments/assets/66e1b913-7779-4c3b-a092-fcaa8f5e04f6)
+
+
+
 
 
 Uma vez no prompt de comando, digite `wmic os get osarchitecture`. Ele vai devolver qual é a arquitetura da sua máquina como na figura abaixo:
