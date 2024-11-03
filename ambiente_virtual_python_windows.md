@@ -171,6 +171,23 @@ Para instalar o pyenv-win, acesse prompt de comando como administrador, e execut
 
 `pip install pyenv-win`
 
+Uma vez instalado, ainda não tem como acessar o pyenv-win através do prompt de comando porque a pasta onde fica o binário do pyenv-win ainda não está na variável path. Então o próximo passo é adicionar a pasta do binário à variável path do Windows. Para adicionar, primeiro é necessário encontrar onde fica a pasta to pyenv-win. Se você repetir o comando: 
+
+`pip install pyenv-win`
+
+Ele vai informar que o pyenv-win já está instalado e onde está instalado. Vá até esse diretório, encontre o diretório do pyenv-win, entre no diretório, e depois vá no bin. A figura abaixo explica melhor:
+
+![Captura de tela 2024-11-03 195413](https://github.com/user-attachments/assets/cff8f471-1d9f-4e59-93f3-1558d25aa3c2)
+
+Depois vá nas variáveis do ambiente do windows, e adicione o endereço copiado à variável PATH conforme as figuras abaixo. O seu computador pode estar um pouco diferente. Se estiver um pouco diferente, não vai estar tão diferente. O importante é adicionar ao PATH:
+
+![Captura de tela 2024-11-03 195927](https://github.com/user-attachments/assets/040727d7-55eb-487c-9809-c3a85a9d7813)
+
+![Captura de tela 2024-11-03 195942](https://github.com/user-attachments/assets/d744a4be-48c0-4890-87a8-fd81d408a9b9)
+
+
+
+
 ## 4 - alterar a versão do python para versões mais antigas com o pyenv-win
 
 
