@@ -93,7 +93,8 @@ para rodar o Jupyter Lab é só digitar:
 
 só que se você rodar esse comando direto no prompt de comando assim que ele executa, você vai abrir o jupyter lab no endereço das pastas do sistema do windows:
 
-![Screenshot (1)](https://github.com/user-attachments/assets/20c02664-f659-4855-8e0f-5b1ca0cc372c)
+![Screenshot (2)](https://github.com/user-attachments/assets/fdd072d5-7d50-4bc8-a41c-48b7d39113e4)
+
 
 E, no fim, os arquivos que vão aparecer no Jupyter pra você "trabalhar" vão simplesmete ser arquivos do sistema do windows:
 
