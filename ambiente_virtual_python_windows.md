@@ -100,6 +100,8 @@ Isso vai fazer o prompt de comando apresentar vários dados e ficar indisponíve
 
 "*Ou copie e cole um desses URLs*"
 
-Eu prefiro copiar e colar um desses links para o navegador do que procurar pelo arquivo. O que acontece é que o Jupyter cria um servidor local, e bota pra funcionar quando ele executa. É um servidor dentro do seu próprio computador. Esse servidor é acessível através desses links que ele apresenta no prompt de comando quando você executa o Jupyter. Acessando o link no seu navegador, você acessa o servidor local com o Jupyter Lab rodando.
+Eu prefiro copiar e colar um desses links para o navegador do que procurar pelo arquivo.
+
+O que acontece é que o Jupyter cria um servidor local, e bota pra funcionar quando ele executa. É um servidor dentro do seu próprio computador. Esse servidor é acessível através desses links que ele apresenta no prompt de comando quando você executa o Jupyter. Acessando o link no seu navegador, você acessa o servidor local com o Jupyter Lab rodando.
 
 Copiando e colando o link apresentado no seu prompt de comando no seu navegador, você acessa o Jupyter Lab. =D
