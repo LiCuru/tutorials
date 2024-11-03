@@ -70,12 +70,15 @@ clicando em "Install Now" (O meu diz "64-bit" mas o seu pode diferente, dependen
 ## 2 - instalar o jupyter lab no Windows
 
 É possível instalar o jupyter lab apenas procurando por ele na ferramenta de busca do próprio Windows:
+
 ![Screenshot 2024-11-03 163415](https://github.com/user-attachments/assets/38951be6-a3da-441e-a828-3f24ae08aa15)
 
 Ele vai aparecer e você pode pedir pra baixar:
 
 ![Screenshot 2024-11-03 163441](https://github.com/user-attachments/assets/8157c60e-6746-44a9-bfa4-c8ff7dc84668)
 
+
+### não funcionou, o que eu faço? =(
 Contudo, se isso não funcionar, tem outra opção, que é via prompt de comando (não se esqueça de <ins>**executar o prompt de comando como administrador**</ins>, conforme mostrei no passo 1 deste tutorial). Pelo prompt de comando é possível instalar da forma que é recomendado pelo site oficial do Jupyter (em: https://jupyter.org/install). Nesse site é possível ver que ele recomenda que se use o gerenciador de pacotes pip. Não vá direto igual ele diz digitando `pip install`! primeiro vamos dar upgrade no gerenciador de pacotes pip pra que ele esteja atualizado:
 
 `python -m ensurepip --upgrade`
