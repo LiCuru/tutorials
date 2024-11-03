@@ -43,7 +43,7 @@ Uma vez no prompt de comando, digite `wmic os get osarchitecture`. Ele vai devol
 
 
 
-Sabendo a arquitetura da sua máquina, vá em downloads para Windows no site oficial do python (neste link: https://www.python.org/downloads/windows/), em "*Stable Releases*" (versões estáveis, que já passaram da "fase de teste", por assim dizer, e não tem muitos bugs), e escolha o instalador do windows para o python que **corresponda com a arquitetura da sua máquina**:
+Sabendo a arquitetura da sua máquina, vá em downloads para Windows no site oficial do python (neste link: https://www.python.org/downloads/windows/), em "*Stable Releases*" (versões estáveis, que já passaram da "fase de teste", por assim dizer, e não tem muitos bugs), e escolha o instalador do windows para o python que <ins>**corresponda com a arquitetura da sua máquina**</ins>:
 
  ![Screenshot 2024-11-03 165114](https://github.com/user-attachments/assets/ff4fb9c5-d90c-4dde-ac4c-72c612b421cb)
 
