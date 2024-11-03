@@ -87,9 +87,21 @@ Agora sim, com o gerenciador de pacotes pip atualizado, podemos seguir conforme 
 
 `pip install jupyterlab`
 
-Uma vez instalado, para rodar o Jupyter Lab é só digitar:
+para rodar o Jupyter Lab é só digitar:
 
 `jupyter lab`
+
+só que se você rodar esse comando direto no prompt de comando assim que ele executa, você vai abrir o jupyter lab no endereço das pastas do sistema do windows:
+
+![Screenshot (1)](https://github.com/user-attachments/assets/20c02664-f659-4855-8e0f-5b1ca0cc372c)
+
+E, no fim, os arquivos que vão aparecer no Jupyter pra você "trabalhar" vão simplesmete ser arquivos do sistema do windows:
+
+
+
+Uma vez instalado, vá para o diretório onde fica os seus dados de usuário (Downloads, Desktop, Documentos, etc...). O endereço desse diretório fica disponível para consulta quando você acessa o prompt de comando executando direto, sem executar como administrador:
+
+![Screenshot 2024-11-03 180647](https://github.com/user-attachments/assets/95b1a2c9-3334-4a89-988a-545cf0a47d72)
 
 Isso vai fazer o prompt de comando apresentar vários dados e ficar indisponível para novos comandos. Isso quer dizer que está funcionando. Repare no que ele diz:
 
@@ -105,8 +117,10 @@ O que acontece é que o Jupyter cria um servidor local, e bota pra funcionar qua
 
 ## 3 - instalar o pyenv-win
 
-Rodando o prompt de comando como administrador, execute?
+Rodando o prompt de comando como administrador, execute
 
 `pip install pyenv-win`
+
+
 
 
