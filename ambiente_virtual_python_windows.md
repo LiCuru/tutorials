@@ -31,6 +31,7 @@ Para saber a arquitetura da sua máquina, vá no cmd (*prompt de comando*). Se v
 ![Screenshot 2024-11-03 164910](https://github.com/user-attachments/assets/f3549ee6-d73c-4a1e-850e-c3eb991ea150)
 
 Vai aparecer:
+
 ![Screenshot 2024-11-03 164509](https://github.com/user-attachments/assets/56a81792-124c-46c2-96a6-86fed4f808a2)
 
 
