@@ -101,19 +101,42 @@ E, no fim, os arquivos que vão aparecer no Jupyter pra você "trabalhar" vão s
 ![Screenshot 2024-11-03 181618](https://github.com/user-attachments/assets/fcf14211-79a8-4ee1-9389-580c8c80f06b)
 
 
-Então é necessário ir no endereço da pasta que você quer disponível nos arquivos do jupyter e só então rodar o jupyter lab:
+Então é necessário ir no endereço da pasta que você quer disponível nos arquivos do jupyter. Só depois de ir na pasta que você quer, é que então você roda o jupyter lab:
 
 ![Screenshot 2024-11-03 181805](https://github.com/user-attachments/assets/1167039e-aeaa-4cb6-9895-7e8e598e6859)
 
 
 ![Screenshot 2024-11-03 181816](https://github.com/user-attachments/assets/1896996a-5799-4cce-a234-3dbbbaba6b85)
 
-
-
-
-Uma vez instalado, vá para o diretório onde fica os seus dados de usuário (Downloads, Desktop, Documentos, etc...). O endereço desse diretório fica disponível para consulta quando você acessa o prompt de comando executando direto, sem executar como administrador:
+Nesse exemplo eu decidi ir para o diretório onde fica os dados de usuário (Downloads, Desktop, Documentos, etc...). Se a gente não souber onde fica esse diretório, a gente fica meio perdido. O endereço desse diretório fica disponível para consulta quando você acessa o prompt de comando executando direto, sem executar como administrador:
 
 ![Screenshot 2024-11-03 180647](https://github.com/user-attachments/assets/95b1a2c9-3334-4a89-988a-545cf0a47d72)
+
+### Como eu navego para algum diretório no cmd (prompt de comando)?
+
+O endereço de onde você está no momento é o que aparece antes do sinal de '`>`', e que precede qualquer comando que você venha a executar:
+
+![Screenshot (1)](https://github.com/user-attachments/assets/23b70d5d-d1da-46b7-ae66-b6bcb44d95af)
+
+para voltar para um diretório acima, use o comando:
+
+`cd ..`
+
+para visualizar os diretórios e arquivos dentro do endereço onde você está, use o comando:
+
+`dir`
+
+e para acessar um diretório use o comando:
+
+`cd nome_do_diretorio`
+
+Veja como funciona no exemplo abaixo:
+
+![Screenshot 2024-11-03 183257](https://github.com/user-attachments/assets/9ab1c0c9-c93a-45c2-b4e8-bb121e575cf4)
+
+
+
+
 
 Isso vai fazer o prompt de comando apresentar vários dados e ficar indisponível para novos comandos. Isso quer dizer que está funcionando. Repare no que ele diz:
 
