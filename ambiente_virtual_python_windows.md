@@ -16,7 +16,7 @@ Para instalar certas versões de algumas bibliotecas, muitas vezes não é o suf
 - 8 - adicionar esse kernel no leque de opções de kernel do jupyter lab
 
 
-## 1 - instalando a versão mais recente do python no Windows
+## 1 - instalar a versão mais recente do python no Windows
 
 Primeiro vá no site oficial do python, na parte de downloads, e selecione a versão:
  - para windows
