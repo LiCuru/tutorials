@@ -6,14 +6,14 @@ As vezes é necessário configurar um ambiente virtual onde as bibliotecas estej
 Para instalar certas versões de algumas bibliotecas, muitas vezes não é o suficiente apenas instalar a versão requisitada delas. Muitas vezes também é necessário alterar a versão do python na máquina. Isso é porque algumas versões antigas de algumas bibliotecas, ou suas dependências, podem não ter suporte na versão atual do python. Então acaba sendo necessário trocar a versão do python para uma versão mais antiga, de quando aquela dependência, ou aquela biblioteca mesmo, ainda tinha suporte, ainda rodava, no python.
 
 ### Passos desse tutorial:
-- 1 instalar a versão mais recente do python no Windows
-- 2 instalar o jupyter lab no Windows
-- 3 instalar o pyenv-win
-- 4 alterar a versão do python para versões mais antigas com o pyenv-win
-- 5 criar um ambiente virtual no windows com uma versão escolhida do python
-- 6 instalar as bibliotecas requeridas no ambiente virtual criado
-- 7 criar um kernel do ipython dentro do ambiente virtual criado para ser usado no jupyter lab
-- 8 adicionar esse kernel no leque de opções de kernel do jupyter lab
+- 1 - instalar a versão mais recente do python no Windows
+- 2 - instalar o jupyter lab no Windows
+- 3 - instalar o pyenv-win
+- 4 - alterar a versão do python para versões mais antigas com o pyenv-win
+- 5 - criar um ambiente virtual no windows com uma versão escolhida do python
+- 6 - instalar as bibliotecas requeridas no ambiente virtual criado
+- 7 - criar um kernel do ipython dentro do ambiente virtual criado para ser usado no jupyter lab
+- 8 - adicionar esse kernel no leque de opções de kernel do jupyter lab
 
 
 ## 1 - instalando a versão mais recente do python no Windows
