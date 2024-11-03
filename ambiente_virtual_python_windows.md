@@ -96,9 +96,9 @@ Isso vai fazer o prompt de comando apresentar vários dados e ficar indisponíve
 
 ![Screenshot 2024-11-03 165520](https://github.com/user-attachments/assets/928251cb-4977-4873-b504-a958ca521122)
 
-"Para acessar o servidor, abra esse arquivo em um navegador"
+"*Para acessar o servidor, abra esse arquivo em um navegador*"
 
-"Ou copie e cole um desses URLs"
+"*Ou copie e cole um desses URLs*"
 
 Eu prefiro copiar e colar um desses links para o navegador do que procurar pelo arquivo. O que acontece é que o Jupyter cria um servidor local, e bota pra funcionar quando ele executa. É um servidor dentro do seu próprio computador. Esse servidor é acessível através desses links que ele apresenta no prompt de comando quando você executa o Jupyter. Acessando o link, você acessa o servidor local com o Jupyter Lab rodando.
 
