@@ -177,7 +177,8 @@ Uma vez instalado, ainda não tem como acessar o pyenv-win através do prompt de
 
 Ele vai informar que o pyenv-win já está instalado e onde está instalado. Vá até esse diretório, encontre o diretório do pyenv-win, entre no diretório, e depois vá no bin. A figura abaixo explica melhor:
 
-![Captura de tela 2024-11-03 195413](https://github.com/user-attachments/assets/deaaa392-6d44-4771-a7cf-b7250d1fb7c2)
+![Captura de tela 2024-11-03 195413](https://github.com/user-attachments/assets/c5e8bb45-fc7b-4d1c-ae5c-6bd28ddcd2ee)
+
 
 Copie o endereço da instalação e use para adicionar o `C:\Caminho\Para\O\pyenv-win\bin` e do `C:\Caminho\Para\O\pyenv-win\shims`. No meu caso, por exemplo, o endereço é: 
 
