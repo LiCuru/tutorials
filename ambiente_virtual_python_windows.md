@@ -187,6 +187,7 @@ Copie o endereço da instalação e use para adicionar o `C:\Caminho\Para\O\pyen
 então eu adiciono:
 
 *\pyenv-win\bin*
+
 *\pyenv-win\shims*
 
 no final, fica assim:
