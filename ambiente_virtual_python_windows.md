@@ -184,9 +184,9 @@ Copie o endereço da instalação e use para adicionar o `C:\Caminho\Para\O\pyen
 
 *c:\users\ligia\appdata\local\programs\python\python313\lib\site-packages*
 
-então eu adiciono
+então eu adiciono:
+
 *\pyenv-win\bin*
-e
 *\pyenv-win\shims*
 
 no final, fica assim:
