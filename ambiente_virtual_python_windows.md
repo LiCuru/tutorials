@@ -186,14 +186,13 @@ Copie o endereço da instalação e use para adicionar o `C:\Caminho\Para\O\pyen
 
 então eu adiciono:
 
-*\pyenv-win\bin*
-
-*\pyenv-win\shims*
+ - *\pyenv-win\bin*
+ - *\pyenv-win\shims*
 
 no final, fica assim:
 
-*c:\users\ligia\appdata\local\programs\python\python313\lib\site-packages\pyenv-win\bin*
-*c:\users\ligia\appdata\local\programs\python\python313\lib\site-packages\pyenv-win\shims*
+ - *c:\users\ligia\appdata\local\programs\python\python313\lib\site-packages\pyenv-win\bin*
+ - *c:\users\ligia\appdata\local\programs\python\python313\lib\site-packages\pyenv-win\shims*
 
 Mas é importante frisar que cada computador é diferente, e que você tem que achar qual é o seu `C:\Caminho\Para\O\pyenv-win\bin` e `C:\Caminho\Para\O\pyenv-win\shims`. 
 
