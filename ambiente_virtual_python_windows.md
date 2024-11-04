@@ -182,19 +182,22 @@ Ele vai informar que o pyenv-win já está instalado e onde está instalado. Vá
 
 Copie o endereço da instalação e use para adicionar o `C:\Caminho\Para\O\pyenv-win\bin` e do `C:\Caminho\Para\O\pyenv-win\shims`. No meu caso, por exemplo, o endereço é: 
 
-`c:\users\ligia\appdata\local\programs\python\python313\lib\site-packages`
+*c:\users\ligia\appdata\local\programs\python\python313\lib\site-packages*
 
 então eu adiciono
-`\pyenv-win\bin`
+*\pyenv-win\bin*
 e
-`\pyenv-win\shims`
+*\pyenv-win\shims*
 
 no final, fica assim:
-`c:\users\ligia\appdata\local\programs\python\python313\lib\site-packages\pyenv-win\bin`
-`c:\users\ligia\appdata\local\programs\python\python313\lib\site-packages\pyenv-win\shims`
 
-Mas é importante frisar que cada computador é diferente, e que você tem que achar qual é o seu `C:\Caminho\Para\O\pyenv-win\bin` e do `C:\Caminho\Para\O\pyenv-win\shims`. 
- Depois vá nas variáveis do ambiente do windows, e adicione ambos os endereços à variável PATH conforme as figuras abaixo. O seu computador pode estar um pouco diferente. Se estiver um pouco diferente, não vai estar tão diferente. O importante é adicionar ao PATH:
+*c:\users\ligia\appdata\local\programs\python\python313\lib\site-packages\pyenv-win\bin*
+*c:\users\ligia\appdata\local\programs\python\python313\lib\site-packages\pyenv-win\shims*
+
+Mas é importante frisar que cada computador é diferente, e que você tem que achar qual é o seu `C:\Caminho\Para\O\pyenv-win\bin` e `C:\Caminho\Para\O\pyenv-win\shims`. 
+
+
+Depois que você achou os caminhos, vá nas variáveis do ambiente do windows, e adicione ambos os endereços à variável PATH conforme as figuras abaixo. O seu computador pode estar um pouco diferente. Se estiver um pouco diferente, não vai estar tão diferente. O importante é adicionar ao PATH:
 
 ![Captura de tela 2024-11-03 195927](https://github.com/user-attachments/assets/040727d7-55eb-487c-9809-c3a85a9d7813)
 
