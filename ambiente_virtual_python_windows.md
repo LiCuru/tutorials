@@ -174,6 +174,27 @@ use o comando:
 
 `jupyter lab`
 
+## 3 - Entendendo qual versão do python usar e porque:
+
+ao instalar o Jupyter Lab no Windows, ele está pronto para ser usado. Contudo, a versão do python do kernel do ambiente padrão utilizado, chamado de "Python 3 (ipykernel). Você encontra ele no canto superior direito, como na figura a seguir:
+
+![Captura de tela 2024-11-06 213004](https://github.com/user-attachments/assets/226ac221-a492-4f40-bddd-43e6551b8eea)
+
+Se você deixar o mouse em cima dele, vai ver que ele tem a opção de trocar de kernel:
+
+![Captura de tela 2024-11-06 213010](https://github.com/user-attachments/assets/e63fa639-f8ac-4439-9dbc-4a0a37b9fe19)
+
+Clicando no Python 3 (ipykernel), você pode escolher qual kernel utilizar. Como o Jupyter Lab acabou de ser instalado e não tem outro kernel instalado, não tem outra opção disponível ainda.
+
+ é a versão do python instalada no seu Windows. Para saber a versão do python utilizada, rode esse código em uma célula do notebook:
+
+`from platform import python_version
+
+print(python_version())`
+
+No meu caso, com a última versão instalada no sistema, que veio do primeiro passo desse tutorial, a versão apresentada é a 3.13.0
+
+
 ## 3 - instalar o pyenv-win
 
 Agora que instalamos o jupyter, é necessário configurar um ambiente virtual.
