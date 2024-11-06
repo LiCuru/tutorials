@@ -211,84 +211,13 @@ Vamos instalar com o python na última versão instalada usando o kernel  *"Pyth
 
 Repare na mensagem que ele devolve:
 
-`Collecting pandas==1.5.2
-  Downloading pandas-1.5.2.tar.gz (5.2 MB)
-     ---------------------------------------- 0.0/5.2 MB ? eta -:--:--
-     -------------------- ------------------- 2.6/5.2 MB 16.3 MB/s eta 0:00:01
-     ---------------------------------------- 5.2/5.2 MB 14.4 MB/s eta 0:00:00
-  Installing build dependencies: started
-  Installing build dependencies: finished with status 'done'
-  Getting requirements to build wheel: started
-  Getting requirements to build wheel: still running...
-  Getting requirements to build wheel: finished with status 'done'
-  Preparing metadata (pyproject.toml): started
-  Preparing metadata (pyproject.toml): finished with status 'done'
-Collecting numpy==1.23.5
-  Downloading numpy-1.23.5.tar.gz (10.7 MB)
-     ---------------------------------------- 0.0/10.7 MB ? eta -:--:--
-     --------- ------------------------------ 2.6/10.7 MB 13.7 MB/s eta 0:00:01
-     ---------------------- ----------------- 6.0/10.7 MB 14.6 MB/s eta 0:00:01
-     ----------------------------------- ---- 9.4/10.7 MB 15.2 MB/s eta 0:00:01
-     --------------------------------------- 10.7/10.7 MB 14.3 MB/s eta 0:00:00
-  Installing build dependencies: started
-  Installing build dependencies: finished with status 'done'
-  Getting requirements to build wheel: started
-  Getting requirements to build wheel: finished with status 'error'
-Note: you may need to restart the kernel to use updated packages.
-  error: subprocess-exited-with-error
-  
-  Getting requirements to build wheel did not run successfully.
-  exit code: 1
-  
-  [32 lines of output]
-  Traceback (most recent call last):
-    File "C:\Users\ligia\AppData\Local\Programs\Python\Python313\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 353, in <module>
-      main()
-      ~~~~^^
-    File "C:\Users\ligia\AppData\Local\Programs\Python\Python313\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 335, in main
-      json_out['return_val'] = hook(**hook_input['kwargs'])
-                               ~~~~^^^^^^^^^^^^^^^^^^^^^^^^
-    File "C:\Users\ligia\AppData\Local\Programs\Python\Python313\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 112, in get_requires_for_build_wheel
-      backend = _build_backend()
-    File "C:\Users\ligia\AppData\Local\Programs\Python\Python313\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 77, in _build_backend
-      obj = import_module(mod_path)
-    File "C:\Users\ligia\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py", line 88, in import_module
-      return _bootstrap._gcd_import(name[level:], package, level)
-             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-    File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-    File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
-    File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-    File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-    File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-    File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-    File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-    File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
-    File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-    File "C:\Users\ligia\AppData\Local\Temp\pip-build-env-ei5_bv37\overlay\Lib\site-packages\setuptools\__init__.py", line 16, in <module>
-      import setuptools.version
-    File "C:\Users\ligia\AppData\Local\Temp\pip-build-env-ei5_bv37\overlay\Lib\site-packages\setuptools\version.py", line 1, in <module>
-      import pkg_resources
-    File "C:\Users\ligia\AppData\Local\Temp\pip-build-env-ei5_bv37\overlay\Lib\site-packages\pkg_resources\__init__.py", line 2172, in <module>
-      register_finder(pkgutil.ImpImporter, find_on_path)
-                      ^^^^^^^^^^^^^^^^^^^
-  AttributeError: module 'pkgutil' has no attribute 'ImpImporter'. Did you mean: 'zipimporter'?
-  [end of output]
-  
-  note: This error originates from a subprocess, and is likely not a problem with pip.
+![Captura de tela 2024-11-06 232051](https://github.com/user-attachments/assets/5d15e33f-2122-4043-8926-035c5ec5aadd)
 
-[notice] A new release of pip is available: 24.2 -> 24.3.1
-[notice] To update, run: C:\Users\ligia\AppData\Local\Programs\Python\Python313\python.exe -m pip install --upgrade pip
-error: subprocess-exited-with-error
 
-Getting requirements to build wheel did not run successfully.
-exit code: 1
+Leia com atenção. Você vai reparar que o pip faz bem a instalação do pandas versão 1.5.2 , e que depois ele parte para a instalação do numpy versão 1.23.5. Aí ele dá erro. Olhe o final da mensagem de erro:
 
-See above for output.
+![Captura de tela 2024-11-06 232032](https://github.com/user-attachments/assets/99502758-3143-40f4-9a5a-71aae38f6e20)
 
-note: This error originates from a subprocess, and is likely not a problem with pip.`
-
-Leia com atenção. Você vai reparar que o pip faz bem a instalação do pandas versão 1.5.2 , e que depois ele parte para a instalação do numpy versão 1.23.5. Aí ele dá erro. Repare que a mensagem de erro 
 
 
 
