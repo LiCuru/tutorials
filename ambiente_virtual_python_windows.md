@@ -1,12 +1,25 @@
 ## Como instalar o Jupyter Lab e configurar um ambiente virtual do python no Windows
 
-As vezes é necessário configurar um ambiente virtual onde as bibliotecas estejam em versões específicas. E se você conduz mais de um projeto em sua máquina, pode ser necessário configurar um ambiente para cada projeto.
+Esse tutorial explica como que instala o Jupyter Lab no Windows e como que se configura um ambiente virtual com qualquer versão do python para instalação de bibliotecas nas versões requeridas.
 
 ### Por que é necessário saber isso?
-Para instalar certas versões de algumas bibliotecas, muitas vezes não é o suficiente apenas instalar a versão requisitada delas. Por ser também necessário alterar a versão do python na máquina. Isso é porque algumas versões antigas de algumas bibliotecas, ou suas dependências, podem não ter suporte na versão atual do python. Então acaba sendo necessário trocar a versão do python para uma versão mais antiga, de quando aquela dependência, ou aquela biblioteca mesmo, ainda tinha suporte, ainda rodava, no python.
+As vezes é necessário configurar um ambiente virtual onde as bibliotecas estejam em versões específicas. E se você conduz mais de um projeto em sua máquina, pode ser necessário configurar um ambiente para cada projeto.
 
-No caso desse tutorial, ele foi escrito porque para o eixo de IA e Ciência de Dados do AcademiaBB, um processo de certificação interna de TI do BB, são necessárias as instalações das seguintes bibliotecasdo python nas seguintes versões:
+Para instalar certas versões de algumas bibliotecas, muitas vezes não é o suficiente apenas instalar a versão requisitada delas. Por ser também necessário alterar a versão do python. Isso é porque algumas versões antigas de algumas bibliotecas, ou suas dependências, podem não ter suporte na versão atual do python. Então acaba sendo necessário trocar a versão do python para uma versão mais antiga, de quando aquela dependência, ou aquela biblioteca requisitada mesmo, ainda tinha suporte, ainda rodava, naquela versão mais antiga do python.
 
+Esse tutorial também explica como ver quando uma versão de alguma biblioteca não tem suporte na versão atual do python.
+
+No caso desse tutorial, é explicado como configurar um ambiente para o Jupyter Lab com as instalações das seguintes bibliotecasdo python nas seguintes versões:
+
+
+|Biblioteca|Versão|
+|---|---|
+|pandas|1.5.2 ou inferior|
+|numpy|1.23.5 ou inferior|
+|matplotlib|3.5.2 ou inferior|
+|imblearn|0.11.0|
+|seaborn|0.12.2 ou inferior|
+|scikit-learn|1.2.0 ou inferior|
 
 
 ### Passos desse tutorial:
