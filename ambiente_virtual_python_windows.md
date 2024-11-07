@@ -35,7 +35,7 @@ No caso desse tutorial, é explicado como configurar um ambiente para o Jupyter 
 
 
 ## 1 - instalar a versão mais recente do python no Windows
-Primeiro vá no site oficial do python, na parte de downloads para windows (https://www.python.org/downloads/windows/), e selecione a versão correta para a **arquitetura da sua máquina**
+Primeiro vá no [site oficial do python, na parte de downloads para windows] (https://www.python.org/downloads/windows/), e selecione a versão correta para a **arquitetura da sua máquina**
 
 Para saber a arquitetura da sua máquina, vá no cmd (*prompt de comando*). Se você não sabe como encontrar o prompt de comando, procure por "cmd" no menu do windows:
 
@@ -83,7 +83,7 @@ Ele vai aparecer e você pode pedir pra baixar:
 
 
 ### não funcionou, o que eu faço? =(
-Contudo, se isso não funcionar, tem outra opção, que é via prompt de comando (não se esqueça de <ins>**executar o prompt de comando como administrador**</ins>, conforme mostrei no passo 1 deste tutorial). Pelo prompt de comando é possível instalar da forma que é recomendado pelo site oficial do Jupyter (em: https://jupyter.org/install). Nesse site é possível ver que ele recomenda que se use o gerenciador de pacotes pip. Não vá direto igual ele diz digitando `pip install`! primeiro vamos dar upgrade no gerenciador de pacotes pip pra que ele esteja atualizado:
+Contudo, se isso não funcionar, tem outra opção, que é via prompt de comando (não se esqueça de <ins>**executar o prompt de comando como administrador**</ins>, conforme mostrei no passo 1 deste tutorial). Pelo prompt de comando é possível instalar da forma que é recomendado pelo [site oficial do Jupyter](https://jupyter.org/install). Nesse site é possível ver que ele recomenda que se use o gerenciador de pacotes pip. Não vá direto igual ele diz digitando `pip install`! primeiro vamos dar upgrade no gerenciador de pacotes pip pra que ele esteja atualizado:
 
 `python.exe -m pip install --upgrade pip`
 
@@ -198,7 +198,7 @@ Vamos tentar instalar as bibliotecas nas versões requeridas:
 
 Vamos instalar as bibliotecas com o python na última versão instalada usando o kernel  *"Python 3 (ipykernel)"* . No Jupyter mesmo, dentro da célula.
 
-Toda vez que for instalar bibliotecas escolhendo versões específicas, é melhor instalar todas as bibliotecas do ambiente no mesmo comando pip, porque o pip faz o gerenciamento da compatibilidade entre versões do pandas e numpy, por exemplo. Isso é explicado melhor nessa questão do fórum do stack overflow (https://stackoverflow.com/questions/78634235/numpy-dtype-size-changed-may-indicate-binary-incompatibility-expected-96-from). Portanto vamos rodar o seguinte código em uma célula do Jupyter com o kernel  *"Python 3 (ipykernel)"* :
+Toda vez que for instalar bibliotecas escolhendo versões específicas, é melhor instalar todas as bibliotecas do ambiente no mesmo comando pip, porque o pip faz o gerenciamento da compatibilidade entre versões do pandas e numpy, por exemplo. Isso é explicado melhor [nessa questão do fórum do stack overflow](https://stackoverflow.com/questions/78634235/numpy-dtype-size-changed-may-indicate-binary-incompatibility-expected-96-from). Portanto vamos rodar o seguinte código em uma célula do Jupyter com o kernel  *"Python 3 (ipykernel)"* :
 
 `!pip install pandas==1.5.2 numpy==1.23.5 matplotlib==3.5.2 imbalanced-learn==0.11.0 seaborn==0.12.2 scikit-learn==1.2.0`
 
@@ -227,7 +227,7 @@ O ambiente virtual é criado com uma execução de comando do python. Isso que s
 ### Trocando a versão do python
 Trocar de versão do python no Windows, e em qualquer sistema operacional, pode ser muito desafiador e desnecessariamente difícil. Para que seja possível poder trocar de versão com facilidade e organização, foi criado o pyenv. Depois de um tempo, o pyenv teve sua versão adaptada para o Windows, chamado de pyenv-win.
 
-Esse site (https://realpython.com/intro-to-pyenv/) explica como que faz o gerenciamento das diferentes versões do python com o pyenv. Vale a pena ler.
+[O site di Real Python](https://realpython.com/intro-to-pyenv/) explica como que faz o gerenciamento das diferentes versões do python com o pyenv. Vale a pena ler.
 
 ### Instalação do pyenv-win
 A instalação do pyenv-win pode ser de formas diferentes. Seguindo as instruções do página oficial do pyenv-win no GitHub (https://github.com/pyenv-win/pyenv-win/tree/057ba9e97bc5f217ddcffc01768174495c78859a#finish-the-installation) não tem erro. Os passos a seguir são apenas um dos caminhos possíveis das instruções dadas no github do pyenv-win. Escolhi instalar com o pip:
@@ -236,12 +236,12 @@ No cmd execute:
 
 `pip install pyenv-win --target %USERPROFILE%\.pyenv`
 
-No **Power Shell** (não esqueça de executar como administrador) execute, para atualizar as variáveis de ambiente:
+No **PowerShell** (<ins>Atenção, PowerShell não é cmd. Quando for executar o PowerShell, não esqueça de executar como administrador</ins>). No PowerShell execute, para atualizar as variáveis de ambiente:
 
 `[System.Environment]::SetEnvironmentVariable('PYENV',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
 [System.Environment]::SetEnvironmentVariable('PYENV_HOME',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")`
 
-No **Power Shell** também execute, para que o cmd reconheça o comando pyenv:
+No **PowerShell** também execute, para que o cmd reconheça o comando pyenv:
 
 `[System.Environment]::SetEnvironmentVariable('path', $HOME + "\.pyenv\pyenv-win\bin;" + $HOME + "\.pyenv\pyenv-win\shims;" + $env:Path,"User")`
 
