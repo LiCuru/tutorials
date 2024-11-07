@@ -177,7 +177,7 @@ use o comando:
 
 ## 3 - Entendendo qual versão do python usar e porque:
 
-ao instalar o Jupyter Lab no Windows, ele está pronto para ser usado. Contudo, a versão do python do kernel do ambiente padrão utilizado, chamado de  *"Python 3 (ipykernel)"* . Você encontra ele no canto superior direito, como na figura a seguir:
+ao instalar o Jupyter Lab no Windows, ele está pronto para ser usado. Contudo, a versão do python do kernel do ambiente padrão utilizado, chamado de  *"Python 3 (ipykernel)"* . Você encontra ele no canto superior direito, como na figura a seguir (ele está no modo escuro, mas é a mesma coisa que o modo claro):
 
 ![Captura de tela 2024-11-06 213004](https://github.com/user-attachments/assets/226ac221-a492-4f40-bddd-43e6551b8eea)
 
@@ -320,7 +320,39 @@ Ele deverá listar o kernel python3 e o kernel que você acabou de criar. No exe
 
 ![Captura de tela 2024-11-07 164822](https://github.com/user-attachments/assets/984ebf5c-13e0-4ba8-acf3-7a07858b6b79)
 
-Agora feche o jupyter completamente. Se estiver executando em um cmd, feche esse cmd e a janela do jupyter. Inicie novamente.
+### fim da instalação do kernel!
+Saia de dentro do ambiente com o comando:
+
+`deactivate`
+
+Depois de usar `deactivate`, você vai voltar para o sistema normal, e não vai estar mais dentro do ambiente virtual criado, por isso não vai mais aparecer o nome do ambiente entre parênteses no cmd.
+
+Agora feche o jupyter completamente. Se o Jupyter estiver executando em um cmd, feche esse cmd e a janela do jupyter no navegador.
+
+Inicie novamente o Jupyter (não se esqueça de fazer isso de dentro do diretório home se estiver no cmd) e selecione o kernel no canto superior direito:
+
+![Captura de tela 2024-11-06 213004](https://github.com/user-attachments/assets/ed9ee147-f464-46e7-b206-b6a51f45d17e)
+
+![Captura de tela 2024-11-06 213010](https://github.com/user-attachments/assets/019712ce-4388-468e-8ec4-7e072ea27c92)
+
+Repare que ao clicar para selecionar o kernel, o kernel estará listado =D
+No meu caso o nome do kernel que eu criei foi 'desafio', é o que aparece:
+
+![Captura de tela 2024-11-07 165833](https://github.com/user-attachments/assets/65077068-7525-4052-97ba-b6e7ea4d6ddd)
+
+Fim!
+
+### Aviso importante!
+Se você estiver fazendo o academIA e for mandar o notebook para validação, ele vai dar erro com um kernel de nome diferente do kernel padrão. Então, na hora de desenvolver o desafio, desenvolva com o kernel novo, mas na hora de enviar para validação, não pode esquecer de:
+ - selecionar o kernel padrão, chamado de "Python 3 (ipykernel)"
+ - salvar com o kernel padrão selecionado
+Com isso, ele vai rodar o notebook no validador com o kernel padrão. Caso contrário ele vai devolver a mensagem de erro dizendo no final:
+
+NoSuchKernel: No such kernel named nome_do_kernel
+
+### Agora sim!
+Aproveite seu novo ambiente de desenvolvimento! =)
+
 
 
  
