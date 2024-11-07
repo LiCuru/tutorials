@@ -35,7 +35,6 @@ No caso desse tutorial, é explicado como configurar um ambiente para o Jupyter 
 
 
 ## 1 - instalar a versão mais recente do python no Windows
-
 Primeiro vá no site oficial do python, na parte de downloads para windows (https://www.python.org/downloads/windows/), e selecione a versão correta para a **arquitetura da sua máquina**
 
 Para saber a arquitetura da sua máquina, vá no cmd (*prompt de comando*). Se você não sabe como encontrar o prompt de comando, procure por "cmd" no menu do windows:
@@ -109,7 +108,6 @@ Eu prefiro copiar e colar um desses links no navegador do que procurar pelo arqu
 O que acontece é que o Jupyter cria um servidor local, e bota pra funcionar quando ele executa. É um servidor dentro do seu próprio computador. Esse servidor é acessível através desses links que ele apresenta no prompt de comando quando você executa o Jupyter. Acessando o link no seu navegador, você acessa o servidor local com o Jupyter Lab rodando. Ou seja, copiando e colando o link apresentado no seu prompt de comando no seu navegador, você acessa o Jupyter Lab.
 
 ### as pastas no Jupyter estão esquisitas =(
-
 Ok, você copiou o link e colou no navegador e o Jupyter funciona. Só que as pastas são totalmente "aleatórias". Isso é porque se você rodar esse comando direto no prompt de comando assim que ele executa, você vai abrir o jupyter lab no endereço das pastas do sistema do windows:
 
 ![Screenshot (2)](https://github.com/user-attachments/assets/fdd072d5-7d50-4bc8-a41c-48b7d39113e4)
@@ -164,8 +162,7 @@ use o comando:
 `jupyter lab`
 
 ## 3 - Entendendo qual versão do python usar e porque:
-
-ao instalar o Jupyter Lab no Windows, ele está pronto para ser usado. Contudo, a versão do python do kernel do ambiente padrão utilizado, chamado de  *"Python 3 (ipykernel)"* . Você encontra ele no canto superior direito, como na figura a seguir (ele está no modo escuro, mas é a mesma coisa que o modo claro):
+Ao instalar o Jupyter Lab no Windows, ele está pronto para ser usado. Contudo, a versão do python do kernel do ambiente padrão utilizado, chamado de  *"Python 3 (ipykernel)"* . Você encontra ele no canto superior direito, como na figura a seguir (ele está no modo escuro, mas é a mesma coisa que o modo claro):
 
 ![Captura de tela 2024-11-06 213004](https://github.com/user-attachments/assets/226ac221-a492-4f40-bddd-43e6551b8eea)
 
