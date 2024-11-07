@@ -200,7 +200,7 @@ Vamos instalar as bibliotecas com o python na última versão instalada usando o
 
 Toda vez que for instalar bibliotecas escolhendo versões específicas, é melhor instalar todas as bibliotecas do ambiente no mesmo comando pip, porque o pip faz o gerenciamento da compatibilidade entre versões do pandas e numpy, por exemplo. Isso é explicado melhor nessa questão do fórum do stack overflow (https://stackoverflow.com/questions/78634235/numpy-dtype-size-changed-may-indicate-binary-incompatibility-expected-96-from). Portanto vamos rodar o seguinte código em uma célula do Jupyter com o kernel  *"Python 3 (ipykernel)"* :
 
-`pip install pandas==1.5.2 numpy==1.23.5 matplotlib==3.5.2 imbalanced-learn==0.11.0 seaborn==0.12.2 scikit-learn==1.2.0`
+`!pip install pandas==1.5.2 numpy==1.23.5 matplotlib==3.5.2 imbalanced-learn==0.11.0 seaborn==0.12.2 scikit-learn==1.2.0`
 
 Repare na mensagem que ele devolve tentando instalar essas bibliotecas com o python versão 3.13.0:
 
