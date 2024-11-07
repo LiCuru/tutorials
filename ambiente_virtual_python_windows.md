@@ -54,18 +54,11 @@ Toda vez que for utilizar o prompt de comando, execute como administrador. Sem a
 
 **Dica importante**: Toda vez que for copiar ou colar qualquer coisa no cmd (prompt de comando) do windows, utilize o botão direito do mouse. O botão direito do mouse é a mesma coisa que CTRL + C ou CTRL + V no cmd do Windows.
 
-
-
-
-Uma vez no prompt de comando, digite `wmic os get osarchitecture`. Ele vai devolver qual é a arquitetura da sua máquina como na figura abaixo:
-
+Uma vez no prompt de comando, digite `wmic os get osarchitecture`. Ele vai devolver qual é a arquitetura da sua máquina como na figura abaixo (a sua máquina tem uma arquitetura própria, e o resultado pode ser diferente):
 
 ![Screenshot 2024-11-07 180616](https://github.com/user-attachments/assets/757f93be-7528-44e6-bd7e-046be037bfcf)
 
-
-
-
-Sabendo a arquitetura da sua máquina, vá em downloads para Windows no site oficial do python (neste link: https://www.python.org/downloads/windows/), em "*Stable Releases*" (versões estáveis, que já passaram da "fase de teste", por assim dizer, e não tem muitos bugs), e escolha o instalador do Windows (*Windows installer*) para o python que <ins>**corresponda com a arquitetura da sua máquina**</ins>:
+Sabendo a arquitetura **da sua máquina**, vá em downloads para Windows no site oficial do python, em "*Stable Releases*" (versões estáveis, que já passaram da "fase de teste", por assim dizer, e não tem muitos bugs), e escolha o instalador do Windows (*Windows installer*) para o python que corresponda com a arquitetura da sua máquina:
 
  ![Screenshot 2024-11-03 165114](https://github.com/user-attachments/assets/ff4fb9c5-d90c-4dde-ac4c-72c612b421cb)
 
