@@ -309,7 +309,7 @@ Para criar o kernel, primeiro precisamos instalar o Ipython. É o Ipython que pr
 
 `pip install ipython`
 
-Uma vez instalar o ipython, podemos instalar o kernel executando:
+Uma vez instalado o Ipython, podemos instalar o kernel executando:
 
 `pip install ipykernel`
 
