@@ -232,54 +232,23 @@ Trocar de versão do python no Windows, e em qualquer sistema operacional, pode 
 
 Esse site (https://realpython.com/intro-to-pyenv/) explica como que faz o manejo das diferentes versões do python com o pyenv. Vale a pena ler.
 
-Para instalar o pyenv-win, acesse prompt de comando como administrador, e execute:
+A instalação do pyenv-win pode ser de formas diferentes. Seguindo as instruções do página oficial do pyenv-win no GitHub (https://github.com/pyenv-win/pyenv-win/tree/057ba9e97bc5f217ddcffc01768174495c78859a#finish-the-installation) não tem erro. Os passos a seguir são apenas um espelho do que é recomendado no github do pyenv-win.
 
-`pip install pyenv-win`
+A instalação que eu fiz foi com o pip:
 
-Uma vez instalado, ainda não tem como acessar o pyenv-win através do prompt de comando, porque a pasta onde fica o binário do pyenv-win ainda não está na variável path. Isso quer dizer que quando você digita "pyenv" no cmd, ele não encontra esse comando em lugar nenhum. Então o próximo passo é adicionar a pasta do binário à variável path do Windows para que ele encontre o pyenv e outras funcionalidades dele. Para adicionar, primeiro é necessário encontrar onde fica a pasta to pyenv-win. Se você repetir o comando: 
+no cmd execute: `pip install pyenv-win --target %USERPROFILE%\.pyenv`
 
-`pip install pyenv-win`
+no power shell execute:
 
-Ele vai informar que o pyenv-win já está instalado e onde está instalado.A figura abaixo explica melhor:
-
-![Captura de tela 2024-11-03 195413](https://github.com/user-attachments/assets/c5e8bb45-fc7b-4d1c-ae5c-6bd28ddcd2ee)
-
-
-Copie esse endereço da instalação e adicione "\pyenv-win\bin" e "\pyenv-win\shims". Assim você cria o "C:\Caminho\Para\O\pyenv-win\bin" e o "C:\Caminho\Para\O\pyenv-win\shims". No meu caso, por exemplo, o endereço é: 
-
-*c:\users\ligia\appdata\local\programs\python\python313\lib\site-packages*
-
-então eu adiciono:
- - *\pyenv-win\bin*
- - *\pyenv-win\shims*
-
-no final, fica assim:
- - *c:\users\ligia\appdata\local\programs\python\python313\lib\site-packages\pyenv-win\bin*
- - *c:\users\ligia\appdata\local\programs\python\python313\lib\site-packages\pyenv-win\shims*
-
-Mas é importante frisar que cada computador é diferente, e que você tem que achar qual é o seu:
- -  *C:\Caminho\Para\O\pyenv-win\bin* 
- -  *C:\Caminho\Para\O\pyenv-win\shims*  
+`[System.Environment]::SetEnvironmentVariable('PYENV',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
+[System.Environment]::SetEnvironmentVariable('PYENV_HOME',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")`
 
 
-Depois que você achou os caminhos, vá nas variáveis do ambiente do windows, e adicione ambos os endereços à variável PATH conforme as figuras abaixo. O seu computador pode estar um pouco diferente. Se estiver um pouco diferente, não vai estar tão diferente. O importante é adicionar ao PATH:
 
-![Captura de tela 2024-11-03 195927](https://github.com/user-attachments/assets/040727d7-55eb-487c-9809-c3a85a9d7813)
-
-![Captura de tela 2024-11-03 195942](https://github.com/user-attachments/assets/d744a4be-48c0-4890-87a8-fd81d408a9b9)
-
-![Captura de tela 2024-11-03 200044](https://github.com/user-attachments/assets/4a80e44d-2644-4ee4-82dd-92360c523665)
-
-![Captura de tela 2024-11-03 202634](https://github.com/user-attachments/assets/27836d9b-ef8d-4f77-9ea0-142559560ff3)
-
-
-![Captura de tela 2024-11-03 200224](https://github.com/user-attachments/assets/133d375c-c802-4006-afdc-f3f778e741bf)
-
-Isso é o suficiente para que o pyenv seja reconhecido quando se digita pyenv no cmd. Mas toda vez que a gente digitar 'python' no cmd, ele vai apenas encontrar a versão do python instalada originalmente no sistema, e não a instalada e escolhida pelo pyenv. Por isso é necessário também fazer com que o sistema reconheça o termo "python" como a versão escolhida pelo pyenv, seja essa versão a original instalada no passo 1 desse tutorial, ou outra versão escolhida no pyenv.
 
 ## 5 - alterar a versão do python para versões mais antigas com o pyenv-win
 
-Para instalar uma versão anterior do python, no caso, vou instalar a versão 3.10.5, utilize o comando:
+Para instalar uma versão anterior do python (no caso, vou instalar a versão 3.10.5) utilize o comando:
 
 `pyenv install 3.10.5`
 
