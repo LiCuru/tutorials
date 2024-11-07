@@ -233,13 +233,16 @@ Esse site (https://realpython.com/intro-to-pyenv/) explica como que faz o gerenc
 A instalação do pyenv-win pode ser de formas diferentes. Seguindo as instruções do página oficial do pyenv-win no GitHub (https://github.com/pyenv-win/pyenv-win/tree/057ba9e97bc5f217ddcffc01768174495c78859a#finish-the-installation) não tem erro. Os passos a seguir são apenas um dos caminhos possíveis das instruções dadas no github do pyenv-win. Escolhi instalar com o pip:
 
 No cmd execute:
+
 `pip install pyenv-win --target %USERPROFILE%\.pyenv`
 
 No **Power Shell** execute, para atualizar as variáveis de ambiente:
+
 `[System.Environment]::SetEnvironmentVariable('PYENV',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
 [System.Environment]::SetEnvironmentVariable('PYENV_HOME',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")`
 
 No **Power Shell** também execute, para que o cmd reconheça o comando pyenv:
+
 `[System.Environment]::SetEnvironmentVariable('path', $HOME + "\.pyenv\pyenv-win\bin;" + $HOME + "\.pyenv\pyenv-win\shims;" + $env:Path,"User")`
 
 
