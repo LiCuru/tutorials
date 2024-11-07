@@ -155,7 +155,7 @@ Veja como funciona no exemplo abaixo:
 
 Então é isso. Se você quiser fechar o Jupyter porque ele está acessando uma pasta que não te interessa, digite `Ctrl + C` no prompt de comando onde ele está rodando e apresentando os links para acesso. Vai levar uns segundos, mas ele vai terminar o processo. Em seguida navegue até a pasta que é do seu interesse, e só então execute o `jupyter lab`.
 
-### depois de acessar a pasta que você quer trabalhar:
+### depois de acessar a pasta onde você quer trabalhar:
 
 use o comando:
 
