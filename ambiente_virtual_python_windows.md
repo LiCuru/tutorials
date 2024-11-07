@@ -335,7 +335,7 @@ Saia de dentro do ambiente com o comando:
 
 `deactivate`
 
-Depois de usar `deactivate`, você vai voltar para o sistema normal, e não vai estar mais dentro do ambiente virtual criado, por isso não vai mais aparecer o nome do ambiente entre parênteses no cmd.
+Depois de usar `deactivate`, você vai voltar para o sistema normal, e não vai estar mais dentro do ambiente virtual criado, por isso não vai mais aparecer o nome do ambiente no cmd.
 
 Agora feche o jupyter completamente. Se o Jupyter estiver executando em um cmd, feche esse cmd e a janela do jupyter no navegador.
 
