@@ -71,7 +71,7 @@ Antes de prosseguir com a instalação, autorize os privilégios de administrado
 
 Clique em "Install Now" (O meu diz "64-bit" mas o seu pode diferente, dependendo da sua arquitetura).
 
-Feche o cmd (prompt de comando) e abra novamente (não esqueça de executar como administrador)
+Feche o cmd (prompt de comando) e abra novamente (não esqueça de [executar como administrador](#execute_administrador))
 
 ## 2 - instalar o jupyter lab no Windows
 
@@ -256,7 +256,7 @@ Pronto. O pyenv-win está instalado.
 
 ## 5 - alterar a versão do python para uma versão mais antiga com o pyenv-win
 
-Feche o cmd, e abra um novo como administrador.
+Feche o cmd, e abra um novo [como administrador](#execute_administrador).
 Vá até o diretório home no cmd.
 
 Para instalar uma versão anterior do python (no caso, vou instalar a versão 3.10.5):
