@@ -138,9 +138,9 @@ Então é necessário ir no endereço da pasta que você quer disponível nos ar
 
 ![Screenshot 2024-11-03 181816](https://github.com/user-attachments/assets/1896996a-5799-4cce-a234-3dbbbaba6b85)
 
-### diretório de dados do usuário
+### diretório home, ou home directory e navegação entre pastas no cmd
 
-Nesse exemplo eu decidi ir para o diretório onde fica os dados de usuário (Downloads, Desktop, Documentos, etc...). Se a gente não souber onde fica esse diretório, a gente fica meio perdido. O endereço desse diretório fica disponível para consulta quando você acessa o prompt de comando executando direto, sem executar como administrador:
+Nesse exemplo eu decidi ir para o diretório home, home directory, onde fica os dados de usuário (Downloads, Desktop, Documentos, etc...). Se a gente não souber onde fica esse diretório, a gente fica meio perdido. O endereço desse diretório fica disponível para consulta quando você acessa o prompt de comando executando direto, sem executar como administrador:
 
 ![Screenshot 2024-11-03 180647](https://github.com/user-attachments/assets/95b1a2c9-3334-4a89-988a-545cf0a47d72)
 
@@ -238,19 +238,94 @@ A instalação que eu fiz foi com o pip:
 
 no cmd execute: `pip install pyenv-win --target %USERPROFILE%\.pyenv`
 
-no power shell execute:
+no **Power Shell** execute, para atualizar as variáveis de ambiente:
 
 `[System.Environment]::SetEnvironmentVariable('PYENV',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
 [System.Environment]::SetEnvironmentVariable('PYENV_HOME',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")`
 
+no **Power Shell** também execute, para que o cmd reconheça o comando pyenv:
+
+`[System.Environment]::SetEnvironmentVariable('path', $HOME + "\.pyenv\pyenv-win\bin;" + $HOME + "\.pyenv\pyenv-win\shims;" + $env:Path,"User")`
 
 
+## 5 - alterar a versão do python para uma versão mais antiga com o pyenv-win
 
-## 5 - alterar a versão do python para versões mais antigas com o pyenv-win
+Vá até o diretório home no cmd.
 
-Para instalar uma versão anterior do python (no caso, vou instalar a versão 3.10.5) utilize o comando:
+Para instalar uma versão anterior do python (no caso, vou instalar a versão 3.10.5):
 
 `pyenv install 3.10.5`
+
+Para dar update no shims execute (conforme explicado nesse tópico do stack overflow https://stackoverflow.com/questions/29753592/pyenv-shim-not-created-when-installing-package-using-setup-py):
+
+`pyenv rehash`
+
+Defina o python global como sendo a versão instalada:
+
+`pyenv global 3.10.5`
+
+Ao testar a versão do python na máquina, você deverá ver a versão instalada:
+
+`python -V`
+
+Ele deverá retornar como mensagem o python na versão instalada, nesse caso é o python 3.10.5
+
+## 6 - criar um ambiente virtual no windows com uma versão escolhida do python
+Conforme explicado no site oficial do python (https://docs.python.org/3/library/venv.html), crie um ambiente no diretório de sua escolha:
+
+`python -m venv \caminho\para\o\ambiente`
+
+O ambiente é um diretório por si só. No caso, resolvi gravar na pasta Desktop um ambiente chamado 'desafio':
+
+![Captura de tela 2024-11-07 161325](https://github.com/user-attachments/assets/05329e6c-e56c-4e0a-b775-66488b3b906b)
+
+Com isso foi criado um ambiente com o python versão 3.10.5
+
+## 7 - instalar as bibliotecas requeridas no ambiente virtual criado
+Para acessar no cmd o ambiente:
+
+`C:\> <venv>\Scripts\activate.bat`
+
+O que quer dizer que, no meu caso, seria:
+
+![Captura de tela 2024-11-07 162114](https://github.com/user-attachments/assets/e3927408-f9e3-4131-80b4-8c80cfcb06bd)
+
+Repara que ele sinaliza que está dentro do ambiente virtual, mencionando ele entre parênteses. Os comandos dados dentro do ambiente mencionado  *(desafio)* são comandos que ficam contidos dentro do ambiente  *desafio* . Uma vez dentro, podemos fazer as instalações com:
+
+`pip install pandas==1.5.2 numpy==1.23.5 matplotlib==3.5.2 imbalanced-learn==0.11.0 seaborn==0.12.2 scikit-learn==1.2.0`
+
+## 8 - criar um kernel do ipython dentro do ambiente virtual
+Para criar o kernel, primeiro precisamos instalar o ipython (site oficial: https://ipython.org/). É o ipython que provê a estrutura para que interfaces de usuário gráficas rodem, assim como o shell, e também o kernel para que o python rode no Jupyter acessando as bibliotecas instaladas. Para instalar o ipython:
+
+`pip install ipython`
+
+Uma vez instalar o ipython, podemos instalar o kernel:
+
+`pip install ipykernel`
+
+## 9 - adicionar esse kernel no leque de opções de kernel do jupyter lab
+Para finalmente ter o kernel listado no Jupyter. Escolha um nome para o kernel:
+
+`ipython kernel install --name "nome_do_kernel" --user`
+
+ No meu caso, chamei o kernel de 'desafio':
+ 
+![Captura de tela 2024-11-07 164623](https://github.com/user-attachments/assets/49ab32cf-ce19-4bca-8efe-523527a5d506)
+
+Para se certificar de que o kernel está listado nos kernels disponíveis no Jupyter:
+
+`jupyter kernelspec list`
+
+Ele deverá listar o kernel python3 e o kernel que você acabou de criar. No exemplo do meu computador:
+
+![Captura de tela 2024-11-07 164822](https://github.com/user-attachments/assets/984ebf5c-13e0-4ba8-acf3-7a07858b6b79)
+
+Agora feche o jupyter completamente. Se estiver executando em um cmd, feche esse cmd e a janela do jupyter. Inicie novamente.
+
+
+ 
+
+
 
 
 
