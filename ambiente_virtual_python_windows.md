@@ -254,7 +254,7 @@ Para instalar uma versão anterior do python (no caso, vou instalar a versão 3.
 
 `pyenv install 3.10.5`
 
-Para dar update no shims execute (conforme explicado nesse tópico do stack overflow https://stackoverflow.com/questions/29753592/pyenv-shim-not-created-when-installing-package-using-setup-py):
+Para dar update no shims execute [conforme explicado nesse tópico do stack overflow](https://stackoverflow.com/questions/29753592/pyenv-shim-not-created-when-installing-package-using-setup-py):
 
 `pyenv rehash`
 
@@ -269,7 +269,7 @@ Ao testar a versão do python na máquina, você deverá ver a versão instalada
 Ele deverá retornar como mensagem o python na versão instalada, nesse caso é o python 3.10.5
 
 ## 6 - criar um ambiente virtual no windows com uma versão escolhida do python
-Conforme explicado no site oficial do python (https://docs.python.org/3/library/venv.html), crie um ambiente no diretório de sua escolha:
+Conforme explicado na [documentação do python](https://docs.python.org/3/library/venv.html), crie um ambiente no diretório de sua escolha:
 
 `python -m venv \caminho\para\o\ambiente`
 
@@ -293,7 +293,7 @@ Repara que ele sinaliza que está dentro do ambiente virtual, mencionando ele en
 `pip install pandas==1.5.2 numpy==1.23.5 matplotlib==3.5.2 imbalanced-learn==0.11.0 seaborn==0.12.2 scikit-learn==1.2.0`
 
 ## 8 - criar um kernel do ipython dentro do ambiente virtual
-Para criar o kernel, primeiro precisamos instalar o ipython (site oficial: https://ipython.org/). É o ipython que provê a estrutura para que interfaces de usuário gráficas rodem, assim como o shell, e também o kernel para que o python rode no Jupyter acessando as bibliotecas instaladas. Para instalar o ipython:
+Para criar o kernel, primeiro precisamos instalar o Ipython. É o Ipython que provê a estrutura para que interfaces de usuário gráficas rodem, assim como o shell, e também o kernel para que o python rode no Jupyter acessando as bibliotecas instaladas. Você pode entender melhor sobre o Ipython visitando o [site oficial do Ipython](https://ipython.org/) Para instalar o ipython:
 
 `pip install ipython`
 
