@@ -228,7 +228,7 @@ Agora que instalamos o jupyter, é necessário criar um ambiente virtual novo, c
 
 O ambiente virtual é criado com uma execução de comando do python. Isso que significa que a versão do python utilizada vai ser a versão do python do ambiente virtual. Então é preciso trocar de versão do python para depois executar o comando que cria o ambiente virtual.
 
-Trocar de versão do python no Windows, e em qualquer sistema operacional, pode ser muito desafiador e desnecessariamente difícil. Para que seja possível poder trocar de versão com facilidade e organização, foi criado o pyenv. Depois de um tempo o pyenv teve sua versão adaptada para o Windows, chamado de pyenv-win.
+Trocar de versão do python no Windows, e em qualquer sistema operacional, pode ser muito desafiador e desnecessariamente difícil. Para que seja possível poder trocar de versão com facilidade e organização, foi criado o pyenv. Depois de um tempo, o pyenv teve sua versão adaptada para o Windows, chamado de pyenv-win.
 
 Esse site (https://realpython.com/intro-to-pyenv/) explica como que faz o manejo das diferentes versões do python com o pyenv. Vale a pena ler.
 
@@ -236,7 +236,7 @@ Para instalar o pyenv-win, acesse prompt de comando como administrador, e execut
 
 `pip install pyenv-win`
 
-Uma vez instalado, ainda não tem como acessar o pyenv-win através do prompt de comando porque a pasta onde fica o binário do pyenv-win ainda não está na variável path. Isso quer dizer que quando você digita "pyenv" no cmd, ele não encontra esse comando em lugar nenhum. Então o próximo passo é adicionar a pasta do binário à variável path do Windows para que ele encontre o pyenv e outras funcionalidades dele. Para adicionar, primeiro é necessário encontrar onde fica a pasta to pyenv-win. Se você repetir o comando: 
+Uma vez instalado, ainda não tem como acessar o pyenv-win através do prompt de comando, porque a pasta onde fica o binário do pyenv-win ainda não está na variável path. Isso quer dizer que quando você digita "pyenv" no cmd, ele não encontra esse comando em lugar nenhum. Então o próximo passo é adicionar a pasta do binário à variável path do Windows para que ele encontre o pyenv e outras funcionalidades dele. Para adicionar, primeiro é necessário encontrar onde fica a pasta to pyenv-win. Se você repetir o comando: 
 
 `pip install pyenv-win`
 
@@ -245,7 +245,7 @@ Ele vai informar que o pyenv-win já está instalado e onde está instalado.A fi
 ![Captura de tela 2024-11-03 195413](https://github.com/user-attachments/assets/c5e8bb45-fc7b-4d1c-ae5c-6bd28ddcd2ee)
 
 
-Copie esse endereço da instalação e adicione "\pyenv-win\bin" e "\pyenv-win\shims". Assim você criar o "C:\Caminho\Para\O\pyenv-win\bin" e o "C:\Caminho\Para\O\pyenv-win\shims". No meu caso, por exemplo, o endereço é: 
+Copie esse endereço da instalação e adicione "\pyenv-win\bin" e "\pyenv-win\shims". Assim você cria o "C:\Caminho\Para\O\pyenv-win\bin" e o "C:\Caminho\Para\O\pyenv-win\shims". No meu caso, por exemplo, o endereço é: 
 
 *c:\users\ligia\appdata\local\programs\python\python313\lib\site-packages*
 
