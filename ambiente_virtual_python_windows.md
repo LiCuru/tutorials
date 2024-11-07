@@ -237,7 +237,11 @@ No cmd execute:
 
 `pip install pyenv-win --target %USERPROFILE%\.pyenv`
 
-No **PowerShell** (<ins>Atenção, PowerShell não é cmd. Quando for executar o PowerShell, não esqueça de executar como administrador</ins>). No PowerShell execute, para atualizar as variáveis de ambiente:
+No **PowerShell**. <ins>Atenção, PowerShell não é cmd. Quando for executar o PowerShell, não esqueça de executar como administrador</ins>:
+
+![Screenshot 2024-11-07 193112](https://github.com/user-attachments/assets/2c09a758-81e0-4a1d-a14d-df3b637147e3)
+
+No PowerShell execute, para atualizar as variáveis de ambiente:
 
 `[System.Environment]::SetEnvironmentVariable('PYENV',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
 [System.Environment]::SetEnvironmentVariable('PYENV_HOME',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")`
@@ -246,9 +250,11 @@ No **PowerShell** também execute, para que o cmd reconheça o comando pyenv:
 
 `[System.Environment]::SetEnvironmentVariable('path', $HOME + "\.pyenv\pyenv-win\bin;" + $HOME + "\.pyenv\pyenv-win\shims;" + $env:Path,"User")`
 
+Pronto. O pyenv-win está instalado.
 
 ## 5 - alterar a versão do python para uma versão mais antiga com o pyenv-win
 
+Feche o cmd, e abra um novo como administrador.
 Vá até o diretório home no cmd.
 
 Para instalar uma versão anterior do python (no caso, vou instalar a versão 3.10.5):
