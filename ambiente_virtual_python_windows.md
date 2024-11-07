@@ -86,7 +86,7 @@ Ele vai aparecer e você pode pedir pra baixar:
 ### não funcionou, o que eu faço? =(
 Contudo, se isso não funcionar, tem outra opção, que é via prompt de comando (não se esqueça de <ins>**executar o prompt de comando como administrador**</ins>, conforme mostrei no passo 1 deste tutorial). Pelo prompt de comando é possível instalar da forma que é recomendado pelo site oficial do Jupyter (em: https://jupyter.org/install). Nesse site é possível ver que ele recomenda que se use o gerenciador de pacotes pip. Não vá direto igual ele diz digitando `pip install`! primeiro vamos dar upgrade no gerenciador de pacotes pip pra que ele esteja atualizado:
 
-`python -m ensurepip --upgrade`
+`python.exe -m pip install --upgrade pip`
 
 Agora sim, com o gerenciador de pacotes pip atualizado, podemos seguir conforme recomenda o site do Jupyter Lab:
 
