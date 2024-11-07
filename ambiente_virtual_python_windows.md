@@ -68,7 +68,7 @@ Antes de prosseguir com a instalação, autorize os privilégios de administrado
 
 ![Screenshot (19)](https://github.com/user-attachments/assets/8f34d149-612b-4198-881c-8fc7fd59240d)
 
-clicando em "Install Now" (O meu diz "64-bit" mas o seu pode diferente, dependendo da arquitetura).:
+clicando em "Install Now" (O meu diz "64-bit" mas o seu pode diferente, dependendo da sua arquitetura).:
 
 ## 2 - instalar o jupyter lab no Windows
 
