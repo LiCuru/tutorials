@@ -170,7 +170,7 @@ Se você deixar o mouse em cima dele, vai ver que ele tem a opção de trocar de
 
 ![Captura de tela 2024-11-06 213010](https://github.com/user-attachments/assets/e63fa639-f8ac-4439-9dbc-4a0a37b9fe19)
 
-Clicando no Python 3 (ipykernel), você pode escolher qual kernel utilizar. Como o Jupyter Lab acabou de ser instalado e não tem outro kernel instalado, não tem outra opção disponível ainda. A versão do python desse kernel e seu ambiente virtual é a versão do python instalada no seu Windows. Para saber a versão do python utilizada, rode esse código em uma célula do notebook:
+Clicando no Python 3 (ipykernel), você pode escolher qual kernel utilizar. Como o Jupyter Lab acabou de ser instalado e não tem outro kernel instalado, não tem outra opção disponível ainda. A versão do python desse kernel e seu ambiente virtual é a versão do python instalada no seu Windows. Para saber a versão do python utilizada, rode esse código em uma célula do notebook do Jupyter:
 
 `from platform import python_version`
 
@@ -178,7 +178,11 @@ Clicando no Python 3 (ipykernel), você pode escolher qual kernel utilizar. Como
 
 No meu caso, com a última versão instalada no sistema, que veio do primeiro passo desse tutorial, a versão apresentada é a  *3.13.0* . O seu pode ser diferente, dependendo da época em que você siga este tutorial (dependendo de qual python foi instalado no passo 1).
 
-### Entendendo a questão com as bibliotecas
+Repare que é mesma versão que ele apresenta se você for ver qual a versão no python no cmd e digitar:
+
+`python -V`
+
+### Entendendo o incompatibilidade as bibliotecas antigas com versões recentes do python
 Vamos tentar instalar as bibliotecas nas versões requeridas:
 
 |Biblioteca|Versão|
