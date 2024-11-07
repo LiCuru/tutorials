@@ -356,7 +356,9 @@ Fim!
 ### Aviso importante!
 Se você estiver fazendo o academIA e for mandar o notebook para validação, ele vai dar erro com um kernel de nome diferente do kernel padrão. Então, na hora de desenvolver o desafio, desenvolva com o kernel novo, mas na hora de enviar para validação, não pode esquecer de:
  - selecionar o kernel padrão, chamado de "Python 3 (ipykernel)"
- - salvar com o kernel padrão selecionado
+ - salvar com o kernel "Python 3 (ipykernel)" padrão selecionado
+
+
 Com isso, ele vai rodar o notebook no validador com o kernel padrão. Caso contrário ele vai devolver a mensagem de erro dizendo no final:  *NoSuchKernel: No such kernel named nome_do_kernel* 
 
 ### Agora sim!
