@@ -236,7 +236,7 @@ No cmd execute:
 
 `pip install pyenv-win --target %USERPROFILE%\.pyenv`
 
-No **Power Shell** execute, para atualizar as variáveis de ambiente:
+No **Power Shell** (não esqueça de executar como administrador) execute, para atualizar as variáveis de ambiente:
 
 `[System.Environment]::SetEnvironmentVariable('PYENV',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
 [System.Environment]::SetEnvironmentVariable('PYENV_HOME',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")`
