@@ -238,7 +238,7 @@ No cmd execute:
 
 `pip install pyenv-win --target %USERPROFILE%\.pyenv`
 
-No **PowerShell**. <ins>Atenção, PowerShell não é cmd. Quando for executar o PowerShell, não esqueça de executar como administrador</ins>:
+No **PowerShell**. <ins>Atenção, PowerShell não é cmd</ins>. Também não esqueça, quando for executar o PowerShell, de executar como administrador:
 
 ![Screenshot 2024-11-07 193112](https://github.com/user-attachments/assets/89c3570d-e561-4287-851e-31a79802fa82)
 
