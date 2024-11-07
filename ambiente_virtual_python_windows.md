@@ -182,7 +182,7 @@ Repare que é mesma versão que ele apresenta se você for ver qual a versão no
 
 `python -V`
 
-### Entendendo o incompatibilidade as bibliotecas antigas com versões recentes do python
+### Entendendo a incompatibilidade das bibliotecas antigas com versões recentes do python
 Vamos tentar instalar as bibliotecas nas versões requeridas:
 
 |Biblioteca|Versão|
