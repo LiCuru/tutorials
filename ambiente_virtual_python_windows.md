@@ -288,6 +288,9 @@ O ambiente não deixa de ser também um diretório por si só. No caso, resolvi 
 
 Com isso foi criado um ambiente (e um diretório) chamado 'desafio' com o python versão 3.10.5
 
+![Screenshot 2024-11-07 194638](https://github.com/user-attachments/assets/a898d00c-6534-4888-bf42-0300081ff6f1)
+
+
 ## 7 - instalar as bibliotecas requeridas no ambiente virtual criado
 Para acessar no cmd o ambiente:
 
