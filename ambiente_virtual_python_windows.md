@@ -59,7 +59,8 @@ Toda vez que for utilizar o prompt de comando, execute como administrador. Sem a
 
 Uma vez no prompt de comando, digite `wmic os get osarchitecture`. Ele vai devolver qual é a arquitetura da sua máquina como na figura abaixo:
 
-![Screenshot 2024-11-03 164558](https://github.com/user-attachments/assets/0a2ed3e4-34d2-4748-8382-c491dd634266)
+
+![Screenshot 2024-11-07 180616](https://github.com/user-attachments/assets/757f93be-7528-44e6-bd7e-046be037bfcf)
 
 
 
