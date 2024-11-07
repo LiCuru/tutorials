@@ -292,7 +292,7 @@ Com isso foi criado um ambiente (e um diretório) chamado 'desafio' com o python
 
 
 ## 7 - instalar as bibliotecas requeridas no ambiente virtual criado
-Para acessar no cmd o ambiente:
+Para acessar no cmd o ambiente, execute:
 
 `C:\> <venv>\Scripts\activate.bat`
 
@@ -300,21 +300,21 @@ O que quer dizer que, no meu caso, seria:
 
 ![Captura de tela 2024-11-07 162114](https://github.com/user-attachments/assets/e3927408-f9e3-4131-80b4-8c80cfcb06bd)
 
-Repara que ele sinaliza que está dentro do ambiente virtual, mencionando ele entre parênteses. Os comandos dados dentro do ambiente mencionado  *(desafio)* são comandos que ficam contidos dentro do ambiente  *desafio* . Uma vez dentro, podemos fazer as instalações com:
+Repara que ele sinaliza que está dentro do ambiente virtual, mencionando ele entre parênteses. Os comandos dados dentro do ambiente mencionado  *(desafio)* são comandos que ficam contidos dentro do ambiente  *desafio* . Uma vez dentro, podemos fazer as instalações com o comando:
 
 `pip install pandas==1.5.2 numpy==1.23.5 matplotlib==3.5.2 imbalanced-learn==0.11.0 seaborn==0.12.2 scikit-learn==1.2.0`
 
 ## 8 - criar um kernel do ipython dentro do ambiente virtual
-Para criar o kernel, primeiro precisamos instalar o Ipython. É o Ipython que provê a estrutura para que interfaces de usuário gráficas rodem, assim como o shell, e também o kernel para que o python rode no Jupyter acessando as bibliotecas instaladas. Você pode entender melhor sobre o Ipython visitando o [site oficial do Ipython](https://ipython.org/) Para instalar o ipython:
+Para criar o kernel, primeiro precisamos instalar o Ipython. É o Ipython que provê a estrutura para que interfaces de usuário gráficas rodem, assim como o shell, e também o kernel para que o python rode no Jupyter acessando as bibliotecas instaladas. Você pode entender melhor sobre o Ipython visitando o [site oficial do Ipython](https://ipython.org/) Para instalar o ipython, execute:
 
 `pip install ipython`
 
-Uma vez instalar o ipython, podemos instalar o kernel:
+Uma vez instalar o ipython, podemos instalar o kernel executando:
 
 `pip install ipykernel`
 
 ## 9 - adicionar esse kernel no leque de opções de kernel do jupyter lab
-Para finalmente ter o kernel listado no Jupyter. Escolha um nome para o kernel:
+Para finalmente ter o kernel listado no Jupyter. Escolha um nome para o kernel executando:
 
 `ipython kernel install --name "nome_do_kernel" --user`
 
@@ -322,7 +322,7 @@ Para finalmente ter o kernel listado no Jupyter. Escolha um nome para o kernel:
  
 ![Captura de tela 2024-11-07 164623](https://github.com/user-attachments/assets/49ab32cf-ce19-4bca-8efe-523527a5d506)
 
-Para se certificar de que o kernel está listado nos kernels disponíveis no Jupyter:
+Para se certificar de que o kernel está listado nos kernels disponíveis no Jupyter execute:
 
 `jupyter kernelspec list`
 
