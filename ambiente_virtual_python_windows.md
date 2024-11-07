@@ -127,7 +127,7 @@ Então é necessário ir no endereço da pasta que você quer disponível nos ar
 
 ![Screenshot 2024-11-03 181816](https://github.com/user-attachments/assets/1896996a-5799-4cce-a234-3dbbbaba6b85)
 
-### Sobre o diretório home, home directory, e mudar de diretório no cmd
+### Sobre o diretório home, home directory, e como mudar de diretório no cmd
 Nesse exemplo eu decidi ir para o diretório home, home directory, onde fica os dados de usuário (Downloads, Desktop, Documentos, etc...). Se a gente não souber onde fica esse diretório, a gente fica meio perdido. O endereço desse diretório é de onde parte o cmd quando você executa sem ser como administrador, ficando disponível para consulta:
 
 ![Screenshot 2024-11-03 180647](https://github.com/user-attachments/assets/95b1a2c9-3334-4a89-988a-545cf0a47d72)
