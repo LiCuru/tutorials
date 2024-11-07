@@ -227,7 +227,7 @@ O ambiente virtual é criado com uma execução de comando do python. Isso que s
 ### Trocando a versão do python
 Trocar de versão do python no Windows, e em qualquer sistema operacional, pode ser muito desafiador e desnecessariamente difícil. Para que seja possível poder trocar de versão com facilidade e organização, foi criado o pyenv. Depois de um tempo, o pyenv teve sua versão adaptada para o Windows, chamado de pyenv-win.
 
-[O site di Real Python](https://realpython.com/intro-to-pyenv/) explica como que faz o gerenciamento das diferentes versões do python com o pyenv. Vale a pena ler.
+[O site do Real Python](https://realpython.com/intro-to-pyenv/) explica como que faz o gerenciamento das diferentes versões do python com o pyenv. Vale a pena ler.
 
 ### Instalação do pyenv-win
 A instalação do pyenv-win pode ser de formas diferentes. Seguindo as instruções do página oficial do pyenv-win no GitHub (https://github.com/pyenv-win/pyenv-win/tree/057ba9e97bc5f217ddcffc01768174495c78859a#finish-the-installation) não tem erro. Os passos a seguir são apenas um dos caminhos possíveis das instruções dadas no github do pyenv-win. Escolhi instalar com o pip:
