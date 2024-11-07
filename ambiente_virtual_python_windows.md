@@ -348,7 +348,7 @@ Inicie novamente o Jupyter (não se esqueça de fazer isso de dentro do diretór
 Repare que ao clicar para selecionar o kernel, o kernel estará listado =D
 No meu caso o nome do kernel que eu criei foi 'desafio', é o que aparece:
 
-![Captura de tela 2024-11-07 165833](https://github.com/user-attachments/assets/65077068-7525-4052-97ba-b6e7ea4d6ddd)
+![Screenshot 2024-11-07 200415](https://github.com/user-attachments/assets/933daae1-fa9d-4c8d-9092-007801d44c9b)
 
 
 Fim!
