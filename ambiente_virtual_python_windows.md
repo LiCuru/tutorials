@@ -300,7 +300,7 @@ O que quer dizer que, no meu caso, seria:
 
 ![Captura de tela 2024-11-07 162114](https://github.com/user-attachments/assets/e3927408-f9e3-4131-80b4-8c80cfcb06bd)
 
-Ele sinaliza com o nome do ambiente virtual entre parenteses que está dentro do ambiente. Os comandos dados dentro do ambiente mencionado  *(desafio)* são comandos que ficam contidos dentro do ambiente  *desafio* . Uma vez dentro do ambiente, podemos fazer as instalações das bibliotecas. Repare que não precisa do caractere `!` antes do comando de instalação do pip:
+Ele sinaliza com o nome do ambiente virtual entre parenteses que está dentro do ambiente. Os comandos dados dentro do ambiente mencionado  *(desafio)* são comandos que ficam contidos dentro do ambiente  *desafio* . Uma vez dentro do ambiente, podemos fazer as instalações das bibliotecas nas versões requeridas. Repare que não precisa do caractere `!` antes do comando de instalação do pip:
 
 `pip install pandas==1.5.2 numpy==1.23.5 matplotlib==3.5.2 imbalanced-learn==0.11.0 seaborn==0.12.2 scikit-learn==1.2.0`
 
