@@ -46,6 +46,7 @@ Ele vai aparecer:
 ![Screenshot 2024-11-03 164509](https://github.com/user-attachments/assets/043723bc-6038-4bf0-9f18-fb801d4f368c)
 
 
+### Execute como administrador <a name="execute_administrador" />
 Toda vez que for utilizar o prompt de comando, execute como administrador. Sem a autorização de administrador, o prompt de comando não vai autorizar todos os comandos necessários nesse tutorial:
 
 ![Screenshot 2024-11-03 175243](https://github.com/user-attachments/assets/66e1b913-7779-4c3b-a092-fcaa8f5e04f6)
@@ -83,7 +84,7 @@ Ele vai aparecer e você pode pedir pra baixar:
 
 
 ### não funcionou, o que eu faço? =(
-Contudo, se isso não funcionar, tem outra opção, que é via prompt de comando (não se esqueça de <ins>**executar o prompt de comando como administrador**</ins>, conforme mostrei no passo 1 deste tutorial). Pelo prompt de comando é possível instalar da forma que é recomendado pelo [site oficial do Jupyter](https://jupyter.org/install). Nesse site é possível ver que ele recomenda que se use o gerenciador de pacotes pip. Não vá direto igual ele diz digitando `pip install`! primeiro vamos dar upgrade no gerenciador de pacotes pip pra que ele esteja atualizado:
+Contudo, se isso não funcionar, tem outra opção, que é via prompt de comando (não se esqueça de [<ins>**executar o prompt de comando como administrador**</ins>](#execute_administrador), conforme mostrei no passo 1 deste tutorial). Pelo prompt de comando é possível instalar da forma que é recomendado pelo [site oficial do Jupyter](https://jupyter.org/install). Nesse site é possível ver que ele recomenda que se use o gerenciador de pacotes pip. Não vá direto igual ele diz digitando `pip install`! primeiro vamos dar upgrade no gerenciador de pacotes pip pra que ele esteja atualizado:
 
 `python.exe -m pip install --upgrade pip`
 
