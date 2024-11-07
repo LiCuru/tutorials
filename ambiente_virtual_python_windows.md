@@ -35,7 +35,7 @@ No caso desse tutorial, é explicado como configurar um ambiente para o Jupyter 
 
 
 ## 1 - instalar a versão mais recente do python no Windows
-Primeiro vá no [site oficial do python, na parte de downloads para windows] (https://www.python.org/downloads/windows/), e selecione a versão correta para a **arquitetura da sua máquina**
+Primeiro vá no [site oficial do python, na parte de downloads para windows](https://www.python.org/downloads/windows/), e selecione a versão correta para a **arquitetura da sua máquina**
 
 Para saber a arquitetura da sua máquina, vá no cmd (*prompt de comando*). Se você não sabe como encontrar o prompt de comando, procure por "cmd" no menu do windows:
 
