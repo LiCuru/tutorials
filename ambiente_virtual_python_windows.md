@@ -282,7 +282,7 @@ Conforme explicado na [documentação do python](https://docs.python.org/3/libra
 
 `python -m venv \caminho\para\o\ambiente`
 
-O ambiente não deixa de ser também um diretório por si só. No caso, resolvi gravar na pasta Desktop um ambiente chamado 'desafio':
+O ambiente não deixa de ser também um diretório por si só. No caso, resolvi gravar no diretório Desktop um ambiente chamado 'desafio':
 
 ![Captura de tela 2024-11-07 161325](https://github.com/user-attachments/assets/05329e6c-e56c-4e0a-b775-66488b3b906b)
 
