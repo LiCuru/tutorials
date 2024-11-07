@@ -134,7 +134,7 @@ Nesse exemplo eu decidi ir para o diretório home, home directory, onde fica os 
 
 ### Como eu navego para algum diretório no cmd (prompt de comando)?
 
-O endereço de onde você está no momento é o que aparece antes do sinal de '`>`', e que precede qualquer comando que você venha a executar:
+O endereço de onde você está no momento é o que aparece antes do sinal de `>`, e que precede qualquer comando que você venha a executar:
 
 ![Screenshot (1)](https://github.com/user-attachments/assets/23b70d5d-d1da-46b7-ae66-b6bcb44d95af)
 
