@@ -320,7 +320,7 @@ Ele deverá listar o kernel python3 e o kernel que você acabou de criar. No exe
 
 ![Captura de tela 2024-11-07 164822](https://github.com/user-attachments/assets/984ebf5c-13e0-4ba8-acf3-7a07858b6b79)
 
-### fim da instalação do kernel!
+### Fim da instalação do kernel!
 Saia de dentro do ambiente com o comando:
 
 `deactivate`
@@ -339,6 +339,7 @@ Repare que ao clicar para selecionar o kernel, o kernel estará listado =D
 No meu caso o nome do kernel que eu criei foi 'desafio', é o que aparece:
 
 ![Captura de tela 2024-11-07 165833](https://github.com/user-attachments/assets/65077068-7525-4052-97ba-b6e7ea4d6ddd)
+
 
 Fim!
 
