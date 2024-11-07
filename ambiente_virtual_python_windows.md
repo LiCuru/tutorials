@@ -230,9 +230,7 @@ Trocar de versão do python no Windows, e em qualquer sistema operacional, pode 
 Esse site (https://realpython.com/intro-to-pyenv/) explica como que faz o gerenciamento das diferentes versões do python com o pyenv. Vale a pena ler.
 
 ### Instalação do pyenv-win
-A instalação do pyenv-win pode ser de formas diferentes. Seguindo as instruções do página oficial do pyenv-win no GitHub (https://github.com/pyenv-win/pyenv-win/tree/057ba9e97bc5f217ddcffc01768174495c78859a#finish-the-installation) não tem erro. Os passos a seguir são apenas um dos caminhos possíveis das instruções dadas no github do pyenv-win.
-
-A instalação que eu fiz foi com o pip:
+A instalação do pyenv-win pode ser de formas diferentes. Seguindo as instruções do página oficial do pyenv-win no GitHub (https://github.com/pyenv-win/pyenv-win/tree/057ba9e97bc5f217ddcffc01768174495c78859a#finish-the-installation) não tem erro. Os passos a seguir são apenas um dos caminhos possíveis das instruções dadas no github do pyenv-win. Escolhi instalar com o pip:
 
 no cmd execute: `pip install pyenv-win --target %USERPROFILE%\.pyenv`
 
