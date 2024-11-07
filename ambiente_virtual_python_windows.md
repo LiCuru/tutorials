@@ -31,7 +31,7 @@ No caso desse tutorial, é explicado como configurar um ambiente para o Jupyter 
 - 6 - criar um ambiente virtual no windows com uma versão escolhida do python
 - 7 - instalar as bibliotecas requeridas no ambiente virtual criado
 - 8 - criar um kernel do ipython dentro do ambiente virtual
-- 9 - adicionar esse kernel no leque de opções de kernel do jupyter lab
+- 9 - adicionar esse kernel ao leque de opções de kernel do jupyter lab
 
 
 ## 1 - instalar a versão mais recente do python no Windows
