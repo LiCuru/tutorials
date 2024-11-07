@@ -178,9 +178,11 @@ Clicando no Python 3 (ipykernel), você pode escolher qual kernel utilizar. Como
 
 No meu caso, com a última versão instalada no sistema, que veio do primeiro passo desse tutorial, a versão apresentada é a  *3.13.0* . O seu pode ser diferente, dependendo da época em que você siga este tutorial (dependendo de qual python foi instalado no passo 1).
 
-Repare que é mesma versão que ele apresenta se você for ver qual a versão no python no cmd e digitar:
+Repare que é mesma versão que ele apresenta se você for ver qual a versão no python no cmd. Digite no cmd:
 
 `python -V`
+
+Desde que o pyenv-win ainda não tenha sido instalado e você não tenha alterado a versão do python global no pyenv-win, a versão do python vai ser a mesma no cmd e no Jupyter usando o kernel  *Python 3 (ipykernel)* .
 
 ### Entendendo a incompatibilidade das bibliotecas antigas com versões recentes do python
 Vamos tentar instalar as bibliotecas nas versões requeridas:
