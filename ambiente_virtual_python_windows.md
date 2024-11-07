@@ -211,7 +211,9 @@ Leia com atenção. Você vai reparar que o pip faz bem a instalação do pandas
 
 ![Captura de tela 2024-11-06 232032](https://github.com/user-attachments/assets/99502758-3143-40f4-9a5a-71aae38f6e20)
 
-O problema está nessa dependência do numpy chamada ' *pkgutil.ImpImporter* '. Se você procurar pelo ' *pkgutil.ImpImporter* ' na documentação do python (https://docs.python.org/), vai ver nos resultados da busca que essa classe  *ImpImporter* , do módulo  *pkgutil*  foi removido na versão do python 3.12. Então, usando uma versão anterior à do python 3.12, essa função vai ter suporte no python e as bibliotecas vão funcionar. Eu decidi usar a versão 3.10.5 e deu certo com todas as outras bibliotecas com suas respectivas versões.
+O problema está nessa dependência do numpy chamada ' *pkgutil.ImpImporter* '.
+
+Se você procurar pelo ' *pkgutil.ImpImporter* ' na documentação do python (https://docs.python.org/), vai ver nos resultados da busca que essa classe  *ImpImporter* , do módulo  *pkgutil*  foi removido na versão do python 3.12. Então, usando uma versão anterior à do python 3.12, essa função vai ter suporte no python e as bibliotecas vão funcionar. Eu decidi usar a versão 3.10.5 e deu certo com todas as outras bibliotecas com suas respectivas versões.
 
 Para alterar a versão do python, é necessário usar o pyenv-win.
 
