@@ -49,7 +49,8 @@ Ele vai aparecer:
 ### Execute como administrador <a name="execute_administrador" />
 Toda vez que for utilizar o prompt de comando, execute como administrador. Sem a autorização de administrador, o prompt de comando não vai autorizar todos os comandos necessários nesse tutorial:
 
-![Screenshot 2024-11-03 175243](https://github.com/user-attachments/assets/66e1b913-7779-4c3b-a092-fcaa8f5e04f6)
+![Screenshot 2024-11-07 193630](https://github.com/user-attachments/assets/9dec437d-3536-4bf9-855a-68223338f3c2)
+
 
 
 **Dica importante**: Toda vez que for copiar ou colar qualquer coisa no cmd (prompt de comando) do windows, utilize o botão direito do mouse. O botão direito do mouse é a mesma coisa que CTRL + C ou CTRL + V no cmd do Windows.
@@ -239,7 +240,8 @@ No cmd execute:
 
 No **PowerShell**. <ins>Atenção, PowerShell não é cmd. Quando for executar o PowerShell, não esqueça de executar como administrador</ins>:
 
-![Screenshot 2024-11-07 193112](https://github.com/user-attachments/assets/2c09a758-81e0-4a1d-a14d-df3b637147e3)
+![Screenshot 2024-11-07 193112](https://github.com/user-attachments/assets/89c3570d-e561-4287-851e-31a79802fa82)
+
 
 No PowerShell execute, para atualizar as variáveis de ambiente:
 
