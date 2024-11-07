@@ -219,7 +219,7 @@ Para alterar a versão do python, é necessário usar o pyenv-win.
 
 ## 4 - instalar o pyenv-win
 
-Agora que instalamos o jupyter, é necessário criar um ambiente virtual novo, com uma versão diferente do python. Nesse novo ambiente a gente instala as bibliotecas nas versões requisitadas e também instala o kernel para ser usado no jupyter.
+Agora que instalamos o jupyter, é necessário criar um ambiente virtual novo, com uma versão diferente do python para que as bibliotecas funcionem nas versões requisitadas. Nesse novo ambiente a gente instala as bibliotecas nas versões requisitadas e também instala o kernel para ser usado no jupyter.
 
 O ambiente virtual é criado com uma execução de comando do python. Isso que significa que a versão do python utilizada vai ser a versão do python do ambiente virtual. Então é preciso trocar de versão do python para depois executar o comando que cria o ambiente virtual.
 
