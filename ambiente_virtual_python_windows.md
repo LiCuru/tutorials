@@ -305,7 +305,7 @@ Ele sinaliza com o nome do ambiente virtual entre parenteses que está dentro do
 `pip install pandas==1.5.2 numpy==1.23.5 matplotlib==3.5.2 imbalanced-learn==0.11.0 seaborn==0.12.2 scikit-learn==1.2.0`
 
 ## 8 - criar um kernel do ipython dentro do ambiente virtual
-Para criar o kernel, primeiro precisamos instalar o Ipython. É o Ipython que provê a estrutura para que interfaces de usuário gráficas rodem, assim como o shell, e também o kernel para que o python rode no Jupyter acessando as bibliotecas instaladas. Você pode entender melhor sobre o Ipython visitando o [site oficial do Ipython](https://ipython.org/) Para instalar o ipython, execute:
+Para criar o kernel, primeiro precisamos instalar o Ipython. É o Ipython que provê a estrutura para que interfaces de usuário gráficas rodem, assim como o shell, e também o kernel para que o python rode no Jupyter acessando as bibliotecas instaladas. Você pode entender melhor sobre o Ipython visitando o [site oficial do Ipython](https://ipython.org/) Para instalar o Ipython, execute:
 
 `pip install ipython`
 
