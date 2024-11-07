@@ -205,27 +205,28 @@ Vamos tentar instalar as bibliotecas nas versões requeridas:
 |seaborn|0.12.2 ou inferior|
 |scikit-learn|1.2.0 ou inferior|
 
-Vamos instalar com o python na última versão instalada usando o kernel  *"Python 3 (ipykernel)"* . Para isso vamos executar o seguinte código em uma célula do notebook:
+Vamos instalar as bibliotecas com o python na última versão instalada usando o kernel  *"Python 3 (ipykernel)"* . É melhor instalar todas as bibliotecas do ambiente no mesmo comando pip, porque daí ele mantém a compatibilidade do pandas e numpy, por exemplo. Isso é explicado melhor nessa questão do fórum do stack overflow (https://stackoverflow.com/questions/78634235/numpy-dtype-size-changed-may-indicate-binary-incompatibility-expected-96-from). Portanto vamos usar o seguinte código:
 
 `pip install pandas==1.5.2 numpy==1.23.5 matplotlib==3.5.2 imbalanced-learn==0.11.0 seaborn==0.12.2 scikit-learn==1.2.0`
 
-Repare na mensagem que ele devolve:
+Repare na mensagem que ele devolve tentando instalar essas bibliotecas com o python versão 3.13.0:
 
 ![Captura de tela 2024-11-06 232051](https://github.com/user-attachments/assets/5d15e33f-2122-4043-8926-035c5ec5aadd)
 
 
-Leia com atenção. Você vai reparar que o pip faz bem a instalação do pandas versão 1.5.2 , e que depois ele parte para a instalação do numpy versão 1.23.5. Aí ele dá erro. Olhe o final da mensagem de erro:
+Leia com atenção. Você vai reparar que o pip faz bem a instalação do pandas versão 1.5.2 , e que depois ele parte para a instalação do numpy versão 1.23.5. Aí ele dá erro. Esse o final da mensagem de erro:
 
 ![Captura de tela 2024-11-06 232032](https://github.com/user-attachments/assets/99502758-3143-40f4-9a5a-71aae38f6e20)
 
+O problema está nessa dependência do numpy chamada 'pkgutil.ImpImporter'. Se você procurar pelo 'pkgutil.ImpImporter' na documentação do python (https://docs.python.org/), vai ver nos resultados da busca que essa classe  *ImpImporter* , do módulo  *pkgutil*  foi removido na versão do python 3.12. Então, usando uma versão anterior à do python 3.12, essa função vai ter suporte no python e as bibliotecas vão funcionar. Eu decidi usar a versão 3.10.5 e deu certo com todas as outras bibliotecas com suas respectivas versões.
 
-
+Para alterar a versão do python, é necessário usar o pyenv-win.
 
 ## 4 - instalar o pyenv-win
 
-Agora que instalamos o jupyter, é necessário configurar um ambiente virtual.
+Agora que instalamos o jupyter, é necessário criar um ambiente virtual novo, com uma versão diferente do python, e depois instalar as bibliotecas nas versões requisitadas e também instalar o kernel.
 
-O ambiente é criado pelo python, o que significa que a versão do python utilizada vai ser a versão do python do ambiente virtual. Trocar de versão do python no Windows, e em qualquer sistema operacional, pode ser muito desafiador e desnecessariamente difícil. Para que seja possível poder trocar de versão com facilidade e organização, foi criado o pyenv. Depois de um tempo o pyenv teve sua versão adaptada para o Windows, chamado de pyenv-win.
+O ambiente virtual é criado com uma execução de comando do python. Isso que significa que a versão do python utilizada vai ser a versão do python do ambiente virtual. Então é preciso trocar de versão do python para depois executar o comando que cria o ambiente virtual. Trocar de versão do python no Windows, e em qualquer sistema operacional, pode ser muito desafiador e desnecessariamente difícil. Para que seja possível poder trocar de versão com facilidade e organização, foi criado o pyenv. Depois de um tempo o pyenv teve sua versão adaptada para o Windows, chamado de pyenv-win.
 
 Esse site (https://realpython.com/intro-to-pyenv/) explica como que faz o manejo das diferentes versões do python com o pyenv. Vale a pena ler.
 
@@ -233,16 +234,16 @@ Para instalar o pyenv-win, acesse prompt de comando como administrador, e execut
 
 `pip install pyenv-win`
 
-Uma vez instalado, ainda não tem como acessar o pyenv-win através do prompt de comando porque a pasta onde fica o binário do pyenv-win ainda não está na variável path. Então o próximo passo é adicionar a pasta do binário à variável path do Windows. Para adicionar, primeiro é necessário encontrar onde fica a pasta to pyenv-win. Se você repetir o comando: 
+Uma vez instalado, ainda não tem como acessar o pyenv-win através do prompt de comando porque a pasta onde fica o binário do pyenv-win ainda não está na variável path. Isso quer dizer que quando você digita "pyenv" no cmd, ele não encontra esse comando em lugar nenhum. Então o próximo passo é adicionar a pasta do binário à variável path do Windows para que ele encontre o pyenv e outras funcionalidades dele. Para adicionar, primeiro é necessário encontrar onde fica a pasta to pyenv-win. Se você repetir o comando: 
 
 `pip install pyenv-win`
 
-Ele vai informar que o pyenv-win já está instalado e onde está instalado. Vá até esse diretório, encontre o diretório do pyenv-win, entre no diretório, e depois vá no bin. A figura abaixo explica melhor:
+Ele vai informar que o pyenv-win já está instalado e onde está instalado.A figura abaixo explica melhor:
 
 ![Captura de tela 2024-11-03 195413](https://github.com/user-attachments/assets/c5e8bb45-fc7b-4d1c-ae5c-6bd28ddcd2ee)
 
 
-Copie o endereço da instalação e use para adicionar o `C:\Caminho\Para\O\pyenv-win\bin` e do `C:\Caminho\Para\O\pyenv-win\shims`. No meu caso, por exemplo, o endereço é: 
+Copie esse endereço da instalação e adicione "\pyenv-win\bin" e "\pyenv-win\shims". Assim você criar o "C:\Caminho\Para\O\pyenv-win\bin" e o "C:\Caminho\Para\O\pyenv-win\shims". No meu caso, por exemplo, o endereço é: 
 
 *c:\users\ligia\appdata\local\programs\python\python313\lib\site-packages*
 
@@ -255,8 +256,8 @@ no final, fica assim:
  - *c:\users\ligia\appdata\local\programs\python\python313\lib\site-packages\pyenv-win\shims*
 
 Mas é importante frisar que cada computador é diferente, e que você tem que achar qual é o seu:
- - `C:\Caminho\Para\O\pyenv-win\bin`
- - `C:\Caminho\Para\O\pyenv-win\shims`. 
+ -  *C:\Caminho\Para\O\pyenv-win\bin* 
+ -  *C:\Caminho\Para\O\pyenv-win\shims*  
 
 
 Depois que você achou os caminhos, vá nas variáveis do ambiente do windows, e adicione ambos os endereços à variável PATH conforme as figuras abaixo. O seu computador pode estar um pouco diferente. Se estiver um pouco diferente, não vai estar tão diferente. O importante é adicionar ao PATH:
@@ -272,6 +273,7 @@ Depois que você achou os caminhos, vá nas variáveis do ambiente do windows, e
 
 ![Captura de tela 2024-11-03 200224](https://github.com/user-attachments/assets/133d375c-c802-4006-afdc-f3f778e741bf)
 
+Isso é o suficiente para que o pyenv seja reconhecido quando se digita pyenv no cmd. Mas toda vez que a gente digitar 'python' no cmd, ele vai apenas encontrar a versão do python instalada originalmente no sistema, e não a instalada e escolhida pelo pyenv. Por isso é necessário também fazer com que o sistema reconheça o termo "python" como a versão escolhida pelo pyenv, seja essa versão a original instalada no passo 1 desse tutorial, ou outra versão escolhida no pyenv.
 
 ## 5 - alterar a versão do python para versões mais antigas com o pyenv-win
 
