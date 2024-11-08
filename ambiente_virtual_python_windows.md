@@ -370,7 +370,7 @@ Se você estiver fazendo o academIA e for mandar o notebook para validação, el
  - enviar para validação
 
 
-Com isso, ele vai rodar o notebook no validador com o kernel padrão. Caso contrário ele vai devolver a mensagem de erro dizendo no final:  *NoSuchKernel: No such kernel named nome_do_kernel* 
+Com isso, ele vai rodar o notebook no validador com o kernel padrão. Caso contrário, o validador vai devolver a mensagem de erro dizendo no final:  *NoSuchKernel: No such kernel named nome_do_kernel* 
 
 ### =)
 Aproveite seu novo ambiente de desenvolvimento!
