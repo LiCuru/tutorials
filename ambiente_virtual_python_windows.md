@@ -215,7 +215,7 @@ Leia com atenção. Você vai reparar que o pip faz bem a instalação do pandas
 
 O problema está nessa dependência do numpy chamada ' *pkgutil.ImpImporter* '.
 
-Se você procurar pelo '*pkgutil.ImpImporter*' na [documentação do python](https://docs.python.org/), vai ver nos resultados da busca que essa classe  *ImpImporter* , do módulo  *pkgutil*  foi removido na versão do python 3.12. Você pode buscar por '*pkgutil.ImpImporter*' na [página que explica o que é novo no python 3.12](https://docs.python.org/3/whatsnew/3.12.html), e você vai encontrar:
+Se você procurar pelo '*pkgutil.ImpImporter*' na [documentação do python](https://docs.python.org/), vai ver nos resultados da busca que essa classe  *ImpImporter* , do módulo  *pkgutil*  foi removido na versão do python 3.12. Você pode buscar por '*pkgutil.ImpImporter*' na [página que explica o que é novo no python 3.12](https://docs.python.org/3/whatsnew/3.12.html), você vai encontrar:
 
 ![Captura de tela 2024-11-08 062029](https://github.com/user-attachments/assets/a74a2831-24e4-4169-a7a7-273a232fb8e1)
 
