@@ -219,6 +219,11 @@ Se você procurar pelo '*pkgutil.ImpImporter*' na [documentação do python](htt
 
 ![Captura de tela 2024-11-08 062029](https://github.com/user-attachments/assets/a74a2831-24e4-4169-a7a7-273a232fb8e1)
 
+Repare que a mensagem de erro quando vai instalar a biblioteca com o python 3.13 é justamente dizendo que '*pkgutil.ImpImporter*' não existe:
+
+*AttributeError: module 'pkgutil' has no attribute 'ImpImporter'. Did you mean: 'zipimporter'?*
+
+E a página contando as atualizações do python 3.12 explica que essa classe foi removida.
 
 Então, usando uma versão anterior à do python 3.12, essa função vai ter suporte no python e as bibliotecas vão funcionar. Eu decidi usar a versão 3.10.5 e deu certo com todas as outras bibliotecas com suas respectivas versões.
 
