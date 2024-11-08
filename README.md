@@ -1,6 +1,6 @@
 # Tutorial dump / Depósito de tutoriais
 
-## index / índice
+### index / índice:
 
 ### ambiente_virtual_python_windows.md (em português)
 Explains how to install Jupyter Lab on Windows and how to configure a virutal environment. It also explains about the incompatibility of libraries in older versions with more recent versions of python, how to identify these incompatibilities, and how to know what version of python to use.
