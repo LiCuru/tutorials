@@ -2,12 +2,12 @@
 
 ## index / índice
 
-### ambiente_virtual_python_windows.md (Em português)
+### ambiente_virtual_python_windows.md (em português)
 Explains how to install Jupyter Lab on Windows and how to configure a virutal environment. It also explains about the incompatibility of libraries in older versions with more recent versions of python, how to identify these incompatibilities, and how to know what version of python to use.
 
 Explica como instalar o Jupyter Lab no Windows e como que configura um ambiente virtual. Também explica sobre a incompatibilidade de bibliotecas em versões mais antigas com versões mais recentes do python, como identificar essas incompatibilidades, e como saber qual versão do python usar.
 
-### classe_javascript (Em português)
+### classe_javascript (em português)
 Explains the processing of classes in javascript.
 
 Explica como funciona o processamento de classes em javascript.
