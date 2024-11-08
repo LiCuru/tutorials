@@ -2,7 +2,7 @@
 
 Esse tutorial explica como que instala o Jupyter Lab no Windows e como que se configura um ambiente virtual com qualquer versão do python para instalação de bibliotecas nas versões requeridas.
 
-### Por que é necessário sobre ambientes virtuais?
+### Por que é necessário saber sobre ambientes virtuais?
 As vezes é necessário configurar um ambiente virtual onde as bibliotecas estejam em versões específicas. E se você conduz mais de um projeto em sua máquina, pode ser necessário configurar um ambiente para cada projeto.
 
 Para instalar certas versões de algumas bibliotecas, muitas vezes não é o suficiente apenas instalar a versão requisitada delas. Pode ser também necessário alterar a versão do python. Isso é porque algumas versões antigas de algumas bibliotecas, ou suas dependências, podem não ter suporte na versão atual do python. Então acaba sendo necessário trocar a versão do python para uma versão mais antiga, de quando aquela dependência, ou aquela biblioteca requisitada mesmo, ainda tinha suporte, ainda rodava, naquela versão mais antiga do python.
