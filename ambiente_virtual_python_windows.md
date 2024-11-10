@@ -28,6 +28,7 @@ No caso desse tutorial, é explicado como configurar um ambiente para o Jupyter 
 - 3 - entendendo qual versão do python usar e porque
 - 4 - instalar o pyenv-win
 - 5 - alterar a versão do python para versões mais antigas com o pyenv-win
+- 6 - instalar o Microsoft C++ Build Tools
 - 6 - criar um ambiente virtual no windows com uma versão escolhida do python
 - 7 - instalar as bibliotecas requeridas no ambiente virtual criado
 - 8 - criar um kernel do ipython dentro do ambiente virtual
@@ -269,7 +270,7 @@ Pronto. O pyenv-win está instalado.
 Feche o cmd, e abra um novo [como administrador](#execute_administrador).
 Vá até o diretório home no cmd.
 
-Para instalar uma versão anterior do python (no caso, vou instalar a versão 3.10.5):
+Para instalar uma versão anterior do python (no caso, vou instalar a versão 3.10.5, mas outras versões do python 3.11 também funcionam):
 
 `pyenv install 3.10.5`
 
@@ -287,7 +288,33 @@ Ao testar a versão do python na máquina, você deverá ver a versão instalada
 
 Ele deverá retornar como mensagem o python na versão instalada, nesse caso é o python 3.10.5
 
-## 6 - criar um ambiente virtual no windows com uma versão escolhida do python
+## 6 - instalar o Microsoft C++ Build Tools
+Se você não tiver o Microsoft C++ Build Tools instalado, apesar de não aparecer nenhuma mensagem de erro na hora de instalar as bibliotecas nas versões citadas, a biblioteca matplotlib na versão 3.5.2 simplesmente não vai funcionar quando você importar. Ao importar a biblioteca, vai aparecer o seguinte erro:
+
+ *ImportError: DLL load failed while importing _path: The specified module could not be found.* 
+
+Ao procurar a respeito desse erro, é possível ver nesses tópicos do [GitHub][https://github.com/matplotlib/matplotlib/issues/18292#issuecomment-792634734] e no [StackOverflow][https://stackoverflow.com/questions/66919838/matplotlib-wont-run-on-windows-10-dll-fails-to-load] que uma das soluções apontadas para o problema seria fazer um downgrade do matplotlib para a versão 3.3.0 ou 3.3.1
+
+Só que ao tentar fazer a instalação do matplotlib 3.3.1 (depois de desinstalar o matplotlib 3.5.2), ele dá erro na hora do build e recomenda a instalação do Microsoft C++ Build Tools:
+
+![Captura de tela 2024-11-10 155717](https://github.com/user-attachments/assets/ef711e06-d958-4407-b260-f599bb04f44c)
+
+Ou seja, ele não consegue passar da fase do build porque não tem as ferramentas necessárias.
+
+Indo no site recomendado: https://visualstudio.microsoft.com/visual-cpp-build-tools , é possível fazer a instalação. Vou deixar as figuras aqui para ficar mais fácil:
+
+Vá no site e faça o download do instalador:
+![Screenshot (6)](https://github.com/user-attachments/assets/21658aca-ed73-4991-a984-494a6c7f9e26)
+
+Não esqueça de rodar o instalador como administrador:
+![Screenshot (2)](https://github.com/user-attachments/assets/85778906-f15c-4edb-8f87-e831218ddfad)
+
+Escolha o build tools e faça a instalação:
+![Screenshot (4)](https://github.com/user-attachments/assets/f7ebf7ad-430e-4ee4-b3e9-063818def56d)
+
+Com isso é possível fazer a instalação de todas as bibliotecas e o matplotlib vai funcionar ao ser importado.
+
+## 7 - criar um ambiente virtual no windows com uma versão escolhida do python
 Conforme explicado na [documentação do python](https://docs.python.org/3/library/venv.html), crie um ambiente no diretório de sua escolha:
 
 `python -m venv \caminho\para\o\ambiente`
@@ -301,7 +328,7 @@ Com isso foi criado um ambiente (e um diretório) chamado 'desafio' com o python
 ![Screenshot 2024-11-07 194638](https://github.com/user-attachments/assets/a898d00c-6534-4888-bf42-0300081ff6f1)
 
 
-## 7 - instalar as bibliotecas requeridas no ambiente virtual criado
+## 8 - instalar as bibliotecas requeridas no ambiente virtual criado
 Para acessar no cmd o ambiente, execute:
 
 `C:\> <venv>\Scripts\activate.bat`
@@ -314,7 +341,7 @@ Ele sinaliza com o nome do ambiente virtual entre parenteses que está dentro do
 
 `pip install pandas==1.5.2 numpy==1.23.5 matplotlib==3.5.2 imbalanced-learn==0.11.0 seaborn==0.12.2 scikit-learn==1.2.0`
 
-## 8 - criar um kernel do ipython dentro do ambiente virtual
+## 9 - criar um kernel do ipython dentro do ambiente virtual
 Para criar o kernel, primeiro precisamos instalar o Ipython. É o Ipython que provê a estrutura para que interfaces de usuário gráficas rodem, assim como o shell, e também o kernel para que o python rode no Jupyter acessando as bibliotecas instaladas. Você pode entender melhor sobre o Ipython visitando o [site oficial do Ipython](https://ipython.org/) Para instalar o Ipython, execute:
 
 `pip install ipython`
@@ -323,7 +350,7 @@ Uma vez instalado o Ipython, podemos instalar o kernel executando:
 
 `pip install ipykernel`
 
-## 9 - adicionar esse kernel no leque de opções de kernel do jupyter lab
+## 10 - adicionar esse kernel no leque de opções de kernel do jupyter lab
 Para finalmente ter o kernel listado no Jupyter. Escolha um nome para o kernel executando:
 
 `ipython kernel install --name "nome_do_kernel" --user`
