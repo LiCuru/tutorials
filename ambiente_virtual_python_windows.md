@@ -289,11 +289,11 @@ Ao testar a versão do python na máquina, você deverá ver a versão instalada
 Ele deverá retornar como mensagem o python na versão instalada, nesse caso é o python 3.10.5
 
 ## 6 - instalar o Microsoft C++ Build Tools
-Se você não tiver o Microsoft C++ Build Tools instalado, apesar de não aparecer nenhuma mensagem de erro na hora de instalar as bibliotecas nas versões citadas, a biblioteca matplotlib na versão 3.5.2 simplesmente não vai funcionar quando você importar. Ao importar a biblioteca, vai aparecer o seguinte erro:
+Se você não tiver o Microsoft C++ Build Tools instalado, apesar de não aparecer nenhuma mensagem de erro na hora de instalar as bibliotecas nas versões citadas, a biblioteca matplotlib na versão 3.5.2 simplesmente não vai funcionar quando você importar. Ao importar a biblioteca em alguma célula do Jupyter, vai aparecer o seguinte erro:
 
  *ImportError: DLL load failed while importing _path: The specified module could not be found.* 
 
-Ao procurar a respeito desse erro, é possível ver nesses tópicos do [GitHub][https://github.com/matplotlib/matplotlib/issues/18292#issuecomment-792634734] e no [StackOverflow][https://stackoverflow.com/questions/66919838/matplotlib-wont-run-on-windows-10-dll-fails-to-load] que uma das soluções apontadas para o problema seria fazer um downgrade do matplotlib para a versão 3.3.0 ou 3.3.1
+Ao procurar a respeito desse erro, é possível ver nesses tópicos do [GitHub](https://github.com/matplotlib/matplotlib/issues/18292#issuecomment-792634734) e no [StackOverflow](https://stackoverflow.com/questions/66919838/matplotlib-wont-run-on-windows-10-dll-fails-to-load) que uma das soluções apontadas para o problema seria fazer um downgrade do matplotlib para a versão 3.3.0 ou 3.3.1
 
 Só que ao tentar fazer a instalação do matplotlib 3.3.1 (depois de desinstalar o matplotlib 3.5.2), ele dá erro na hora do build e recomenda a instalação do Microsoft C++ Build Tools:
 
