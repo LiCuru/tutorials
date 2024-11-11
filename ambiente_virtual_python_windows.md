@@ -29,10 +29,10 @@ No caso desse tutorial, é explicado como configurar um ambiente para o Jupyter 
 - 4 - instalar o pyenv-win
 - 5 - alterar a versão do python para versões mais antigas com o pyenv-win
 - 6 - instalar o Microsoft C++ Build Tools
-- 6 - criar um ambiente virtual no windows com uma versão escolhida do python
-- 7 - instalar as bibliotecas requeridas no ambiente virtual criado
-- 8 - criar um kernel do ipython dentro do ambiente virtual
-- 9 - adicionar esse kernel ao leque de opções de kernel do jupyter lab
+- 7 - criar um ambiente virtual no windows com uma versão escolhida do python
+- 8 - instalar as bibliotecas requeridas no ambiente virtual criado
+- 9 - criar um kernel do ipython dentro do ambiente virtual
+- 10 - adicionar esse kernel ao leque de opções de kernel do jupyter lab
 
 
 ## 1 - instalar a versão mais recente do python no Windows
