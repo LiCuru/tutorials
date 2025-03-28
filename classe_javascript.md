@@ -561,7 +561,7 @@ Exemplo de uma computed key: https://ilikekillnerds.com/2018/02/computed-object-
 
 
 
-### <b> PASSO 4 </b> - métodos e accessors
+## <b> PASSO 4 </b> - métodos e accessors
 métodos e accessors são instalados na ordem em que são declarados.
 
 O que são <i>métodos</i> e <i>accessors</i>:
