@@ -505,7 +505,7 @@ Mas se for só pra observar um objeto direto no console, `__proto__` é bem mais
  
 ## Sobre protótipos
 
-'<i>JavaScript is a prototype-based language, and functions differently than the traditional class-based paradigm that many other object-oriented languages use.</i>' ([Digital Ocean](https://www.digitalocean.com/community/tutorials/understanding-prototypes-and-inheritance-in-javascript) e [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes))
+	<i>JavaScript is a prototype-based language, and functions differently than the traditional class-based paradigm that many other object-oriented languages use.</i> ([Digital Ocean](https://www.digitalocean.com/community/tutorials/understanding-prototypes-and-inheritance-in-javascript) e [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes))
 
 A descrição do que são objetos em Javascript também passa pela definição do protótipos, [conforme descreve o Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 )
