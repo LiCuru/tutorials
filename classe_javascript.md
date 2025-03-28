@@ -619,7 +619,7 @@ colorWithStatic_object.__proto__.constructor.static_method()
  
  
  
-### <b> PASSO 6 </b> Os <i>valores</i> dos elementos da classe
+### <b> PASSO 6 </b> - Os <i>valores</i> dos elementos da classe
 Elessão processados na ordem em que aparecem
  
  
