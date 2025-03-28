@@ -529,16 +529,18 @@ A descrição do que são objetos em Javascript também passa pela definição d
 
 ------------------------------------------
 
-### processamento das classes em javascript
+# processamento das classes em javascript
 
 Ordem de processamento das classes:
 
-- <b>PASSO 1 - extends </b> : O `extends` faz referência a uma função construtora de outra classe (ou nulo, se não referencia nada). Quando a classe deriva de outra classe, ou seja, quando herda propriedades de outra classe,  `extends` aponta para a função construtora dessa classe de origem.
+## <b>PASSO 1 - extends </b>
+O `extends` faz referência a uma função construtora de outra classe (ou nulo, se não referencia nada). Quando a classe deriva de outra classe, ou seja, quando herda propriedades de outra classe,  `extends` aponta para a função construtora dessa classe de origem.
 
 O `NomeDaClasse.__proto__ = a classe-mãe `. Se é uma classe base, o `NomeDaClasse.__proto__ = algum outro objeto definido por default`. É interessante verificar isso com o developer tools (atalho: F12) e os exemplos de classe herança desse [link do mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance)
 
 
-- <b>PASSO 2 - constructor </b>: Não existe uma instância sem a função construtora dessa instância. A classe é um objeto que tem um construtor da instância que ela gera. Toda classe tem uma função construtora que vai gerar instâncias, senão, não é uma classe. O construtor sempre vai existir e é processado de alguma forma na criação da classe. Se não tiver declarado na classe, o engine vai processar um default.  Na sintaxe do javascript, o constructor é "só uma declaração de um método" da classe. É como se declarar o construtor fosse a mesma coisa que "sobreescrever" o default. Provavelmente é o que a sintaxe do javascript permite pra conseguir implementar o OOP, programação orientada a objeto.
+## <b>PASSO 2 - constructor </b>:
+Não existe uma instância sem a função construtora dessa instância. A classe é um objeto que tem um construtor da instância que ela gera. Toda classe tem uma função construtora que vai gerar instâncias, senão, não é uma classe. O construtor sempre vai existir e é processado de alguma forma na criação da classe. Se não tiver declarado na classe, o engine vai processar um default.  Na sintaxe do javascript, o constructor é "só uma declaração de um método" da classe. É como se declarar o construtor fosse a mesma coisa que "sobreescrever" o default. Provavelmente é o que a sintaxe do javascript permite pra conseguir implementar o OOP, programação orientada a objeto.
 
 O processamento do constructor não é observável.
 
@@ -547,7 +549,8 @@ O processamento do constructor não é observável.
 
 
 
-- <b> PASSO 3 - as chaves dos elementos da classe </b>:  A chave é o "nome" da propriedade. Os valores associados às keys (às chaves, aos "nomes") não são processados nessa etapa 3.
+## <b> PASSO 3
+as chaves dos elementos da classe </b>:  A chave é o "nome" da propriedade. Os valores associados às keys (às chaves, aos "nomes") não são processados nessa etapa 3.
 
 	- computed key e `this`: Se essa chave for uma computed key, ela é processada com o `this` vinculado ao escopo exterior, ao qual a classe está imersa (não é um `this` que se refere à classe em si). Computed keys são keys que precisam ser processadas, 'calculadas' para ter o valor delas, não é um valor estabelecido (uma string, uma int...). O computador precisa "calcular" ele.
 
@@ -558,7 +561,8 @@ Exemplo de uma computed key: https://ilikekillnerds.com/2018/02/computed-object-
 
 
 
-<b> PASSO 4 </b> - métodos e accessors são instalados na ordem em que são declarados.
+### <b> PASSO 4 </b> - métodos e accessors
+métodos e accessors são instalados na ordem em que são declarados.
 
 O que são <i>métodos</i> e <i>accessors</i>:
 Classes tem métodos e propriedades. De certa forma, os métodos são as funções das classes, e as propriedades são as variáveis. Os accessors são um tipo de "função" que chama uma propriedade. Ou seja, são funções que dão acesso a certas variáveis da classe.
@@ -568,7 +572,9 @@ Classes tem métodos e propriedades. De certa forma, os métodos são as funçõ
 Info sobre accessors:
 
 [javascript.info](https://javascript.info/property-accessors) 
+
 [stackoverflow](https://stackoverflow.com/questions/42342623/why-use-getters-and-setters-in-javascript) 
+
 [documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes#accessor_fields) 
 
 
@@ -582,8 +588,7 @@ As instalações são em 3 "camadas":
   - 4.3 - instância --> métodos e accessors privados são instalados depois diretamente na instância. Eles são salvos para serem depois instalados diretamente na instância.
  
 
-----------------------------------------------
-### sobre o static method
+#### sobre o static method
 
 Fonte:  [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance) 
 
@@ -596,7 +601,7 @@ e não da sua instância.
 
 Verificação:
 
-
+```
 class Color {
 	//  o código da classe Color do link da página do Mozilla
 }
@@ -627,40 +632,36 @@ colorWithStatic_object.__proto__.constructor
 
 colorWithStatic_object.__proto__.constructor.static_method()
 >>> static method was called
+```
 
 
+## <b> PASSO 5 </b> - A classe é inicializada com:
 
-
-----------------------------------------------
-
-
-
-PASSO 5 - A classe é inicializada com:
-
---> o Object.__proto__ definido (ou não) pelo extends
---> a declaração (ou não) do constructor.
+	- o `Object.__proto__` definido (ou não) pelo extends
+	- a declaração (ou não) do constructor.
  
  
  
-PASSO 6 - Os --valores-- dos elementos da classe são processados na ordem em que aparecem
+## <b> PASSO 6 </b> 
+Os <i>valores</i> dos elementos da classe são processados na ordem em que aparecem
  
  
- --- instance fields ---
+#### instance fields
  
  A classe é um objeto. A instância que deriva da classe é um objeto também.
  
  
  classe sem herança: 
- NomeDaClasse.__proto__  ---> é o protótipo definido por padrão 
+ `NomeDaClasse.__proto___`  ---> é o protótipo definido por padrão 
  
  classe com herança
- NomeDaClasse.__proto__  ---> é a classe da qual ela deriva
+ `NomeDaClasse.__proto__`  ---> é a classe da qual ela deriva
  
  a instâcia da classe:
- InstanciaDaClasse.__proto__.constructor  ---> class NomeDaClasse
+ `InstanciaDaClasse.__proto__.constructor`  ---> `class NomeDaClasse`
  
 
--- gravação das instance fields VALUES --
+### gravação das instance fields VALUES
 Quando a classe é criada, a expressão do inicializador de cada instance field é gravada.
  
 O inicializador dos valores dos instance fields são processados, quando:
@@ -670,26 +671,27 @@ Quando a classe é instanciada, ou seja, quando são criados objetos à partir d
 Em que lugar:
 
  - em classes base  (que não derivam de outras classes)
- 	-> no constructor() -  no começo do constructor
+ 	-> no `constructor()` -  no começo do constructor
  
  - em classes derivadas de outra classe: 
- 	-> no super() - logo antes dos retornos do super()
+ 	-> no `super()` - logo antes dos retornos do super()
  
  
  
- --- static fields ---
+#### static fields
  
  o inicializador dele é processado com 'this' já vinculado à própria classe
  
  
  
-  --- static initialization blocks ---
+#### static initialization blocks
  
  são processados com o 'this' vinculado à própria classe também
  
  
  
-PASSO 7 - A classe está pronta para ser usada como uma função construtora
+## PASSO 7
+A classe está pronta para ser usada como uma função construtora
  
  
  
