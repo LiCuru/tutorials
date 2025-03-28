@@ -1,5 +1,5 @@
 # Javascript 
-### Objetos, protótipos, e processamento das classes
+### Objetos, funções, protótipos e processamento das classes
 
 Principal fonte: [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#evaluation_order) 
 
