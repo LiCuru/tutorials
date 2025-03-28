@@ -499,41 +499,35 @@ Existe um processo de transformar alguma coisa em outra coisa de forma automáti
 
 
 
-Esse link de um tutorial de javascript do mozilla.org tem exemplos interessantes pra rodar no console do DevTools.
+[Esse link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes) de um tutorial de javascript do mozilla.org tem exemplos interessantes pra rodar no console do DevTools.
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes
 
 IMPORTANTE:
-É boa prática não fazer alterações em protótipos, ou seja, na propriedade __proto__, de qualquer objeto. Se for alterar alguma coisa, altere direto no objeto, ou na classe etc, não altere no protótipo. 
-(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+É boa prática não fazer alterações em protótipos, ou seja, na propriedade `__proto__`, de qualquer objeto. Se for alterar alguma coisa, altere direto no objeto, ou na classe etc, não altere no protótipo. 
+(fonte: [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)) 
 
-acessar a propriedade via '__proto__' está deprecated.
+acessar a propriedade via `__proto__` está deprecated.
 
-'some browsers are kind enough let you set and get [[Prototype]] through the __proto__ property'
-(https://stackoverflow.com/questions/17174786/what-is-the-significance-of-the-double-brackets-for-the-prototype-property-i)
+'<i>some browsers are kind enough let you set and get [[Prototype]] through the __proto__ property</i>'
+([Stack Overflow](https://stackoverflow.com/questions/17174786/what-is-the-significance-of-the-double-brackets-for-the-prototype-property-i))
 
- Hoje em dia existe um getter e um setter (accessors) pra acessar a propriedade __proto__:
+ Hoje em dia existe um getter e um setter (accessors) pra acessar a propriedade `__proto__`:
 
- --> Object.getPrototypeOf()
- --> Object.setPrototypeOf()
+`Object.getPrototypeOf()`
+`Object.setPrototypeOf()`
  
-Mas se for só pra observar um objeto direto no console, __proto__ é bem mais direta e fácil de entender, é mais didático que um getter pra entender o conceito da propriedade __proto__.
+Mas se for só pra observar um objeto direto no console, `__proto__` é bem mais direta e fácil de entender, é mais didático que um getter pra entender o conceito da propriedade `__proto__`.
 
  
 ------------------------------------------
 Sobre protótipos:
 
-'JavaScript is a prototype-based language, and functions differently than the traditional class-based paradigm that many other object-oriented languages use.'
-   
-https://www.digitalocean.com/community/tutorials/understanding-prototypes-and-inheritance-in-javascript
- 
-https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes
+'<i>JavaScript is a prototype-based language, and functions differently than the traditional class-based paradigm that many other object-oriented languages use.</i>' ([Digital Ocean](https://www.digitalocean.com/community/tutorials/understanding-prototypes-and-inheritance-in-javascript) e [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes))
 
-A descrição do que são objetos em Javascript também passa pela definição do protótipos:
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
-------------------------------------------
+A descrição do que são objetos em Javascript também passa pela definição do protótipos, [conforme descreve o Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+) ------------------------------------------
 
-    --- processamento das classes em javascript ---
+processamento das classes em javascript
 
 Ordem de processamento das classes:
 
