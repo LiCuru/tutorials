@@ -25,9 +25,9 @@ this_object.retornar_this()
 
 O `this.value` e refere ao `value` no escopo fora das {chaves onde `this` estava}. `retornar_this()` é uma função. Funções também são objetos em javascrit. Ou seja, se é uma função, também é um objeto. Repare que quase todo o conteúdo de uma função é definido dentro de chaves, {}, da mesma forma que outros objetos.
 
-## sobre as funções
+## Sobre as funções
 
-### funções também são objetos em javascript
+### Funções também são objetos em javascript
 
 <i>In JavaScript, functions are first-class objects, because they can be passed to other functions, returned from functions, and assigned to variables and properties. They can also have properties and methods just like any other object. What distinguishes them from other objects is that functions can be called.
 
@@ -506,7 +506,7 @@ acessar a propriedade via `__proto__` está deprecated.
  
 Mas se for só pra observar um objeto direto no console, `__proto__` é bem mais direta e fácil de entender, é mais didático que um getter pra entender o conceito da propriedade `__proto__`.
 
-# processamento das classes em javascript
+# Processamento das classes em javascript
 
 Ordem de processamento das classes:
 
@@ -565,7 +565,7 @@ As instalações são em 3 "camadas":
   - 4.3 - instância --> métodos e accessors privados são instalados depois diretamente na instância. Eles são salvos para serem depois instalados diretamente na instância.
  
 
-#### sobre o static method
+#### Sobre o static method
 
 Fonte:  [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance) 
 
@@ -623,7 +623,7 @@ colorWithStatic_object.__proto__.constructor.static_method()
 Elessão processados na ordem em que aparecem
  
  
-#### instance fields
+#### Instance fields
  
  A classe é um objeto. A instância que deriva da classe é um objeto também.
  
@@ -638,7 +638,7 @@ Elessão processados na ordem em que aparecem
  `InstanciaDaClasse.__proto__.constructor`  ---> `class NomeDaClasse`
  
 
-### gravação das instance fields VALUES
+### Gravação das instance fields VALUES
 Quando a classe é criada, a expressão do inicializador de cada instance field é gravada.
  
 O inicializador dos valores dos instance fields são processados, quando:
@@ -655,13 +655,13 @@ Em que lugar:
  
  
  
-#### static fields
+#### Static fields
  
  o inicializador dele é processado com 'this' já vinculado à própria classe
  
  
  
-#### static initialization blocks
+#### Static initialization blocks
  
  são processados com o 'this' vinculado à própria classe também
  
