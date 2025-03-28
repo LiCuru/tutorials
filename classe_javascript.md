@@ -1,7 +1,6 @@
-## Anotações sobre a ordem de processamento das classes do javascript
+## Ordem de processamento das classes do javascript
 
-Fonte:
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#evaluation_order
+Fonte: [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#evaluation_order) 
 
 Entender a ordem, e de que forma acontece o processamento das classes em javascript é importante para entender muitas coisas.
 O 'this', por exemplo: a palavra-chave, a keyword, 'this' referencia objetos diferentes dependendo de onde é declarada dentro de uma classe.
@@ -26,17 +25,14 @@ O `this.value` e refere ao `value` no escopo fora das {chaves onde `this` estava
 
 ### funções também são objetos em javascript
 
-In JavaScript, functions are first-class objects, because they can be passed to other functions, returned from functions, and assigned to variables and properties. They can also have properties and methods just like any other object. What distinguishes them from other objects is that functions can be called.
+<i>In JavaScript, functions are first-class objects, because they can be passed to other functions, returned from functions, and assigned to variables and properties. They can also have properties and methods just like any other object. What distinguishes them from other objects is that functions can be called.
 
-Function values are typically instances of Function. See Function for information on properties and methods of Function objects. Callable values cause typeof to return "function" instead of "object".
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions
+Function values are typically instances of Function. See Function for information on properties and methods of Function objects. Callable values cause typeof to return "function" instead of "object". </i> [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions) 
 
 ------------------------------------------------
+### Ainda sobre funções serem objetos
 
-
-
-Ainda sobre funções serem objetos: O código da funçao está contido nas chaves, {}, que é a notação de objetos, e tem um protótipo próprio:
+O código da funçao está contido nas chaves, {}, que é a notação de objetos, e tem um protótipo próprio:
 
 Repare:
 
