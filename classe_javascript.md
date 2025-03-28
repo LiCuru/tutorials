@@ -1,4 +1,4 @@
-Anotações sobre a ordem de processamento das classes do javascript.:
+## Anotações sobre a ordem de processamento das classes do javascript
 
 Fonte:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#evaluation_order
@@ -9,7 +9,7 @@ O 'this', por exemplo: a palavra-chave, a keyword, 'this' referencia objetos dif
  O 'this' em um objeto vai se referir ao objeto que está fora do objeto onde ele é declarado. Você encontra esse objeto fora das chaves onde está o this.
 
 
-
+```
 this_object = { value: 1, retornar_this(){return this.value} } 
 >>> Object { value: 1, retornar_this: retornar_this() }
 
@@ -17,14 +17,14 @@ this_object = { value: 1, retornar_this(){return this.value} }
 
 this_object.retornar_this() 
 >>> 1
-
+```
 
 
 this_object é um objeto com um "método" e uma "propriedade"
 
-O 'this.value' e refere ao 'value' no escopo fora das {chaves onde 'this' estava}. retornar_this() é uma função. Funções também são objetos em javascrit. Ou seja, se é uma função, também é um objeto. Repare que quase todo o conteúdo de uma função é definido dentro de chaves, {}, da mesma forma que outros objetos.
+O `this.value` e refere ao `value` no escopo fora das {chaves onde `this` estava}. `retornar_this()` é uma função. Funções também são objetos em javascrit. Ou seja, se é uma função, também é um objeto. Repare que quase todo o conteúdo de uma função é definido dentro de chaves, {}, da mesma forma que outros objetos.
 
---- funções também são objetos em javascript ---
+### funções também são objetos em javascript
 
 In JavaScript, functions are first-class objects, because they can be passed to other functions, returned from functions, and assigned to variables and properties. They can also have properties and methods just like any other object. What distinguishes them from other objects is that functions can be called.
 
@@ -40,6 +40,7 @@ Ainda sobre funções serem objetos: O código da funçao está contido nas chav
 
 Repare:
 
+```
 this_object = 	{ 
 		  value: 1, 
 		  retornar_this(){
@@ -60,7 +61,7 @@ this_object.__proto__
 
 this_object.retornar_this() 
 >>> "o que existe entre as chaves da função ainda é um objeto1"
-
+```
 ------------------------------------
 
 Uma revisão rápida sobre classes, instâncias e protótipos.
@@ -96,10 +97,11 @@ Imagine as classes como uma forma de bolo. O bolo é a instância. E a massa é 
 
 Na classe, a função construtora da classe, ou seja, a função que retorna o objeto instanciado, é chamada de constructor.
 
-Um 'this' para definir {uma propriedade dentro da função construtora} vai se referir ao objeto que envolve a função construtora, a classe, ou seja, um 'this' em uma propriedade na função construtora se refere ao escopo fora da função construtora.
+Um `this` para definir {uma propriedade dentro da função construtora} vai se referir ao objeto que envolve a função construtora, a classe, ou seja, um `this` em uma propriedade na função construtora se refere ao escopo fora da função construtora.
 
 É possível escrever e rodar esse exemplo de classe no navegador, no browser, pelo DevTools, atalho F12, indo direto no console. Uma classe pode ser escrita assim:
 
+```
 class Bolo{
 
     constructor(sabor, qtdFarinhag){
@@ -145,13 +147,15 @@ boloDeChocolate.__proto__
 boloDeChocolate.__proto__ == Object.getPrototypeOf(boloDeChocolate) 
 >>> true
 
-----> repare que o objeto boloDeChocolate não tem o método .avisarQueTemBolo(). Quem tem o método .avisarQueTemBolo() é o boloDeChocolate.__proto__ , o protótipo· Mas você pode chamar direto do objeto boloDeChocolate.avisarQueTemBolo().
+```
 
-é mais fácil entender boloDeChocolate.__proto__ do que Object.getPrototypeOf(boloDeChocolate). Ambos devolvem o mesmo objeto que é o protótipo de boloDeChocolate. Só que:
+----> repare que o objeto boloDeChocolate não tem o método `.avisarQueTemBolo()`. Quem tem o método `.avisarQueTemBolo()` é o `boloDeChocolate.__proto__` , o protótipo· Mas você pode chamar direto do objeto `boloDeChocolate.avisarQueTemBolo()`.
 
-boloDeChocolate.__proto__ ---> é um accessor, uma propriedade, que dá acesso ao prototype do objeto
+é mais fácil entender `boloDeChocolate.__proto__` do que `Object.getPrototypeOf(boloDeChocolate)`. Ambos devolvem o mesmo objeto que é o protótipo de boloDeChocolate. Só que:
 
-Object.getPrototypeOf(boloDeChocolate) ---> é um método estático de Object, que busca o prototype do objeto passado como parâmetro.  Argumento = boloDeChocolate
+`boloDeChocolate.__proto__` ---> é um accessor, uma propriedade, que dá acesso ao prototype do objeto
+
+`Object.getPrototypeOf(boloDeChocolate)` ---> é um método estático de Object, que busca o prototype do objeto passado como parâmetro.  <b>Argumento = `boloDeChocolate`</b>
 
 
 
