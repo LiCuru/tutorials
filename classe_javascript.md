@@ -27,7 +27,8 @@ O `this.value` e refere ao `value` no escopo fora das {chaves onde `this` estava
 
 <i>In JavaScript, functions are first-class objects, because they can be passed to other functions, returned from functions, and assigned to variables and properties. They can also have properties and methods just like any other object. What distinguishes them from other objects is that functions can be called.
 
-Function values are typically instances of Function. See Function for information on properties and methods of Function objects. Callable values cause typeof to return "function" instead of "object". </i> [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions) 
+Function values are typically instances of Function. See Function for information on properties and methods of Function objects. Callable values cause typeof to return "function" instead of "object". </i>
+(Fonte: [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions))
 
 ------------------------------------------------
 ### Ainda sobre funções serem objetos
@@ -73,9 +74,11 @@ instanciar a classe --> criar um objeto à partir de uma classe
 
 É comum usar essa notação para instanciar uma classe:
 
+```
 instância_da_classe = new NomeDaClasse(parametro);
+```
 
-parâmetro --> é o que você passa entre parênteses na função. É só isso. Os valores propriamente ditos são chamados de argumentos.  Parâmetro se refere ao que você encontra na definição da função. O argumento é o que você passa de valor quando chama a função. No dia a dia é comum "parâmetro" e "argumento" serem usados como se fossem sinônimos, mas eles não são sempre sinônimos.
+<b> parâmetro </b> --> é o que você passa entre parênteses na função. É só isso. Os valores propriamente ditos são chamados de argumentos.  Parâmetro se refere ao que você encontra na definição da função. O argumento é o que você passa de valor quando chama a função. No dia a dia é comum "parâmetro" e "argumento" serem usados como se fossem sinônimos, mas eles não são sempre sinônimos.
 
 (https://stackoverflow.com/questions/156767/whats-the-difference-between-an-argument-and-a-parameter)
 
@@ -83,7 +86,7 @@ Funções construtoras --> são funções que criam objetos e os retornam.
 
 
 
---- Classes e funções construtoras ---
+### Classes e funções construtoras
 Toda classe em javascript tem uma função construtora, o constructor. Isso porque toda classe devolve um objeto. É justamente isso o que define uma classe: o fato de instanciar objetos. A classe recebe (ou não recebe) parâmetros e devolve um objeto.
 
 
@@ -158,35 +161,36 @@ boloDeChocolate.__proto__ == Object.getPrototypeOf(boloDeChocolate)
 
 --------------------------------------------
 
---- 'JavaScript is a prototype-based language' ---
-https://www.digitalocean.com/community/tutorials/understanding-prototypes-and-inheritance-in-javascript
+### 'JavaScript is a prototype-based language'
+([Digital Ocean](https://www.digitalocean.com/community/tutorials/understanding-prototypes-and-inheritance-in-javascript)) 
 
 
 
---- 'JavaScript is a prototype-based language — an object's behaviors are specified by its own properties and its prototype's properties. However, with the addition of classes, the creation of hierarchies of objects and the inheritance of properties and their values are much more in line with other object-oriented languages' ---
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes
+<i> 'JavaScript is a prototype-based language — an object's behaviors are specified by its own properties and its prototype's properties. However, with the addition of classes, the creation of hierarchies of objects and the inheritance of properties and their values are much more in line with other object-oriented languages'</i>
+([Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes)) 
 
 
---- 'Nearly all objects in JavaScript are instances of Object; a typical object inherits properties (including methods) from Object.prototype' ---
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+<i>'Nearly all objects in JavaScript are instances of Object; a typical object inherits properties (including methods) from Object.prototype'</i>
+([Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object))
 
 
 -------------------------------------------
-Sobre protótipos
+### Sobre protótipos
 
-Quase todo objeto tem um protótipo. Ele ainda é acessível pelo nomeDoObjeto.__proto__ ,o que é bem mais didático, mas favorece que códigos sejam escritos de forma ruim, porque é possível alterar o __proto__, e alterar o protótipo de objetos não é boa prática.
+Quase todo objeto tem um protótipo. Ele ainda é acessível pelo `nomeDoObjeto.__proto__` ,o que é bem mais didático, mas favorece que códigos sejam escritos de forma ruim, porque é possível alterar o `__proto__`, e alterar o protótipo de objetos não é boa prática.
 
-Se não é um objeto, não tem protótipo, e, portanto, não tem nomeDoObjeto.__proto__
+Se não é um objeto, não tem protótipo, e, portanto, não tem `nomeDoObjeto.__proto__`
 
-__proto__ sempre aponta para outro objeto. Se não apontar para outro objeto, __proto__ vai apontar para null. É possível alterar o __proto__ simplesmente definindo um valor para ele, ou então através de Object.defineProperty().
+`__proto__` sempre aponta para outro objeto. Se não apontar para outro objeto, `__proto__` vai apontar para null. É possível alterar o `__proto__` simplesmente definindo um valor para ele, ou então através de `Object.defineProperty()`.
 
+```
 umObjeto = {} 
 >>> Object {  }
+```
 
 criação de objeto
 
-
-
+```
 umObjeto.__proto__ 
 >>> v Object { … }
 ​	> __defineGetter__: function __defineGetter__()
@@ -204,34 +208,36 @@ umObjeto.__proto__
 ​	> <get __proto__()>: function __proto__()
 ​	> <set __proto__()>: function __proto__()
 
+```
 
 
 
-
-repare que o umObjeto.__proto__ é o Object { … } e que o seu o protótipo é nulo:
-
+repare que o `umObjeto.__proto__` é o Object { … } e que o seu o protótipo é nulo:
+```
 __proto__ : null
+```
 
-Esse é o protótipo final da cadeia de protótipos de todos os objetos que têm protótipo, ou seja de todos os objetos em que __proto__ não é nulo.
+Esse é o protótipo final da cadeia de protótipos de todos os objetos que têm protótipo, ou seja de todos os objetos em que `__proto__` não é nulo.
 
 
-
+```
 umObjeto.__proto__ = {'a' : 3} 
 >>> v Object { a: 3 }
 ​	a: 3
 ​	<prototype>: Object { … }
+```
 
-dá pra alterar o __proto__ simplesmente definindo um valor pra ele, esse valor sempre precisa ser outro objeto. Se o valor definido para o __proto__ não for um objeto, não funciona.
+dá pra alterar o `__proto__` simplesmente definindo um valor pra ele, esse valor sempre precisa ser outro objeto. Se o valor definido para o `__proto__` não for um objeto, não funciona.
 
-Esse novo objeto apontado em __proto__ tem sua própria cadeia de protótipos. No caso, o protótipo de umObjeto.__proto__ é Object { … }. 
+Esse novo objeto apontado em `__proto__` tem sua própria cadeia de protótipos. No caso, o protótipo de `umObjeto.__proto__` é `Object { … }`. 
 
-Se umObjeto.__proto__ fosse uma instância de uma classe, era diferente. O novo umObjeto.__proto__ ía deixar de ser o "protótipo final" e seria outro objeto com sua própria herança de sequência de protótipos.
+Se `umObjeto.__proto__` fosse uma instância de uma classe, era diferente. O novo `umObjeto.__proto__` ía deixar de ser o "protótipo final" e seria outro objeto com sua própria herança de sequência de protótipos.
 
-Se usarmos a classe do tutorial do site do mozilla
-(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance)
+Se usarmos a classe do [tutorial do site do mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance)
 
 podemos verificar esse exemplo:
 
+```
 class Color {
   #values;
   constructor(r, g, b, a = 1) {
@@ -391,13 +397,15 @@ umObjeto.__proto__.__proto__.__proto__
 umObjeto.__proto__.__proto__.__proto__.__proto__ 
 >>> null
 
+```
 
 
 
-Além de __proto__ permitir a alteração do protótipo de um objeto, se um objeto já foi construído com protótipo nulo, definir um valor para nomeDoObjeto.__proto__ não vai alterar o protótipo, mas sim, criar uma nova propriedade chamada __proto__. Por isso essa propriedade __proto__ está sendo substituída.
 
-__proto__ -->ainda<-- pode ser acessado. Em outras palavras: __proto__ está 'deprecated'.
-(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
+Além de `__proto__` permitir a alteração do protótipo de um objeto, se um objeto já foi construído com protótipo nulo, definir um valor para `nomeDoObjeto.__proto__` não vai alterar o protótipo, mas sim, criar uma nova propriedade chamada `__proto__`. Por isso essa propriedade `__proto__` está sendo substituída.
+
+`__proto__` -->ainda<-- pode ser acessado. Em outras palavras: `__proto__` está 'deprecated'.
+(Fonte: [documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto))) 
 
 __proto__ está sendo substituído por:
 Object.getPrototypeOf(nomeDoObjeto)
