@@ -78,9 +78,9 @@ instanciar a classe --> criar um objeto à partir de uma classe
 instância_da_classe = new NomeDaClasse(parametro);
 ```
 
-<b> parâmetro </b> --> é o que você passa entre parênteses na função. É só isso. Os valores propriamente ditos são chamados de argumentos.  Parâmetro se refere ao que você encontra na definição da função. O argumento é o que você passa de valor quando chama a função. No dia a dia é comum "parâmetro" e "argumento" serem usados como se fossem sinônimos, mas eles não são sempre sinônimos.
+<b> parâmetro </b> --> é o que você passa entre parênteses na função. É só isso. Os valores propriamente ditos são chamados de <i>argumentos</i>.  <b>Parâmetro</b> se refere ao que você encontra na definição da função. O <i>argumento</i> é o que você passa de valor quando chama a função. No dia a dia é comum "<b>parâmetro</b>" e "<i>argumento</i>" serem usados como se fossem sinônimos, mas eles não são sempre sinônimos.
 
-(https://stackoverflow.com/questions/156767/whats-the-difference-between-an-argument-and-a-parameter)
+(Fonte: [Stack Overflow](https://stackoverflow.com/questions/156767/whats-the-difference-between-an-argument-and-a-parameter))) 
 
 Funções construtoras --> são funções que criam objetos e os retornam. 
 
