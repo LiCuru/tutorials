@@ -3,9 +3,11 @@
 Fonte: [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#evaluation_order) 
 
 Entender a ordem, e de que forma acontece o processamento das classes em javascript é importante para entender muitas coisas.
-O 'this', por exemplo: a palavra-chave, a keyword, 'this' referencia objetos diferentes dependendo de onde é declarada dentro de uma classe.
 
- O 'this' em um objeto vai se referir ao objeto que está fora do objeto onde ele é declarado. Você encontra esse objeto fora das chaves onde está o this.
+### Entendendo o 'this'
+A palavra-chave, a keyword, `this` referencia objetos diferentes dependendo de onde é declarada dentro de uma classe.
+
+ O `this` em um objeto vai se referir ao objeto que está fora do objeto onde ele é declarado. Você encontra esse objeto fora das chaves onde está o this.
 
 
 ```
@@ -19,9 +21,11 @@ this_object.retornar_this()
 ```
 
 
-this_object é um objeto com um "método" e uma "propriedade"
+`this_object` é um objeto com um <i>método</i> e uma <i>propriedade</i>
 
 O `this.value` e refere ao `value` no escopo fora das {chaves onde `this` estava}. `retornar_this()` é uma função. Funções também são objetos em javascrit. Ou seja, se é uma função, também é um objeto. Repare que quase todo o conteúdo de uma função é definido dentro de chaves, {}, da mesma forma que outros objetos.
+
+## sobre as funções
 
 ### funções também são objetos em javascript
 
@@ -30,10 +34,8 @@ O `this.value` e refere ao `value` no escopo fora das {chaves onde `this` estava
 Function values are typically instances of Function. See Function for information on properties and methods of Function objects. Callable values cause typeof to return "function" instead of "object". </i>
 (Fonte: [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions))
 
-------------------------------------------------
-### Ainda sobre funções serem objetos
 
-O código da funçao está contido nas chaves, {}, que é a notação de objetos, e tem um protótipo próprio:
+O código da funçao fica contido nas chaves, {}, que é a notação de objetos, e tem um protótipo próprio:
 
 Repare:
 
@@ -61,7 +63,7 @@ this_object.retornar_this()
 ```
 ------------------------------------
 
-Uma revisão rápida sobre classes, instâncias e protótipos.
+### Uma revisão rápida sobre classes, instâncias e protótipos
 
 Para entender classes em javascript é necessário entender o funcionamento de protótipos. Pois a implementação da programação orientada a objeto no javascript foi implementada através da existência desses protótipos.
 
@@ -86,9 +88,6 @@ instância_da_classe = new NomeDaClasse(parametro);
 
 ### Classes e funções construtoras
 Toda classe em javascript tem uma função construtora, o constructor. Isso porque toda classe devolve um objeto. É justamente isso o que define uma classe: o fato de instanciar objetos. A classe recebe (ou não recebe) parâmetros e devolve um objeto.
-
-
-----------------------------------
 
 Imagine as classes como uma forma de bolo. O bolo é a instância. E a massa é (ou são) o(s) parâmetro(s).  
 
@@ -146,23 +145,17 @@ boloDeChocolate.__proto__ == Object.getPrototypeOf(boloDeChocolate)
 
 ```
 
-----> repare que o objeto boloDeChocolate não tem o método `.avisarQueTemBolo()`. Quem tem o método `.avisarQueTemBolo()` é o `boloDeChocolate.__proto__` , o protótipo· Mas você pode chamar direto do objeto `boloDeChocolate.avisarQueTemBolo()`.
+repare que o objeto boloDeChocolate não tem o método `.avisarQueTemBolo()`. Quem tem o método `.avisarQueTemBolo()` é o `boloDeChocolate.__proto__` , o protótipo· Mas você pode chamar direto do objeto `boloDeChocolate.avisarQueTemBolo()`.
 
 é mais fácil entender `boloDeChocolate.__proto__` do que `Object.getPrototypeOf(boloDeChocolate)`. Ambos devolvem o mesmo objeto que é o protótipo de boloDeChocolate. Só que:
 
-`boloDeChocolate.__proto__` ---> é um accessor, uma propriedade, que dá acesso ao prototype do objeto
+`boloDeChocolate.__proto__` é um accessor, uma propriedade, que dá acesso ao prototype do objeto
 
-`Object.getPrototypeOf(boloDeChocolate)` ---> é um método estático de Object, que busca o prototype do objeto passado como parâmetro.  <b>Argumento = `boloDeChocolate`</b>
+`Object.getPrototypeOf(boloDeChocolate)`é um método estático de Object, que busca o prototype do objeto passado como parâmetro.  <b>Argumento = `boloDeChocolate`</b>
 
-
-
-
---------------------------------------------
-
-### 'JavaScript is a prototype-based language'
+### Sobre protótipos
+#### 'JavaScript is a prototype-based language'
 ([Digital Ocean](https://www.digitalocean.com/community/tutorials/understanding-prototypes-and-inheritance-in-javascript)) 
-
-
 
 <i> 'JavaScript is a prototype-based language — an object's behaviors are specified by its own properties and its prototype's properties. However, with the addition of classes, the creation of hierarchies of objects and the inheritance of properties and their values are much more in line with other object-oriented languages'</i>
 ([Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes)) 
@@ -170,10 +163,6 @@ boloDeChocolate.__proto__ == Object.getPrototypeOf(boloDeChocolate)
 
 <i>'Nearly all objects in JavaScript are instances of Object; a typical object inherits properties (including methods) from Object.prototype'</i>
 ([Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object))
-
-
--------------------------------------------
-### Sobre protótipos
 
 Quase todo objeto tem um protótipo. Ele ainda é acessível pelo `nomeDoObjeto.__proto__` ,o que é bem mais didático, mas favorece que códigos sejam escritos de forma ruim, porque é possível alterar o `__proto__`, e alterar o protótipo de objetos não é boa prática.
 
@@ -184,11 +173,8 @@ Se não é um objeto, não tem protótipo, e, portanto, não tem `nomeDoObjeto._
 ```
 umObjeto = {} 
 >>> Object {  }
-```
 
-criação de objeto
 
-```
 umObjeto.__proto__ 
 >>> v Object { … }
 ​	> __defineGetter__: function __defineGetter__()
@@ -208,9 +194,8 @@ umObjeto.__proto__
 
 ```
 
-
-
 repare que o `umObjeto.__proto__` é o Object { … } e que o seu o protótipo é nulo:
+
 ```
 __proto__ : null
 ```
@@ -225,7 +210,7 @@ umObjeto.__proto__ = {'a' : 3}
 ​	<prototype>: Object { … }
 ```
 
-dá pra alterar o `__proto__` simplesmente definindo um valor pra ele, esse valor sempre precisa ser outro objeto. Se o valor definido para o `__proto__` não for um objeto, não funciona.
+Dá para alterar o `__proto__` simplesmente definindo um valor pra ele, esse valor sempre precisa ser outro objeto. Se o valor definido para o `__proto__` não for um objeto, não funciona.
 
 Esse novo objeto apontado em `__proto__` tem sua própria cadeia de protótipos. No caso, o protótipo de `umObjeto.__proto__` é `Object { … }`. 
 
@@ -233,7 +218,7 @@ Se `umObjeto.__proto__` fosse uma instância de uma classe, era diferente. O nov
 
 Se usarmos a classe do [tutorial do site do mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance)
 
-podemos verificar esse exemplo:
+Podemos verificar esse exemplo:
 
 ```
 class Color {
