@@ -611,8 +611,8 @@ colorWithStatic_object.__proto__.constructor.static_method()
 
 ### PASSO 5 - A classe é inicializada com:
 
-	- o `Object.__proto__` definido (ou não) pelo extends
-	- a declaração (ou não) do constructor.
+- o `Object.__proto__` definido (ou não) pelo extends
+- a declaração (ou não) do constructor.
  
  
  
