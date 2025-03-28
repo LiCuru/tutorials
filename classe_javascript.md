@@ -526,15 +526,15 @@ O processamento do constructor não é observável.
 
 
 
-### <b> PASSO 3
-as chaves dos elementos da classe </b>:  A chave é o "nome" da propriedade. Os valores associados às keys (às chaves, aos "nomes") não são processados nessa etapa 3.
+### <b> PASSO 3 - as chaves dos elementos da classe </b>
+A chave é o "nome" da propriedade. Os valores associados às keys (às chaves, aos "nomes") não são processados nessa etapa 3.
 
-	- computed key e `this`: Se essa chave for uma computed key, ela é processada com o `this` vinculado ao escopo exterior, ao qual a classe está imersa (não é um `this` que se refere à classe em si). Computed keys são keys que precisam ser processadas, 'calculadas' para ter o valor delas, não é um valor estabelecido (uma string, uma int...). O computador precisa "calcular" ele.
+Computed key e `this`: Se essa chave for uma computed key, ela é processada com o `this` vinculado ao escopo exterior, ao qual a classe está imersa (não é um `this` que se refere à classe em si). Computed keys são keys que precisam ser processadas, 'calculadas' para ter o valor delas, não é um valor estabelecido (uma string, uma int...). O computador precisa "calcular" ele.
 
 Ou seja, voltando: ao processar o valor da key declarada na classe (se não for um valor já estabelecido), um "this" vai se referir ao escopo fora, que envolve a classe, e não à classe em si.
 Exemplo de uma computed key: https://ilikekillnerds.com/2018/02/computed-object-keys-function-names-javascript/
 
----> Já um `this` declarado no valor vinculado à chave (à key), e não à chave em si, vai se referir à classe, e não ao escopo fora da classe.
+-Já um `this` declarado no valor vinculado à chave (à key), e não à chave em si, vai se referir à classe, e não ao escopo fora da classe.
 
 
 
@@ -619,8 +619,8 @@ colorWithStatic_object.__proto__.constructor.static_method()
  
  
  
-### <b> PASSO 6 </b> 
-Os <i>valores</i> dos elementos da classe são processados na ordem em que aparecem
+### <b> PASSO 6 </b> Os <i>valores</i> dos elementos da classe
+Elessão processados na ordem em que aparecem
  
  
 #### instance fields
@@ -667,7 +667,7 @@ Em que lugar:
  
  
  
-### PASSO 7
+### PASSO 7 - fim
 A classe está pronta para ser usada como uma função construtora
  
  
