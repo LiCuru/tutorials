@@ -61,9 +61,8 @@ this_object.__proto__
 this_object.retornar_this() 
 >>> "o que existe entre as chaves da função ainda é um objeto1"
 ```
-------------------------------------
 
-### Uma revisão rápida sobre classes, instâncias e protótipos
+## Uma revisão rápida sobre classes, instâncias e protótipos
 
 Para entender classes em javascript é necessário entender o funcionamento de protótipos. Pois a implementação da programação orientada a objeto no javascript foi implementada através da existência desses protótipos.
 
@@ -86,7 +85,7 @@ instância_da_classe = new NomeDaClasse(parametro);
 
 
 
-### Classes e funções construtoras
+## Classes e funções construtoras
 Toda classe em javascript tem uma função construtora, o constructor. Isso porque toda classe devolve um objeto. É justamente isso o que define uma classe: o fato de instanciar objetos. A classe recebe (ou não recebe) parâmetros e devolve um objeto.
 
 Imagine as classes como uma forma de bolo. O bolo é a instância. E a massa é (ou são) o(s) parâmetro(s).  
@@ -153,7 +152,7 @@ repare que o objeto boloDeChocolate não tem o método `.avisarQueTemBolo()`. Qu
 
 `Object.getPrototypeOf(boloDeChocolate)`é um método estático de Object, que busca o prototype do objeto passado como parâmetro.  <b>Argumento = `boloDeChocolate`</b>
 
-### Sobre protótipos
+## Sobre protótipos
 #### 'JavaScript is a prototype-based language'
 ([Digital Ocean](https://www.digitalocean.com/community/tutorials/understanding-prototypes-and-inheritance-in-javascript)) 
 
@@ -487,7 +486,7 @@ Existe um processo de transformar alguma coisa em outra coisa de forma automáti
 [Esse link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes) de um tutorial de javascript do mozilla.org tem exemplos interessantes pra rodar no console do DevTools.
 
 
-IMPORTANTE:
+#### IMPORTANTE:
 É boa prática não fazer alterações em protótipos, ou seja, na propriedade `__proto__`, de qualquer objeto. Se for alterar alguma coisa, altere direto no objeto, ou na classe etc, não altere no protótipo. 
 (fonte: [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)) 
 
@@ -504,15 +503,12 @@ acessar a propriedade via `__proto__` está deprecated.
 Mas se for só pra observar um objeto direto no console, `__proto__` é bem mais direta e fácil de entender, é mais didático que um getter pra entender o conceito da propriedade `__proto__`.
 
  
-------------------------------------------
-Sobre protótipos:
+## Sobre protótipos
 
 '<i>JavaScript is a prototype-based language, and functions differently than the traditional class-based paradigm that many other object-oriented languages use.</i>' ([Digital Ocean](https://www.digitalocean.com/community/tutorials/understanding-prototypes-and-inheritance-in-javascript) e [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes))
 
 A descrição do que são objetos em Javascript também passa pela definição do protótipos, [conforme descreve o Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 )
-
-------------------------------------------
 
 # processamento das classes em javascript
 
