@@ -78,9 +78,7 @@ As classes são objetos. Só que elas criam outros objetos. Esses objetos que as
 instância_da_classe = new NomeDaClasse(parametro);
 ```
 
-- <b> parâmetro </b>: é o que você passa entre parênteses na função. É só isso. Os valores propriamente ditos são chamados de <i>argumentos</i>.  <b>Parâmetro</b> se refere ao que você encontra na definição da função. O <i>argumento</i> é o que você passa de valor quando chama a função. No dia a dia é comum "<b>parâmetro</b>" e "<i>argumento</i>" serem usados como se fossem sinônimos, mas eles não são sempre sinônimos.
-
-(Fonte: [Stack Overflow](https://stackoverflow.com/questions/156767/whats-the-difference-between-an-argument-and-a-parameter))) 
+- <b> parâmetro </b>: é o que você passa entre parênteses na função. É só isso. Os valores propriamente ditos são chamados de <i>argumentos</i>.  <b>Parâmetro</b> se refere ao que você encontra na definição da função. O <i>argumento</i> é o que você passa de valor quando chama a função. No dia a dia é comum "<b>parâmetro</b>" e "<i>argumento</i>" serem usados como se fossem sinônimos, mas eles não são sempre sinônimos. (Fonte: [Stack Overflow](https://stackoverflow.com/questions/156767/whats-the-difference-between-an-argument-and-a-parameter))) 
 
 - <b>Funções construtoras</b>: são funções que criam objetos e os retornam. 
 
@@ -407,55 +405,59 @@ Além de `__proto__` permitir a alteração do protótipo de um objeto, se um ob
 `__proto__` -->ainda<-- pode ser acessado. Em outras palavras: `__proto__` está 'deprecated'.
 (Fonte: [documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto))) 
 
-__proto__ está sendo substituído por:
+`__proto__` está sendo substituído por:
+```
 Object.getPrototypeOf(nomeDoObjeto)
+```
 
-Object.getPrototypeOf(nomeDoObjeto) é um método estático, ou seja, é um método que só pode ser chamado diretamente do objeto Object, e não de nenhuma instância de Object. Por isso que a notação é:
+`Object.getPrototypeOf(nomeDoObjeto)` é um método estático, ou seja, é um método que só pode ser chamado diretamente do objeto Object, e não de nenhuma instância de Object. Por isso que a notação é:
 
-
+```
 nomeDoObjeto = {}
 >>> Object {  }
+```
 
 criação do objeto nomeDoObjeto
 
-
-
+```
 nomeDoObjeto.__proto__
 >>> Object { … }
+```
 
 ainda funciona, está deprecated, e é a mesma coisa que:
 
-
-
+```
 Object.getPrototypeOf(nomeDoObjeto)
 >>> Object { … }
 
-funciona
-
-
 nomeDoObjeto.getPrototypeOf() -->
 >>> Uncaught TypeError: nomeDoObjeto.getPrototypeOf is not a function
+```
 
-não funciona. "Não existe". É um método estático (static method). Mesmo que o protótipo da instância seja Object (repare que Object { … } é o protótipo do nomeDoObjeto), mesmo assim, não dá pra chamar pela instância. Você tem que chamar pelo Object, pois é um static method. Static methods (métodos estáticos) são isso: são métodos de classes que não são instanciados, ou seja, não estão nos objetos criados através daquela classe. Eles simplesmentes não estão na instância. 
+não funciona. "Não existe". É um método estático (static method). Mesmo que o protótipo da instância seja `Object` (repare que `Object { … }` é o protótipo do nomeDoObjeto), mesmo assim, não dá pra chamar pela instância. Você tem que chamar pelo `Object`, pois é um static method. Static methods (métodos estáticos) são isso: são métodos de classes que não são instanciados, ou seja, não estão nos objetos criados através daquela classe. Eles simplesmentes não estão na instância. 
 
-Classes geram objetos, mas elas também não deixam de ser objetos. Se você tem uma classe chamada "NomeDaClasse" e jogar NomeDaClasse.__proto__ no console tu vai acessar o protótipo da classe NomeDaClasse. E tu pode acessar o protótipo do protótipo do protótipo... NomeDaClasse.__proto__.__proto__.__proto__ até chegar no final 
+Classes geram objetos, mas elas também não deixam de ser objetos. Se você tem uma classe chamada `NomeDaClasse` e jogar `NomeDaClasse.__proto__` no console tu vai acessar o protótipo da classe `NomeDaClasse`. E tu pode acessar o protótipo do protótipo do protótipo... `NomeDaClasse.__proto__.__proto__.__proto__` até chegar no final 
 
 ou também:
-
+```
 Object.getPrototypeOf(Object.getPrototypeOf(Object.getPrototypeOf(Component)))
---> o que não é nada didático.
+```
+o que não é nada didático.
 
+```
 NomeDaClasse.__proto__.__proto__.__proto__
---> é mais fácil de entender
+```
+é mais fácil de entender
 
 
-Mas enfim, voltando, tu pode acessar o protótipo do protótipo do protótipo, NomeDaClasse.__proto__.__proto__.__proto__ até chegar no final, que é comum a quase todos os objetos (todos em que o protótipo não é nulo).
+Mas enfim, voltando, tu pode acessar o protótipo do protótipo do protótipo, `NomeDaClasse.__proto__.__proto__.__proto__` até chegar no final, que é comum a quase todos os objetos (todos em que o protótipo não é nulo).
 
 
-Alguns protótipos são compartilhados entre os vários objetos de uma cadeia de herança. Se vc tem vários arrays, todos eles compartilham o mesmo protótipo que dá origem a todos os Arrays. O mesmo Array.__proto__
+Alguns protótipos são compartilhados entre os vários objetos de uma cadeia de herança. Se vc tem vários arrays, todos eles compartilham o mesmo protótipo que dá origem a todos os Arrays. O mesmo `Array.__proto__`
 
-O jeito mais simples de verificar isso é indo no developer tools do browser (atalho: F12) e jogar no console nomeDoObjeto.__proto__ que ele roda o código e devolve o protótipo. Ou seja:
+O jeito mais simples de verificar isso é indo no developer tools do browser (atalho: F12) e jogar no console `nomeDoObjeto.__proto__` que ele roda o código e devolve o protótipo. Ou seja:
 
+```
 nomeDaArray = ['a', 'b', 'c']
 >>> Array(3) [ "a", "b", "c" ]
 
@@ -468,9 +470,12 @@ nomeDaArray.__proto__.__proto__
 nomeDaArray.__proto__.__proto__.__proto__ 
 >>> null
 
+```
 
----> repare que __proto__ de Object { … } é null. Ele é o protótipo final de todos os objetos. Ele é assim:
 
+repare que __proto__ de Object { … } é null. Ele é o protótipo final de todos os objetos. Ele é assim:
+
+```
       v Object { … }
 	 > ​__defineGetter__: function __defineGetter__()
 ​	 > __defineSetter__: function __defineSetter__()
@@ -486,12 +491,11 @@ nomeDaArray.__proto__.__proto__.__proto__
 	​ > valueOf: function valueOf()
 	​ > <get __proto__()>: function __proto__()
 	​ > <set __proto__()>: function __proto__()
-
+```
 
 
 Existe um processo de transformar alguma coisa em outra coisa de forma automática pelo engine. Ele é chamado de coercion
-sobre coercion
-(https://www.freecodecamp.org/news/coercion-and-type-conversion-in-javascript/)
+[Link sobre coercion](https://www.freecodecamp.org/news/coercion-and-type-conversion-in-javascript/)
 
 
 
