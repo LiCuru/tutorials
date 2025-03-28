@@ -525,58 +525,57 @@ Sobre protótipos:
 '<i>JavaScript is a prototype-based language, and functions differently than the traditional class-based paradigm that many other object-oriented languages use.</i>' ([Digital Ocean](https://www.digitalocean.com/community/tutorials/understanding-prototypes-and-inheritance-in-javascript) e [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes))
 
 A descrição do que são objetos em Javascript também passa pela definição do protótipos, [conforme descreve o Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
-) ------------------------------------------
+)
 
-processamento das classes em javascript
+------------------------------------------
+
+### processamento das classes em javascript
 
 Ordem de processamento das classes:
 
-PASSO 1 - extends --> O 'extends' faz referência a uma função construtora de outra classe (ou nulo, se não referencia nada). Quando a classe deriva de outra classe, ou seja, quando herda propriedades de outra classe,  "extends" aponta para a função construtora dessa classe de origem.
+- <b>PASSO 1 - extends </b> : O `extends` faz referência a uma função construtora de outra classe (ou nulo, se não referencia nada). Quando a classe deriva de outra classe, ou seja, quando herda propriedades de outra classe,  `extends` aponta para a função construtora dessa classe de origem.
 
-O NomeDaClasse.__proto__ = a classe-mãe. Se é uma classe base, o NomeDaClasse.__proto__ = algum outro objeto definido por default. É interessante verificar isso com o developer tools (atalho: F12) e os exemplos de classe herança desse link do mozilla:
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance
+O `NomeDaClasse.__proto__ = a classe-mãe `. Se é uma classe base, o `NomeDaClasse.__proto__ = algum outro objeto definido por default`. É interessante verificar isso com o developer tools (atalho: F12) e os exemplos de classe herança desse [link do mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance)
 
 
-PASSO 2 - constructor --> Não existe uma instância sem a função construtora dessa instância. A classe é um objeto que tem um construtor da instância que ela gera. Toda classe tem uma função construtora que vai gerar instâncias, senão, não é uma classe. O construtor sempre vai existir e é processado de alguma forma na criação da classe. Se não tiver declarado na classe, o engine vai processar um default.  Na sintaxe do javascript, o constructor é "só uma declaração de um método" da classe. É como se declarar o construtor fosse a mesma coisa que "sobreescrever" o default. Provavelmente é o que a sintaxe do javascript permite pra conseguir implementar o OOP, programação orientada a objeto.
+- <b>PASSO 2 - constructor </b>: Não existe uma instância sem a função construtora dessa instância. A classe é um objeto que tem um construtor da instância que ela gera. Toda classe tem uma função construtora que vai gerar instâncias, senão, não é uma classe. O construtor sempre vai existir e é processado de alguma forma na criação da classe. Se não tiver declarado na classe, o engine vai processar um default.  Na sintaxe do javascript, o constructor é "só uma declaração de um método" da classe. É como se declarar o construtor fosse a mesma coisa que "sobreescrever" o default. Provavelmente é o que a sintaxe do javascript permite pra conseguir implementar o OOP, programação orientada a objeto.
 
 O processamento do constructor não é observável.
 
-Sobre construtores (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes)
+[Link sobre construtores](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes)
 
 
 
 
-PASSO 3 - as --chaves-- dos elementos da classe. A chave é o "nome" da propriedade. Os valores associados às keys (às chaves, aos "nomes") não são processados nessa etapa 3.
+- <b> PASSO 3 - as chaves dos elementos da classe </b>:  A chave é o "nome" da propriedade. Os valores associados às keys (às chaves, aos "nomes") não são processados nessa etapa 3.
 
-- computed key e 'this':
-Se essa chave for uma computed key, ela é processada com o 'this' vinculado ao escopo exterior, ao qual a classe está imersa (não é um 'this' que se refere à classe em si). Computed keys são keys que precisam ser processadas, 'calculadas' para ter o valor delas, não é um valor estabelecido (uma string, uma int...). O computador precisa "calcular" ele.
+	- computed key e `this`: Se essa chave for uma computed key, ela é processada com o `this` vinculado ao escopo exterior, ao qual a classe está imersa (não é um `this` que se refere à classe em si). Computed keys são keys que precisam ser processadas, 'calculadas' para ter o valor delas, não é um valor estabelecido (uma string, uma int...). O computador precisa "calcular" ele.
 
 Ou seja, voltando: ao processar o valor da key declarada na classe (se não for um valor já estabelecido), um "this" vai se referir ao escopo fora, que envolve a classe, e não à classe em si.
 Exemplo de uma computed key: https://ilikekillnerds.com/2018/02/computed-object-keys-function-names-javascript/
 
----> Já um 'this' declarado no valor vinculado à chave (à key), e não à chave em si, vai se referir à classe, e não ao escopo fora da classe.
+---> Já um `this` declarado no valor vinculado à chave (à key), e não à chave em si, vai se referir à classe, e não ao escopo fora da classe.
 
 
 
-PASSO 4 - métodos e accessors são instalados na ordem em que são declarados.
+<b> PASSO 4 </b> - métodos e accessors são instalados na ordem em que são declarados.
 
-O que são métodos e accessors:
+O que são <i>métodos</i> e <i>accessors</i>:
 Classes tem métodos e propriedades. De certa forma, os métodos são as funções das classes, e as propriedades são as variáveis. Os accessors são um tipo de "função" que chama uma propriedade. Ou seja, são funções que dão acesso a certas variáveis da classe.
 
 
 
 Info sobre accessors:
-https://javascript.info/property-accessors
-https://stackoverflow.com/questions/42342623/why-use-getters-and-setters-in-javascript
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes#accessor_fields
+[javascript.info](https://javascript.info/property-accessors) 
+[stackoverflow](https://stackoverflow.com/questions/42342623/why-use-getters-and-setters-in-javascript) 
+[documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes#accessor_fields) 
 
 
 
 As instalações são em 3 "camadas":
 
-  - 4.1 - object.__proto__ --> Métodos e accessors da instância são instalados no protótipo da classe declarada. É o object.__proto__ . 
+  - 4.1 - `object.__proto__` --> Métodos e accessors da instância são instalados no protótipo da classe declarada. É o object.__proto__ . 
  
   - 4.2 - classe --> static métodos e accessors (métodos e accessors declarados com a keyword static) são gravados na classe mesmo, e não no protótipo da classe. Não são 'herdados' pela instância através do protótipo. São chamáveis na classe, e não na instância da classe.
  
@@ -584,9 +583,9 @@ As instalações são em 3 "camadas":
  
 
 ----------------------------------------------
---- sobre o static method ---
+### sobre o static method
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance
+Fonte:  [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance) 
 
 É possível verificar que static methods não são chamáveis através do 
 objeto instanciado pela classe, mas sim pela classe em si.
