@@ -3,7 +3,7 @@
 
 Principal fonte: [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#evaluation_order) 
 
-Entender a ordem, e de que forma acontece o processamento das classes em javascript é fundamental para o uso da linguagem. E para compreender o processamento de classes, é importante entender o funcionamento dos objetos, dos protótipos, e da palavra chave, a keyword, `this`. Esse artigo descreve estes tópicos.
+Entender a ordem, e de que forma acontece o processamento das classes em javascript é fundamental para o uso da linguagem. E para compreender o processamento de classes, é importante entender o funcionamento dos objetos, dos protótipos, e da palavra chave `this`. Esse artigo descreve estes tópicos.
 
 ### Entendendo o 'this'
 A palavra-chave, a keyword, `this` referencia objetos diferentes dependendo de onde é declarada dentro de uma classe.
