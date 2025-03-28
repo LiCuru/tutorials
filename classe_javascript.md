@@ -67,9 +67,9 @@ Para entender classes em javascript é necessário entender o funcionamento de p
 
 As classes são objetos. Só que elas criam outros objetos. Esses objetos que as classes criam são chamados de instâncias. Quando um objeto é criado através de uma classe, se diz que a classe foi instanciada. Você chama a classe para criar a instância. Ou seja:
 
-instância --> é objeto que a classe criou
+- <b>instância</b>: é objeto que a classe criou
 
-instanciar a classe --> criar um objeto à partir de uma classe
+- <b>instanciar a classe</b>: criar um objeto à partir de uma classe
 
 
 É comum usar essa notação para instanciar uma classe:
@@ -78,11 +78,11 @@ instanciar a classe --> criar um objeto à partir de uma classe
 instância_da_classe = new NomeDaClasse(parametro);
 ```
 
-<b> parâmetro </b> --> é o que você passa entre parênteses na função. É só isso. Os valores propriamente ditos são chamados de <i>argumentos</i>.  <b>Parâmetro</b> se refere ao que você encontra na definição da função. O <i>argumento</i> é o que você passa de valor quando chama a função. No dia a dia é comum "<b>parâmetro</b>" e "<i>argumento</i>" serem usados como se fossem sinônimos, mas eles não são sempre sinônimos.
+- <b> parâmetro </b>: é o que você passa entre parênteses na função. É só isso. Os valores propriamente ditos são chamados de <i>argumentos</i>.  <b>Parâmetro</b> se refere ao que você encontra na definição da função. O <i>argumento</i> é o que você passa de valor quando chama a função. No dia a dia é comum "<b>parâmetro</b>" e "<i>argumento</i>" serem usados como se fossem sinônimos, mas eles não são sempre sinônimos.
 
 (Fonte: [Stack Overflow](https://stackoverflow.com/questions/156767/whats-the-difference-between-an-argument-and-a-parameter))) 
 
-Funções construtoras --> são funções que criam objetos e os retornam. 
+- <b>Funções construtoras</b>: são funções que criam objetos e os retornam. 
 
 
 
