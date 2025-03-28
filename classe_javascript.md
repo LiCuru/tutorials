@@ -159,6 +159,10 @@ repare que o objeto boloDeChocolate não tem o método `.avisarQueTemBolo()`. Qu
 <i> 'JavaScript is a prototype-based language — an object's behaviors are specified by its own properties and its prototype's properties. However, with the addition of classes, the creation of hierarchies of objects and the inheritance of properties and their values are much more in line with other object-oriented languages'</i>
 ([Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes)) 
 
+<i>JavaScript is a prototype-based language, and functions differently than the traditional class-based paradigm that many other object-oriented languages use.</i> ([Digital Ocean](https://www.digitalocean.com/community/tutorials/understanding-prototypes-and-inheritance-in-javascript) e [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes))
+
+A descrição do que são objetos em Javascript também passa pela definição do protótipos, [conforme descreve o Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+)
 
 <i>'Nearly all objects in JavaScript are instances of Object; a typical object inherits properties (including methods) from Object.prototype'</i>
 ([Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object))
@@ -501,14 +505,6 @@ acessar a propriedade via `__proto__` está deprecated.
 `Object.setPrototypeOf()`
  
 Mas se for só pra observar um objeto direto no console, `__proto__` é bem mais direta e fácil de entender, é mais didático que um getter pra entender o conceito da propriedade `__proto__`.
-
- 
-## Sobre protótipos
-
-	<i>JavaScript is a prototype-based language, and functions differently than the traditional class-based paradigm that many other object-oriented languages use.</i> ([Digital Ocean](https://www.digitalocean.com/community/tutorials/understanding-prototypes-and-inheritance-in-javascript) e [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes))
-
-A descrição do que são objetos em Javascript também passa pela definição do protótipos, [conforme descreve o Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
-)
 
 # processamento das classes em javascript
 
