@@ -1,7 +1,7 @@
 # Javascript 
-### Objetos, protótipos, e processamento das classes no 
+### Objetos, protótipos, e processamento das classes
 
-Fonte: [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#evaluation_order) 
+Principal fonte: [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#evaluation_order) 
 
 Entender a ordem, e de que forma acontece o processamento das classes em javascript é importante para entender muitas coisas.
 
