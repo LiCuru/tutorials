@@ -510,13 +510,13 @@ Mas se for só pra observar um objeto direto no console, `__proto__` é bem mais
 
 Ordem de processamento das classes:
 
-## <b>PASSO 1 - extends </b>
+### <b>PASSO 1 - extends </b>
 O `extends` faz referência a uma função construtora de outra classe (ou nulo, se não referencia nada). Quando a classe deriva de outra classe, ou seja, quando herda propriedades de outra classe,  `extends` aponta para a função construtora dessa classe de origem.
 
 O `NomeDaClasse.__proto__ = a classe-mãe `. Se é uma classe base, o `NomeDaClasse.__proto__ = algum outro objeto definido por default`. É interessante verificar isso com o developer tools (atalho: F12) e os exemplos de classe herança desse [link do mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance)
 
 
-## <b>PASSO 2 - constructor </b>:
+### <b>PASSO 2 - constructor </b>:
 Não existe uma instância sem a função construtora dessa instância. A classe é um objeto que tem um construtor da instância que ela gera. Toda classe tem uma função construtora que vai gerar instâncias, senão, não é uma classe. O construtor sempre vai existir e é processado de alguma forma na criação da classe. Se não tiver declarado na classe, o engine vai processar um default.  Na sintaxe do javascript, o constructor é "só uma declaração de um método" da classe. É como se declarar o construtor fosse a mesma coisa que "sobreescrever" o default. Provavelmente é o que a sintaxe do javascript permite pra conseguir implementar o OOP, programação orientada a objeto.
 
 O processamento do constructor não é observável.
@@ -526,7 +526,7 @@ O processamento do constructor não é observável.
 
 
 
-## <b> PASSO 3
+### <b> PASSO 3
 as chaves dos elementos da classe </b>:  A chave é o "nome" da propriedade. Os valores associados às keys (às chaves, aos "nomes") não são processados nessa etapa 3.
 
 	- computed key e `this`: Se essa chave for uma computed key, ela é processada com o `this` vinculado ao escopo exterior, ao qual a classe está imersa (não é um `this` que se refere à classe em si). Computed keys são keys que precisam ser processadas, 'calculadas' para ter o valor delas, não é um valor estabelecido (uma string, uma int...). O computador precisa "calcular" ele.
@@ -538,7 +538,7 @@ Exemplo de uma computed key: https://ilikekillnerds.com/2018/02/computed-object-
 
 
 
-## <b> PASSO 4 </b> - métodos e accessors
+### <b> PASSO 4 </b> - métodos e accessors
 métodos e accessors são instalados na ordem em que são declarados.
 
 O que são <i>métodos</i> e <i>accessors</i>:
@@ -612,14 +612,14 @@ colorWithStatic_object.__proto__.constructor.static_method()
 ```
 
 
-## <b> PASSO 5 </b> - A classe é inicializada com:
+### <b> PASSO 5 </b> - A classe é inicializada com:
 
 	- o `Object.__proto__` definido (ou não) pelo extends
 	- a declaração (ou não) do constructor.
  
  
  
-## <b> PASSO 6 </b> 
+### <b> PASSO 6 </b> 
 Os <i>valores</i> dos elementos da classe são processados na ordem em que aparecem
  
  
@@ -667,7 +667,7 @@ Em que lugar:
  
  
  
-## PASSO 7
+### PASSO 7
 A classe está pronta para ser usada como uma função construtora
  
  
