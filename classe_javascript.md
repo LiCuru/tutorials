@@ -144,9 +144,9 @@ boloDeChocolate.__proto__ == Object.getPrototypeOf(boloDeChocolate)
 
 ```
 
-repare que o objeto boloDeChocolate não tem o método `.avisarQueTemBolo()`. Quem tem o método `.avisarQueTemBolo()` é o `boloDeChocolate.__proto__` , o protótipo· Mas você pode chamar direto do objeto `boloDeChocolate.avisarQueTemBolo()`.
+Repare que o objeto boloDeChocolate não tem o método `.avisarQueTemBolo()`. Quem tem o método `.avisarQueTemBolo()` é o `boloDeChocolate.__proto__` , o protótipo· Mas você pode chamar direto do objeto `boloDeChocolate.avisarQueTemBolo()`.
 
-é mais fácil entender `boloDeChocolate.__proto__` do que `Object.getPrototypeOf(boloDeChocolate)`. Ambos devolvem o mesmo objeto que é o protótipo de boloDeChocolate. Só que:
+É mais fácil entender `boloDeChocolate.__proto__` do que `Object.getPrototypeOf(boloDeChocolate)`. Ambos devolvem o mesmo objeto que é o protótipo de boloDeChocolate. Só que:
 
 `boloDeChocolate.__proto__` é um accessor, uma propriedade, que dá acesso ao prototype do objeto
 
@@ -197,7 +197,7 @@ umObjeto.__proto__
 
 ```
 
-repare que o `umObjeto.__proto__` é o Object { … } e que o seu o protótipo é nulo:
+Repare que o `umObjeto.__proto__` é o Object { … } e que o seu o protótipo é nulo:
 
 ```
 __proto__ : null
@@ -405,14 +405,14 @@ nomeDoObjeto = {}
 >>> Object {  }
 ```
 
-criação do objeto nomeDoObjeto
+Criação do objeto nomeDoObjeto
 
 ```
 nomeDoObjeto.__proto__
 >>> Object { … }
 ```
 
-ainda funciona, está deprecated, e é a mesma coisa que:
+Ainda funciona, está deprecated, e é a mesma coisa que:
 
 ```
 Object.getPrototypeOf(nomeDoObjeto)
@@ -422,20 +422,20 @@ nomeDoObjeto.getPrototypeOf() -->
 >>> Uncaught TypeError: nomeDoObjeto.getPrototypeOf is not a function
 ```
 
-não funciona. "Não existe". É um método estático (static method). Mesmo que o protótipo da instância seja `Object` (repare que `Object { … }` é o protótipo do nomeDoObjeto), mesmo assim, não dá pra chamar pela instância. Você tem que chamar pelo `Object`, pois é um static method. Static methods (métodos estáticos) são isso: são métodos de classes que não são instanciados, ou seja, não estão nos objetos criados através daquela classe. Eles simplesmentes não estão na instância. 
+Não funciona. "Não existe". É um método estático (static method). Mesmo que o protótipo da instância seja `Object` (repare que `Object { … }` é o protótipo do nomeDoObjeto), mesmo assim, não dá pra chamar pela instância. Você tem que chamar pelo `Object`, pois é um static method. Static methods (métodos estáticos) são isso: são métodos de classes que não são instanciados, ou seja, não estão nos objetos criados através daquela classe. Eles simplesmentes não estão na instância. 
 
 Classes geram objetos, mas elas também não deixam de ser objetos. Se você tem uma classe chamada `NomeDaClasse` e jogar `NomeDaClasse.__proto__` no console tu vai acessar o protótipo da classe `NomeDaClasse`. E tu pode acessar o protótipo do protótipo do protótipo... `NomeDaClasse.__proto__.__proto__.__proto__` até chegar no final 
 
-ou também:
+Ou também:
 ```
 Object.getPrototypeOf(Object.getPrototypeOf(Object.getPrototypeOf(Component)))
 ```
-o que não é nada didático.
+O que não é nada didático.
 
 ```
 NomeDaClasse.__proto__.__proto__.__proto__
 ```
-é mais fácil de entender
+É mais fácil de entender
 
 
 Mas enfim, voltando, tu pode acessar o protótipo do protótipo do protótipo, `NomeDaClasse.__proto__.__proto__.__proto__` até chegar no final, que é comum a quase todos os objetos (todos em que o protótipo não é nulo).
@@ -461,7 +461,7 @@ nomeDaArray.__proto__.__proto__.__proto__
 ```
 
 
-repare que __proto__ de Object { … } é null. Ele é o protótipo final de todos os objetos. Ele é assim:
+Repare que __proto__ de Object { … } é null. Ele é o protótipo final de todos os objetos. Ele é assim:
 
 ```
       v Object { … }
@@ -494,7 +494,7 @@ Existe um processo de transformar alguma coisa em outra coisa de forma automáti
 É boa prática não fazer alterações em protótipos, ou seja, na propriedade `__proto__`, de qualquer objeto. Se for alterar alguma coisa, altere direto no objeto, ou na classe etc, não altere no protótipo. 
 (fonte: [Documentação do Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)) 
 
-acessar a propriedade via `__proto__` está deprecated.
+Acessar a propriedade via `__proto__` está deprecated.
 
 '<i>some browsers are kind enough let you set and get [[Prototype]] through the __proto__ property</i>'
 ([Stack Overflow](https://stackoverflow.com/questions/17174786/what-is-the-significance-of-the-double-brackets-for-the-prototype-property-i))
@@ -506,17 +506,14 @@ acessar a propriedade via `__proto__` está deprecated.
  
 Mas se for só pra observar um objeto direto no console, `__proto__` é bem mais direta e fácil de entender, é mais didático que um getter pra entender o conceito da propriedade `__proto__`.
 
-# Processamento das classes em javascript
-
-Ordem de processamento das classes:
-
-### <b>PASSO 1 - extends </b>
+# A ordem do processamento das classes em javascript
+### PASSO 1 - extends
 O `extends` faz referência a uma função construtora de outra classe (ou nulo, se não referencia nada). Quando a classe deriva de outra classe, ou seja, quando herda propriedades de outra classe,  `extends` aponta para a função construtora dessa classe de origem.
 
 O `NomeDaClasse.__proto__ = a classe-mãe `. Se é uma classe base, o `NomeDaClasse.__proto__ = algum outro objeto definido por default`. É interessante verificar isso com o developer tools (atalho: F12) e os exemplos de classe herança desse [link do mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_Classes#extends_and_inheritance)
 
 
-### <b>PASSO 2 - constructor </b>:
+### PASSO 2 - constructor
 Não existe uma instância sem a função construtora dessa instância. A classe é um objeto que tem um construtor da instância que ela gera. Toda classe tem uma função construtora que vai gerar instâncias, senão, não é uma classe. O construtor sempre vai existir e é processado de alguma forma na criação da classe. Se não tiver declarado na classe, o engine vai processar um default.  Na sintaxe do javascript, o constructor é "só uma declaração de um método" da classe. É como se declarar o construtor fosse a mesma coisa que "sobreescrever" o default. Provavelmente é o que a sintaxe do javascript permite pra conseguir implementar o OOP, programação orientada a objeto.
 
 O processamento do constructor não é observável.
@@ -526,7 +523,7 @@ O processamento do constructor não é observável.
 
 
 
-### <b> PASSO 3 - as chaves dos elementos da classe </b>
+### PASSO 3 - as chaves dos elementos da classe
 A chave é o "nome" da propriedade. Os valores associados às keys (às chaves, aos "nomes") não são processados nessa etapa 3.
 
 Computed key e `this`: Se essa chave for uma computed key, ela é processada com o `this` vinculado ao escopo exterior, ao qual a classe está imersa (não é um `this` que se refere à classe em si). Computed keys são keys que precisam ser processadas, 'calculadas' para ter o valor delas, não é um valor estabelecido (uma string, uma int...). O computador precisa "calcular" ele.
@@ -534,11 +531,11 @@ Computed key e `this`: Se essa chave for uma computed key, ela é processada com
 Ou seja, voltando: ao processar o valor da key declarada na classe (se não for um valor já estabelecido), um "this" vai se referir ao escopo fora, que envolve a classe, e não à classe em si.
 Exemplo de uma computed key: https://ilikekillnerds.com/2018/02/computed-object-keys-function-names-javascript/
 
--Já um `this` declarado no valor vinculado à chave (à key), e não à chave em si, vai se referir à classe, e não ao escopo fora da classe.
+Já um `this` declarado no valor vinculado à chave (à key), e não à chave em si, vai se referir à classe, e não ao escopo fora da classe.
 
 
 
-### <b> PASSO 4 </b> - métodos e accessors
+### PASSO 4 - métodos e accessors
 métodos e accessors são instalados na ordem em que são declarados.
 
 O que são <i>métodos</i> e <i>accessors</i>:
@@ -560,9 +557,9 @@ As instalações são em 3 "camadas":
 
   - 4.1 - `object.__proto__` --> Métodos e accessors da instância são instalados no protótipo da classe declarada. É o object.__proto__ . 
  
-  - 4.2 - classe --> static métodos e accessors (métodos e accessors declarados com a keyword static) são gravados na classe mesmo, e não no protótipo da classe. Não são 'herdados' pela instância através do protótipo. São chamáveis na classe, e não na instância da classe.
+  - 4.2 - <b>classe</b> --> static métodos e accessors (métodos e accessors declarados com a keyword static) são gravados na classe mesmo, e não no protótipo da classe. Não são 'herdados' pela instância através do protótipo. São chamáveis na classe, e não na instância da classe.
  
-  - 4.3 - instância --> métodos e accessors privados são instalados depois diretamente na instância. Eles são salvos para serem depois instalados diretamente na instância.
+  - 4.3 - <b>instância</b> --> métodos e accessors privados são instalados depois diretamente na instância. Eles são salvos para serem depois instalados diretamente na instância.
  
 
 #### Sobre o static method
@@ -612,14 +609,14 @@ colorWithStatic_object.__proto__.constructor.static_method()
 ```
 
 
-### <b> PASSO 5 </b> - A classe é inicializada com:
+### PASSO 5 - A classe é inicializada com:
 
 	- o `Object.__proto__` definido (ou não) pelo extends
 	- a declaração (ou não) do constructor.
  
  
  
-### <b> PASSO 6 </b> - Os <i>valores</i> dos elementos da classe
+### PASSO 6 - Os <i>valores</i> dos elementos da classe
 Elessão processados na ordem em que aparecem
  
  
@@ -638,7 +635,7 @@ Elessão processados na ordem em que aparecem
  `InstanciaDaClasse.__proto__.constructor`  ---> `class NomeDaClasse`
  
 
-### Gravação das instance fields VALUES
+#### Gravação das instance fields values
 Quando a classe é criada, a expressão do inicializador de cada instance field é gravada.
  
 O inicializador dos valores dos instance fields são processados, quando:
